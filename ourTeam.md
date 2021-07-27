@@ -28,6 +28,11 @@ Disha Chauhan              |  Austin Yang
 
 ##### Group Managers:
 
+Nikita Krishnan            |  Disha Chauhan            |  Arian Veyssi             |  Roman Ramirez       
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
+
+
 ##### Group A Members:
 
 ##### Group B1 Members:
