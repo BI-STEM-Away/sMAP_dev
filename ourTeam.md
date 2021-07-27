@@ -1,13 +1,13 @@
 
 <div class="row">
   <div class="column">
-    <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt="Snow" style="width:100%">
+    <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt="Snow" style="width:150">
   </div>
   <div class="column">
-    <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt="Forest" style="width:100%">
+    <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt="Forest" style="width:150">
   </div>
   <div class="column">
-    <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt="Mountains" style="width:100%">
+    <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt="Mountains" style="width:150">
   </div>
 </div>
 
