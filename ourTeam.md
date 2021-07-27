@@ -32,8 +32,8 @@ Nikita Krishnan            |  Disha Chauhan            |  Shreya Vora           
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
 
-Roman Ramirez              |  Aditi Verma              |  Kelly Li                         
-:-------------------------:|:-------------------------:|:-------------------------:
+Roman Ramirez          |  Aditi Verma              |  Kelly Li                         
+:---------------------:|:-------------------------:|:-------------------------:
 ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
 
 ##### Group A Members:
