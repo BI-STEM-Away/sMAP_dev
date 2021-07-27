@@ -2,9 +2,6 @@
 <html>
 <head>
 <style>
-* {
-  box-sizing: border-box;
-}
 
 .column {
   float: left;
@@ -12,7 +9,6 @@
   padding: 5px;
 }
 
-/* Clearfix (clear floats) */
 .row::after {
   content: "";
   clear: both;
