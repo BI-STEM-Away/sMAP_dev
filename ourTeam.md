@@ -8,9 +8,9 @@
 </p>
 
 <p float="left">
-  <figure class="image">
+  
   <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" width="150" alt="Member Name">
   <figcaption>Member Name</figcaption>
   <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" width="150" /> 
-  </figure>
+  
 </p>
