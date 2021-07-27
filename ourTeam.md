@@ -9,8 +9,22 @@ aside: true
 
 ### Project Techinical Lead
 
-Samuel Bharti              
-![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png) 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">Samuel Bharti</th>
+    </tr>
+  </thead>  
+  <tbody>
+    <tr>
+      <td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+:-------------------------:|:-------------------------:
+![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
+
 
 
 Disha Chauhan              |  Austin Yang
