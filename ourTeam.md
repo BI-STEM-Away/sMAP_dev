@@ -43,6 +43,11 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 
 ##### Group A Members:
 
+<table><thead><tr><th style="text-align:center">Maryam</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
+
+<table><thead><tr><th style="text-align:center">Modupe Arotiba</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
+
+<table><thead><tr><th style="text-align:center">Alfred</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
 ##### Group B1 Members:
 
