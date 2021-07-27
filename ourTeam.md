@@ -8,7 +8,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 <table>
   <thead>
     <tr>
-      <th style="text-align:center">Samuel Bharti</th>
+      <th style="text-align:center">Samuel</th>
     </tr>
   </thead>  
   <tbody>
@@ -21,19 +21,19 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 
 ##### Project Management Leads:
 
-Disha Chauhan             |  Austin Yang
+Disha             |  Austin
 :-------------------------:|:-------------------------:
 ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
 
 
 ##### Group Managers:
 
-Nikita Krishnan - A, B1             |  Disha Chauhan - A, B1, D             |  Shreya Vora - B1             |  Arian Veyssi - B2
+Nikita - A, B1             |  Disha - A, B1, D             |  Shreya - B1             |  Arian - B2
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
 
 
-Roman Ramirez - B2             |  Aditi Verma - C             |  Kelly Li - D
+Roman - B2             |  Aditi - C             |  Kelly - D
 :---------------------:|:-------------------------:|:-------------------------:
 ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
 
