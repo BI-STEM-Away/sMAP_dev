@@ -13,6 +13,24 @@
   Disha Chauhan  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Austin Yang 
 </p>
 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
 
 <h2>Images Side by Side</h2>
 <p>How to create side-by-side images with the CSS float property:</p>
