@@ -33,7 +33,7 @@ Nikita - A, B1             |  Disha - A, B1, D             |  Shreya - B1       
 ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
 
 
-Roman - B2             |  Aditi - C             |  Kelly - D
+Roman - B2             |  Aditi - C                |  Kelly - D
 :---------------------:|:-------------------------:|:-------------------------:
 ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
 
