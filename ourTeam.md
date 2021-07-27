@@ -1,17 +1,6 @@
-<div class="image123">
-    <div class="imgContainer">
-        <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" width="150"/>
-        <p>This is image 1</p>
-    </div>
-    <div class="imgContainer">
-        <img class="middle-img" src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png"/ width="150"/>
-        <p>This is image 2</p>
-    </div>
-    <div class="imgContainer">
-         <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png"/ width="150"/>
-        <p>This is image 3</p>
-    </div>
-</div>
+Disha Chauhan              |  Austin Yang
+:-------------------------:|:-------------------------:
+![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
 
 
 
