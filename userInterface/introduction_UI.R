@@ -1,18 +1,23 @@
+#roman_ramirez
+# Imported @ivanlam27's introduction code
 introductionTab <- tabItem(tabName = "introduction",
-                         fluidRow(
-                           column(9,
-                             HTML("Introduction Page")
-                           ),
-                           column(3,
-                                  div(style = "display:inline-block; float:right", 
-                                      actionButton('start', label = 'Begin', status = "success")))
-                         ),
-                         fluidRow(
-                           column(8,
-                                  sliderInput("numCheck","Select a number",
-                                              0,10,1,step = 1)),
-                           column(4,
-                                  
-                                  htmlOutput("resNumCheck"))
-                         )
+                            fluidRow(
+                                column(9,
+                                       #Introduction block 
+                                       jumbotron(
+                                          status = "info",
+                                          title = "R Shiny app",
+                                          lead = "An app for processing quality control, statistical and functional analysis of a 
+                                          GEO dataset in order to find a potential biomarker",
+                                          "This app is created by STEM-away RShiny project team - Session 1",
+                                          href = "https://stemaway.com/" 
+                                       )
+                                ),
+                                column(3,
+                                       div(style = "display:inline-block; float:right", 
+                                           actionButton('start', label = 'Begin', status = "success"))
+                                )
+                            )
+
+                           
 )
