@@ -1,22 +1,15 @@
 
-<ul class="list-unstyled list-inline text-center">
-  <li>
-    <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt= "image1" width="195" height="195">
-    <figcaption>image1</figcaption>
-  </li>
-  <li>
-    <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt= "image2" width="195" height="195">
-    <figcaption>image2</figcaption>
-  </li>
-  <li>
-    <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt= "image3" width="195" height="195">
-    <figcaption>image1</figcaption>
-  </li>
-  <li>
-    <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt= "image4" width="195" height="195">
-    <figcaption>image4</figcaption>
-  </li>
-</ul>
+<div class="row">
+  <div class="column">
+    <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt="Mountains" style="width:100%">
+  </div>
+</div>
 
 
 
