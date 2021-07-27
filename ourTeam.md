@@ -3,7 +3,7 @@ title: Our Team Members
 feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ---
 
-<center>**Project Technical Lead**</center>
+##### Project Technical Lead:
 
 <table>
   <thead>
@@ -18,10 +18,22 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   </tbody>
 </table>
 
+
+##### Project Management Leads:
+
 Disha Chauhan              |  Austin Yang
 :-------------------------:|:-------------------------:
 ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
 
 
+##### Group Managers:
 
+##### Group A Members:
 
+##### Group B1 Members:
+
+##### Group B2 Members:
+
+##### Group C Members:
+
+##### Group D Members:
