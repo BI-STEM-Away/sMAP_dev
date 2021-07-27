@@ -21,45 +21,25 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 
 ##### Project Management Leads:
 
-<table><thead><tr><th style="text-align:center">Disha</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
-<br>
-<table><thead><tr><th style="text-align:center">Austin</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
+<table><thead><tr><th style="text-align:center">Disha Chauhan</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
+
+<table><thead><tr><th style="text-align:center">Austin Yang</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
 ##### Group Managers:
 
-Nikita - A, B1             |  Disha - A, B1, D
-:-------------------------:|:-------------------------:
-![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
+<table><thead><tr><th style="text-align:center">Nikita Krishnan - A, B1</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
-<br>
-<br>
+<table><thead><tr><th style="text-align:center">Disha Chauhan - A, B1, D</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
-Shreya - B1                |  Arian - B2
-:-------------------------:|:-------------------------:
-![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
+<table><thead><tr><th style="text-align:center">Shreya Vora - B1</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
-<br>
-<br> 
+<table><thead><tr><th style="text-align:center">Arian Veyssi - B2</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
-Roman - B2                 |  Aditi - C
-:-------------------------:|:-------------------------:
-![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
+<table><thead><tr><th style="text-align:center">Roman Ramirez - B2</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
-<br>
-<br>
+<table><thead><tr><th style="text-align:center">Aditi Verma - C</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:center">Kelly</th>
-    </tr>
-  </thead>  
-  <tbody>
-    <tr>
-      <td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td>
-    </tr>
-  </tbody>
-</table>
+<table><thead><tr><th style="text-align:center">Kelly Li - D</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
 ##### Group A Members:
 
