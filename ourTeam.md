@@ -22,11 +22,6 @@ aside: true
   </tbody>
 </table>
 
-:-------------------------:|:-------------------------:
-![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
-
-
-
 Disha Chauhan              |  Austin Yang
 :-------------------------:|:-------------------------:
 ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)  |  ![](https://bi-stem-away.github.io/shiny_app_dev/Logo.png)
