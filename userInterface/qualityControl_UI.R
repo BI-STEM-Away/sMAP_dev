@@ -11,7 +11,11 @@
 
 qCTab <- tabItem(tabName = "qC",
                               fluidRow(
-                                  column(4,
+                                  column(1,
+                                         div(style = "display:inline-block; float:left", 
+                                             actionButton('backTo_dataImport', label = 'Back', status = "success"))
+                                  ),
+                                  column(5,
                                          selectInput("qc_method", "Choose a QC visualization method before normalization.", choices = c("NUSE","RLE")),
                                          actionButton("vis_dat","Visualize Data")
                                   ),
@@ -23,18 +27,20 @@ qCTab <- tabItem(tabName = "qC",
                                          
                                   ),
                                   # @roman_ramirez
-                                  column(width = 3,
+                                  column(width = 1,
                                          div(style = "display:inline-block; float:right", 
-                                             actionButton('to_normalization', label = 'Proceed', status = "success")),
-                                         div(style = "display:inline-block; float:left", 
-                                             actionButton('backTo_dataImport', label = 'Back', status = "success"))
+                                             actionButton('to_normalization', label = 'Proceed', status = "success"))
                                   )
                               )
 )
 
 normalizationTab <- tabItem(tabName = "normalization",
                               fluidRow(
-                                  column(4,
+                                  column(1,
+                                         div(style = "display:inline-block; float:left", 
+                                             actionButton('backTo_qC', label = 'Back', status = "success"))
+                                  ),
+                                  column(5,
                                          #Disha
                                          radioButtons("normlztype","Which normalization method do you want to use?", choices=list("RMA","GCRMA","MAS5")),
                                          actionButton("normlzdata","Begin Normalization"),
@@ -45,18 +51,20 @@ normalizationTab <- tabItem(tabName = "normalization",
                                          htmlOutput("feat"),
                                   ),
                                   # @roman_ramirez
-                                  column(width = 3,
+                                  column(width = 1,
                                          div(style = "display:inline-block; float:right", 
-                                             actionButton('to_batchCorrection', label = 'Proceed', status = "success")),
-                                         div(style = "display:inline-block; float:left", 
-                                             actionButton('backTo_qC', label = 'Back', status = "success"))
+                                             actionButton('to_batchCorrection', label = 'Proceed', status = "success"))
                                   )
                               )
 )
 
 batchCorrectionTab <- tabItem(tabName = "batchCorrection",
                              fluidRow(
-                                 column(4,
+                                 column(1, 
+                                     div(style = "display:inline-block; float:left", 
+                                         actionButton('backTo_normalization', label = 'Back', status = "success"))
+                                 ),
+                                 column(5,
                                         htmlOutput("batch_cat"),
                                         actionButton("startbatch","Perform Batch Correction"),
                                         selectInput("qc_method2", "Choose a QC visualization method after normalization.", choices = c("Boxplot","PCA")),
@@ -71,18 +79,20 @@ batchCorrectionTab <- tabItem(tabName = "batchCorrection",
                                         
                                  ),
                                  # @roman_ramirez
-                                 column(width = 3,
+                                 column(width = 1,
                                         div(style = "display:inline-block; float:right", 
-                                            actionButton('to_potentialOutliers', label = 'Proceed', status = "success")),
-                                        div(style = "display:inline-block; float:left", 
-                                            actionButton('backTo_normalization', label = 'Back', status = "success"))
+                                            actionButton('to_potentialOutliers', label = 'Proceed', status = "success"))
                                  )
                              )
 )
 
 potentialOutliersTab <- tabItem(tabName = "potentialOutliers",
                                     fluidRow(
-                                        column(4,
+                                        column(1,
+                                               div(style = "display:inline-block; float:left", 
+                                                   actionButton('backTo_batchCorrection', label = 'Back', status = "success"))
+                                        ),
+                                        column(5,
                                                selectInput("outmethod","Outlier Detection Method",choices=c("KS","sum", "upperquartile")),
                                                actionButton("getout","Find Potential Outliers"),
                                                actionButton("update","Show Updated List of Samples")   
@@ -95,11 +105,9 @@ potentialOutliersTab <- tabItem(tabName = "potentialOutliers",
                                             
                                         ),
                                         # @roman_ramirez
-                                        column(width = 3,
+                                        column(width = 1,
                                                div(style = "display:inline-block; float:right", 
-                                                   actionButton('to_sampleGrouping', label = 'Proceed', status = "success")),
-                                               div(style = "display:inline-block; float:left", 
-                                                   actionButton('backTo_batchCorrection', label = 'Back', status = "success"))
+                                                   actionButton('to_sampleGrouping', label = 'Proceed', status = "success"))
                                         )
                                     )
 )

@@ -1,6 +1,10 @@
 dataImportTab <- tabItem(tabName = "dataImport",
                              fluidRow(
-                               column(9,
+                                 column(1,
+                                        div(style = "display:inline-block; float:left", 
+                                            actionButton('backTo_introduction', label = 'Back', status = "success"))
+                                 ),
+                               column(10,
                                  #Selection Input to decide what type of file they want to input: CSV/txt, CEL files, IDAT files, or GEO Accession number
                                  selectInput("dat_type","Input Type",choices=list("Processed Expression Data (CSV/txt File)","Raw Affymetrix Data (.tar File Containing CEL Files)","Raw Illumina Data (.tar File Containing IDAT Files)","GEO Accession Number")),
                                  #Panel that appears if CSV/txt file type selected
@@ -30,11 +34,9 @@ dataImportTab <- tabItem(tabName = "dataImport",
                                  h1(textOutput("obj"),align="center")
                                ),
                                # @roman_ramirez
-                               column(width = 3,
+                               column(1,
                                       div(style = "display:inline-block; float:right", 
-                                          actionButton('to_qC', label = 'Proceed', status = "success")),
-                                      div(style = "display:inline-block; float:left", 
-                                          actionButton('to_introduction', label = 'Back', status = "success"))
+                                          actionButton('to_qC', label = 'Proceed', status = "success"))
                                       )
                              )
 )

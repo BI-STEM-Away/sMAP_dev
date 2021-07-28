@@ -22,8 +22,8 @@ function(input,output,session){
   )
   
   # DATA IMPORT BUTTONS
-  observeEvent(input$backTo_dataImport, {
-    updateTabItems(session, "tabs", "dataImport")
+  observeEvent(input$backTo_introduction, {
+    updateTabItems(session, "tabs", "introduction")
   }
   )
   observeEvent(input$to_qC, {
@@ -32,6 +32,10 @@ function(input,output,session){
   )
   
   # QC BUTTONS 
+  observeEvent(input$backTo_dataImport, {
+    updateTabItems(session, "tabs", "dataImport")
+  }
+  )
   observeEvent(input$backTo_qC, {
     updateTabItems(session, "tabs", "qC")
   }

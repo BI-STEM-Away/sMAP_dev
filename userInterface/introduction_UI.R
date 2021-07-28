@@ -2,25 +2,21 @@
 # Imported @ivanlam27's introduction code
 introductionTab <- tabItem(tabName = "introduction",
                             fluidRow(
-                                column(9,
+                                column(12,
+                                       align="center",
                                        #Introduction block 
                                        jumbotron(
                                           status = "info",
-                                          title = "R Shiny app",
-                                          lead = "An app for processing quality control, statistical and functional analysis of a 
-                                          GEO dataset in order to find a potential biomarker",
-                                          "This app is created by STEM-away RShiny project team - Session 1",
+                                          title = "STEM-Away Transcriptomics Pipeline Application",
+                                          lead = "An application for processing quality control, statistical and functional analysis of a 
+                                          GEO dataset in order to find potential biomarkers.",
+                                          "This app is created by STEM-Away RShiny Project Team - Session 1, 2021",
                                           href = "https://stemaway.com/" 
-                                       )
-                                ),
-                                # @roman_ramirez
-                                column(3,
-                                       div(style = "display:inline-block; float:right", 
-                                           actionButton('to_dataImport', label = 'Begin', status = "success")),
+                                       ),
                                        # @roman_ramirez
-                                       div(style = "display:inline-block; float:left", 
-                                           actionButton('to_end', label = 'Quit', status = "success"))
-                                )
+                                       div(style ="display:inline-block", 
+                                           actionButton('to_dataImport', label = 'Begin', status = "success"))
+                                ),
                             )
 
                            

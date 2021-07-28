@@ -15,7 +15,11 @@
 
 volcanoPlotTab <- tabItem(tabName = "volcanoPlot",
                           fluidRow(
-                            column(4,
+                            column(1,
+                                   div(style = "display:inline-block; float:left", 
+                                       actionButton('backTo_sampleGrouping', label = 'Back', status = "success"))
+                                   ),
+                            column(5,
                                   sliderInput("n", "LogFC cutoff", 0, 5,
                                                           value =1, step = 0.05),
                                   shinyWidgets::sliderTextInput("m", "Adjusted P-Value cutoff", 
@@ -26,17 +30,19 @@ volcanoPlotTab <- tabItem(tabName = "volcanoPlot",
                                   plotOutput("plot1")
                                    ),
                             # @roman_ramirez
-                            column(width = 3,
+                            column(width = 1,
                                   div(style = "display:inline-block; float:right", 
-                                      actionButton('to_topDEGs', label = 'Proceed', status = "success")),
-                                   div(style = "display:inline-block; float:left", 
-                                       actionButton('backTo_sampleGrouping', label = 'Back', status = "success"))
+                                      actionButton('to_topDEGs', label = 'Proceed', status = "success"))
                                    )
                           )
 )                  
 topDEGsTab <- tabItem(tabName = "topDEGs",
                       fluidRow(
-                        column(4,
+                        column(1,
+                               div(style = "display:inline-block; float:left", 
+                                   actionButton('backTo_volcanoPlot', label = 'Back', status = "success"))
+                               ),
+                        column(5,
                                #Input for genes to cutoff
                                      #marmomeni
                                      numericInput("cutoff","What percent of genes should be filtered out?",value=0),
@@ -56,11 +62,9 @@ topDEGsTab <- tabItem(tabName = "topDEGs",
                                 verbatimTextOutput("toptab")
                                ),
                         # @roman_ramirez
-                        column(width = 3,
+                        column(width = 1,
                               div(style = "display:inline-block; float:right", 
-                                  actionButton('to_functionalEnrichmentAnalysis', label = 'Proceed', status = "success")),
-                              div(style = "display:inline-block; float:left", 
-                                  actionButton('backTo_volcanoPlot', label = 'Back', status = "success"))
+                                  actionButton('to_functionalEnrichmentAnalysis', label = 'Proceed', status = "success"))
                                     )
                                  )
 )

@@ -1,6 +1,10 @@
 sampleGroupingTab <- tabItem(tabName = "sampleGrouping",
                            fluidRow(
-                             column(4,
+                             column(1,
+                                    div(style = "display:inline-block; float:left", 
+                                        actionButton('backTo_potentialOutliers', label = 'Back', status = "success"))
+                             ),
+                             column(5,
                                     selectInput("grouping","Select how to group samples",choices=c("Metadata Feature","Manually")),
                              ),
                              column(5,
@@ -25,11 +29,9 @@ sampleGroupingTab <- tabItem(tabName = "sampleGrouping",
                                                      htmlOutput("col_selection")
                              )),
                              # @roman_ramirez
-                             column(width = 3,
+                             column(width = 1,
                                     div(style = "display:inline-block; float:right", 
-                                        actionButton('to_volcanoPlot', label = 'Proceed', status = "success")),
-                                    div(style = "display:inline-block; float:left", 
-                                        actionButton('backTo_potentialOutliers', label = 'Back', status = "success"))
+                                        actionButton('to_volcanoPlot', label = 'Proceed', status = "success"))
                                     )
                            
                            )
