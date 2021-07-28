@@ -27,8 +27,8 @@ volcanoPlotTab <- tabItem(tabName = "volcanoPlot",
                                    ),
                             column(width = 3,
                                           div(style = "display:inline-block; float:right", 
-                                              actionButton('degAnalyzed', label = 'Proceed', status = "success")))
-                                 )
+                                              actionButton('degAnalyzed', label = 'Proceed', status = "success"))
+                                   )
 )                  
 topDEGsTab <- tabItem(tabName = "topDEGs",
                       fluidRow(
