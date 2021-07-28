@@ -86,11 +86,13 @@ body <- dashboardBody(
   )
 )
 
-
+# Valid statuses are: primary, secondary, info, success, warning, danger, gray-dark, gray, white, indigo, lightblue, navy, purple, fuchsia, pink, maroon, orange, lime, teal, olive.
 title <- dashboardBrand(
-  title = "STEM-Away",
-  color = "success",
-  opacity = 1
+  title = "",
+  color = "white",
+  opacity = 1,
+  href = "https://stemaway.com/",
+  image = "https://d1xykt6w2ydx2s.cloudfront.net/original/2X/7/73414b0fa99a6f8f21a9da7c341b927788ec502e.png"
 )
 
 

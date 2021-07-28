@@ -1,12 +1,19 @@
 function(input,output,session){
   
+  # @roman_ramirez
+  # stop app on browser close
+  session$onSessionEnded(
+    function() {
+      stopApp()
+    }
+  )
+  
   # @sam_bharti and @roman_ramirez
   # BACK AND PROCEED BUTTONS
   
   # INTRODUCTION BUTTONS
   observeEvent(input$to_end, {
-    # stops the app with exit code 0
-    stopApp(0)
+    stopApp()
   }
   )
   observeEvent(input$to_dataImport, {
