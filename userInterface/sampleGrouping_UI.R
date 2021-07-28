@@ -28,4 +28,5 @@ sampleGroupingTab <- tabItem(tabName = "sampleGrouping",
                                     div(style = "display:inline-block; float:right", 
                                         actionButton('grouped', label = 'Proceed', status = "success")))
                            )
+                           )
 )
