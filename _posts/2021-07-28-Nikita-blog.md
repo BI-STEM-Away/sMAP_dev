@@ -3,7 +3,7 @@ title: Nikita's Experience
 categories:
 - Participants
 excerpt: |
-  Nikita , click here to learn more about his experience as a participant in this project.|
+  Nikita , click here to learn more about her experience as a participant in this project.|
 feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ---
@@ -23,3 +23,5 @@ I think one aspect that makes our project unique is that we have a group of inte
 **What is the one thing you will take away from this experience?**
 
 One of the main things I will take away from this experience is that teamwork fosters technical and personal growth and allows us to produce more successful and impressive projects than we otherwise would be able to.
+
+{% include button.html text="Nikita's LinkedIn" link="https://www.linkedin.com/in/nikita-krishnan/" color="#88B98F" %}
