@@ -47,8 +47,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 
 <table><thead><tr><th style="text-align:center">Modupe Arotiba</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
-<table><thead><tr><th style="text-align:center">Sneha Raj</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg
-" alt=""></td></tr></tbody></table>
+<table><thead><tr><th style="text-align:center">Sneha Raj</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg" alt=""></td></tr></tbody></table>
 
 ##### Group B1 Members:
 
