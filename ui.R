@@ -68,8 +68,14 @@ body <- dashboardBody(
       batchCorrectionTab,
       potentialOutliersTab,
     sampleGroupingTab,
-    degAnalysisTab,
-    functionalAnalysisTab,
+    # degAnalysisTab,
+      volcanoPlotTab,
+      topDEGsTab,
+    # functionalAnalysisTab,
+      functionalEnrichmentAnalysisTab,
+      geneConceptNetworkTab,
+      gseaTab,
+      transcriptionFactorAnalysisTab,
     #    docsTab,
     faqTab,
     contactTab
@@ -133,3 +139,4 @@ dashboardPage(
   ),
   fullscreen = TRUE, dark = NULL
 )
+
