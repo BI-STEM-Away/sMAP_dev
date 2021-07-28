@@ -134,10 +134,6 @@ social_links: # Appears in sidebar. Set the urls then uncomment and comment out 
   GitHub: https://github.com/orgs/Bioinformatics-Pathway-STEM-Away/dashboard
   RSS: /feed.xml
 
-sharing_links: # Appear at the bottom of single blog posts, add as desired. The value can be 'true' or the desired button colour
-  Twitter: "#88B98F"
-  facebook: "#88B98F"
-  Email: "#88B98F"
 
 # Load custom fonts from fonts.google.com etc
 #
