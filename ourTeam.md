@@ -39,7 +39,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 
 <table><thead><tr><th style="text-align:center">Aditi Verma - C</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt=""></td></tr></tbody></table>
 
-<table><thead><tr><th style="text-align:center">Kelly Li - D</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
+<table><thead><tr><th style="text-align:center">Huikun Li - D</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
 ##### Group A Members:
 
@@ -71,7 +71,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 
 <table><thead><tr><th style="text-align:center">Ashlesha Patil</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ashlesha.jpg" alt=""></td></tr></tbody></table>
 
-<table><thead><tr><th style="text-align:center">Aditi Verma</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Logo.jpg" alt=""></td></tr></tbody></table>
+<table><thead><tr><th style="text-align:center">Aditi Verma</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt=""></td></tr></tbody></table>
 
 <table><thead><tr><th style="text-align:center">Huikun_Li</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Logo.png" alt=""></td></tr></tbody></table>
 
