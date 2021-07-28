@@ -31,7 +31,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 
 <table><thead><tr><th style="text-align:center">Disha Chauhan - A, B1, D</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
-<table><thead><tr><th style="text-align:center">Shreya Vora - B1</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Shreya.jpg" alt=""></td></tr></tbody></table>
+<table><thead><tr><th style="text-align:center">Shreya Vora - B1</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Shreya.jpg" alt=""></td></tr></tbody></table>
 
 <table><thead><tr><th style="text-align:center">Arian Veyssi - B2</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Arian_Veyssi_.png" alt=""></td></tr></tbody></table>
 
