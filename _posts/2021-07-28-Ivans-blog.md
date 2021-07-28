@@ -28,3 +28,5 @@ As I mentioned previously, coding is my big interest for participating this inte
 **Anything else you would like to add?**
 
 I think everyone has done a great job, and I hope everyone enjoyed this project, even this internship as much as I did. One thing to pinpoint is that the project's purpose should be fully developed as early as the first week to prevent hassles and confusion.
+
+{% include button.html text="Ivan's LinkedIn" link="https://www.linkedin.com/in/hou-wang-ivan-lam-56867a18b/" color="#88B98F" %}
