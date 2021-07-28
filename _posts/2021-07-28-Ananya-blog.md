@@ -3,7 +3,7 @@ title: Ananya's Experience
 categories:
 - Participants
 excerpt: |
-  Ananya is a final year college student, click here to learn more about his experience as a participant in this project.|
+  Ananya is a final year college student, click here to learn more about her experience as a participant in this project.|
 feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ---
