@@ -5,7 +5,6 @@ source('userInterface/qualityControl_UI.R')
 source('userInterface/sampleGrouping_UI.R')
 source('userInterface/degAnalysis_UI.R')
 source('userInterface/functionalAnalysis_UI.R')
-# @veyssi
 source('userInterface/arianVeyssi_faq_UI.R')
 source('userInterface/arianVeyssi_contact_UI.R')
 
