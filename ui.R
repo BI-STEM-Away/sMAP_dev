@@ -5,8 +5,8 @@ source('userInterface/qualityControl_UI.R')
 source('userInterface/sampleGrouping_UI.R')
 source('userInterface/degAnalysis_UI.R')
 source('userInterface/functionalAnalysis_UI.R')
-source('userInterface/faq_UI.R')
-source('userInterface/contact_UI.R')
+source('userInterface/arianVeyssi_faq_UI.R')
+source('userInterface/arianVeyssi_contact_UI.R')
 
 sidebar <- dashboardSidebar(
   skin = "light",
