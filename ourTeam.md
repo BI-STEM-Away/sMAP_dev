@@ -37,13 +37,13 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 
 <table><thead><tr><th style="text-align:center">Roman Ramirez - B2</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
-<table><thead><tr><th style="text-align:center">Aditi Verma - C</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
+<table><thead><tr><th style="text-align:center">Aditi Verma - C</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt=""></td></tr></tbody></table>
 
 <table><thead><tr><th style="text-align:center">Kelly Li - D</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
 ##### Group A Members:
 
-<table><thead><tr><th style="text-align:center">Maryam Momemi</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
+<table><thead><tr><th style="text-align:center">Maryam Momeni</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Maryam.jpg" alt=""></td></tr></tbody></table>
 
 <table><thead><tr><th style="text-align:center">Modupe Arotiba</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
@@ -52,6 +52,12 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ##### Group B1 Members:
 
 ##### Group B2 Members:
+
+<table><thead><tr><th style="text-align:center">Ivan Lam</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ivan_Lam.png" alt=""></td></tr></tbody></table>
+
+<table><thead><tr><th style="text-align:center">Ananya Kaushik</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ananya_Kaushik.png" alt=""></td></tr></tbody></table>
+
+<table><thead><tr><th style="text-align:center">Ashlesha Patil</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ashlesha.jpg" alt=""></td></tr></tbody></table>
 
 ##### Group C Members:
 
