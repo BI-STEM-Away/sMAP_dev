@@ -22,9 +22,12 @@ qCTab <- tabItem(tabName = "qC",
                                          textOutput("norm_comp"),
                                          
                                   ),
+                                  # @roman_ramirez
                                   column(width = 3,
                                          div(style = "display:inline-block; float:right", 
-                                             actionButton('to_normalization', label = 'Proceed', status = "success"))
+                                             actionButton('to_normalization', label = 'Proceed', status = "success")),
+                                         div(style = "display:inline-block; float:left", 
+                                             actionButton('backTo_dataImport', label = 'Back', status = "success"))
                                   )
                               )
 )
@@ -41,9 +44,12 @@ normalizationTab <- tabItem(tabName = "normalization",
                                          htmlOutput("pc_comp"),
                                          htmlOutput("feat"),
                                   ),
+                                  # @roman_ramirez
                                   column(width = 3,
                                          div(style = "display:inline-block; float:right", 
-                                             actionButton('to_batchCorrection', label = 'Proceed', status = "success"))
+                                             actionButton('to_batchCorrection', label = 'Proceed', status = "success")),
+                                         div(style = "display:inline-block; float:left", 
+                                             actionButton('backTo_qC', label = 'Back', status = "success"))
                                   )
                               )
 )
@@ -64,9 +70,12 @@ batchCorrectionTab <- tabItem(tabName = "batchCorrection",
                                         htmlOutput("remove"),
                                         
                                  ),
+                                 # @roman_ramirez
                                  column(width = 3,
                                         div(style = "display:inline-block; float:right", 
-                                            actionButton('to_potentialOutliers', label = 'Proceed', status = "success"))
+                                            actionButton('to_potentialOutliers', label = 'Proceed', status = "success")),
+                                        div(style = "display:inline-block; float:left", 
+                                            actionButton('backTo_normalization', label = 'Back', status = "success"))
                                  )
                              )
 )
@@ -85,9 +94,12 @@ potentialOutliersTab <- tabItem(tabName = "potentialOutliers",
                                                dataTableOutput("newexprs")
                                             
                                         ),
+                                        # @roman_ramirez
                                         column(width = 3,
                                                div(style = "display:inline-block; float:right", 
-                                                   actionButton('to_sampleGrouping', label = 'Proceed', status = "success"))
+                                                   actionButton('to_sampleGrouping', label = 'Proceed', status = "success")),
+                                               div(style = "display:inline-block; float:left", 
+                                                   actionButton('backTo_batchCorrection', label = 'Back', status = "success"))
                                         )
                                     )
 )

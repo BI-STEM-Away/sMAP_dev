@@ -29,9 +29,12 @@ dataImportTab <- tabItem(tabName = "dataImport",
                                  #Text output to confirm data has been uploaded
                                  h1(textOutput("obj"),align="center")
                                ),
-                               
+                               # @roman_ramirez
                                column(width = 3,
                                       div(style = "display:inline-block; float:right", 
-                                          actionButton('to_qC', label = 'Proceed', status = "success")))
+                                          actionButton('to_qC', label = 'Proceed', status = "success")),
+                                      div(style = "display:inline-block; float:left", 
+                                          actionButton('to_introduction', label = 'Back', status = "success"))
+                                      )
                              )
 )

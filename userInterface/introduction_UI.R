@@ -13,6 +13,7 @@ introductionTab <- tabItem(tabName = "introduction",
                                           href = "https://stemaway.com/" 
                                        )
                                 ),
+                                # @roman_ramirez
                                 column(3,
                                        div(style = "display:inline-block; float:right", 
                                            actionButton('to_dataImport', label = 'Begin', status = "success")),

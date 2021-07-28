@@ -25,9 +25,12 @@ volcanoPlotTab <- tabItem(tabName = "volcanoPlot",
                             column(5,
                                   plotOutput("plot1")
                                    ),
+                            # @roman_ramirez
                             column(width = 3,
-                                          div(style = "display:inline-block; float:right", 
-                                              actionButton('to_topDEGs', label = 'Proceed', status = "success"))
+                                  div(style = "display:inline-block; float:right", 
+                                      actionButton('to_topDEGs', label = 'Proceed', status = "success")),
+                                   div(style = "display:inline-block; float:left", 
+                                       actionButton('backTo_sampleGrouping', label = 'Back', status = "success"))
                                    )
                           )
 )                  
@@ -52,8 +55,12 @@ topDEGsTab <- tabItem(tabName = "topDEGs",
                                 textOutput("gen_filt"),
                                 verbatimTextOutput("toptab")
                                ),
+                        # @roman_ramirez
                         column(width = 3,
-                                          div(style = "display:inline-block; float:right", 
-                                              actionButton('to_functionalEnrichmentAnalysis', label = 'Proceed', status = "success")))
+                              div(style = "display:inline-block; float:right", 
+                                  actionButton('to_functionalEnrichmentAnalysis', label = 'Proceed', status = "success")),
+                              div(style = "display:inline-block; float:left", 
+                                  actionButton('backTo_volcanoPlot', label = 'Back', status = "success"))
+                                    )
                                  )
 )

@@ -24,9 +24,12 @@ sampleGroupingTab <- tabItem(tabName = "sampleGrouping",
                                     conditionalPanel(condition="input.grouping=='Metadata Feature'",
                                                      htmlOutput("col_selection")
                              )),
+                             # @roman_ramirez
                              column(width = 3,
                                     div(style = "display:inline-block; float:right", 
-                                        actionButton('to_volcanoPlot', label = 'Proceed', status = "success"))
+                                        actionButton('to_volcanoPlot', label = 'Proceed', status = "success")),
+                                    div(style = "display:inline-block; float:left", 
+                                        actionButton('backTo_potentialOutliers', label = 'Back', status = "success"))
                                     )
                            
                            )

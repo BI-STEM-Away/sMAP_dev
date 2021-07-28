@@ -1,28 +1,39 @@
 function(input,output,session){
   
-  # @sam_bharti and # @roman_ramirez
-  # PROCEED BUTTONS
+  # @sam_bharti and @roman_ramirez
+  # BACK AND PROCEED BUTTONS
   
   # INTRODUCTION BUTTONS
-  observeEvent(input$to_dataImport, {
-    updateTabItems(session, "tabs", "dataImport")
-  }
-  )
-  # @roman_ramirez
   observeEvent(input$to_end, {
     # stops the app with exit code 0
     stopApp(0)
   }
   )
+  observeEvent(input$to_dataImport, {
+    updateTabItems(session, "tabs", "dataImport")
+  }
+  )
   
   # DATA IMPORT BUTTONS
+  observeEvent(input$backTo_dataImport, {
+    updateTabItems(session, "tabs", "dataImport")
+  }
+  )
   observeEvent(input$to_qC, {
     updateTabItems(session, "tabs", "qC")
   }
   )
   
   # QC BUTTONS 
+  observeEvent(input$backTo_qC, {
+    updateTabItems(session, "tabs", "qC")
+  }
+  )
   observeEvent(input$to_normalization, {
+    updateTabItems(session, "tabs", "normalization")
+  }
+  )
+  observeEvent(input$backTo_normalization, {
     updateTabItems(session, "tabs", "normalization")
   }
   )
@@ -30,7 +41,15 @@ function(input,output,session){
     updateTabItems(session, "tabs", "batchCorrection")
   }
   )
+  observeEvent(input$backTo_batchCorrection, {
+    updateTabItems(session, "tabs", "batchCorrection")
+  }
+  )
   observeEvent(input$to_potentialOutliers, {
+    updateTabItems(session, "tabs", "potentialOutliers")
+  }
+  )
+  observeEvent(input$backTo_potentialOutliers, {
     updateTabItems(session, "tabs", "potentialOutliers")
   }
   )
@@ -40,6 +59,10 @@ function(input,output,session){
   )
   
   # SAMPLE GROUPING BUTTONS
+  observeEvent(input$backTo_sampleGrouping, {
+    updateTabItems(session, "tabs", "sampleGrouping")
+  }
+  )
   observeEvent(input$to_volcanoPlot, {
     updateTabItems(session, "tabs", "volcanoPlot")
   }
@@ -47,7 +70,15 @@ function(input,output,session){
   
   
   # DEG ANALYSIS BUTTONS
+  observeEvent(input$backTo_volcanoPlot, {
+    updateTabItems(session, "tabs", "volcanoPlot")
+  }
+  )
   observeEvent(input$to_topDEGs, {
+    updateTabItems(session, "tabs", "topDEGs")
+  }
+  )
+  observeEvent(input$backTo_topDEGs, {
     updateTabItems(session, "tabs", "topDEGs")
   }
   )
@@ -57,7 +88,15 @@ function(input,output,session){
   )
   
   # FUNCTIONAL ANALYSIS BUTTONS
+  observeEvent(input$backTo_functionalEnrichmentAnalysis, {
+    updateTabItems(session, "tabs", "functionalEnrichmentAnalysis")
+  }
+  )
   observeEvent(input$to_geneConceptNetwork, {
+    updateTabItems(session, "tabs", "geneConceptNetwork")
+  }
+  )
+  observeEvent(input$backTo_geneConceptNetwork, {
     updateTabItems(session, "tabs", "geneConceptNetwork")
   }
   )
@@ -65,7 +104,15 @@ function(input,output,session){
     updateTabItems(session, "tabs", "gsea")
   }
   )
+  observeEvent(input$backTo_gsea, {
+    updateTabItems(session, "tabs", "gsea")
+  }
+  )
   observeEvent(input$to_transcriptionFactorAnalysis, {
+    updateTabItems(session, "tabs", "transcriptionFactorAnalysis")
+  }
+  )
+  observeEvent(input$backTo_transcriptionFactorAnalysis, {
     updateTabItems(session, "tabs", "transcriptionFactorAnalysis")
   }
   )
