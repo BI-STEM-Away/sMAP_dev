@@ -35,7 +35,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 
 <table><thead><tr><th style="text-align:center">Arian Veyssi - B2</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Arian_Veyssi_.png" alt=""></td></tr></tbody></table>
 
-<table><thead><tr><th style="text-align:center">Roman Ramirez - B2</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
+<table><thead><tr><th style="text-align:center">Roman Ramirez - B2</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Roman.jpg" alt=""></td></tr></tbody></table>
 
 <table><thead><tr><th style="text-align:center">Aditi Verma - C</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt=""></td></tr></tbody></table>
 
