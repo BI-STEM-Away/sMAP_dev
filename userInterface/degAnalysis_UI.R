@@ -32,7 +32,7 @@ volcanoPlotTab <- tabItem(tabName = "volcanoPlot",
                             # @roman_ramirez
                             column(width = 1,
                                   div(style = "display:inline-block; float:right", 
-                                      actionButton('to_topDEGs', label = 'Proceed', status = "success"))
+                                      actionButton('to_topDEGs', label = 'Next', status = "success"))
                                    )
                           )
 )                  
@@ -64,7 +64,7 @@ topDEGsTab <- tabItem(tabName = "topDEGs",
                         # @roman_ramirez
                         column(width = 1,
                               div(style = "display:inline-block; float:right", 
-                                  actionButton('to_functionalEnrichmentAnalysis', label = 'Proceed', status = "success"))
+                                  actionButton('to_functionalEnrichmentAnalysis', label = 'Next', status = "success"))
                                     )
                                  )
 )

@@ -31,7 +31,7 @@ sampleGroupingTab <- tabItem(tabName = "sampleGrouping",
                              # @roman_ramirez
                              column(width = 1,
                                     div(style = "display:inline-block; float:right", 
-                                        actionButton('to_volcanoPlot', label = 'Proceed', status = "success"))
+                                        actionButton('to_volcanoPlot', label = 'Next', status = "success"))
                                     )
                            
                            )

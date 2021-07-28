@@ -21,7 +21,7 @@ functionalEnrichmentAnalysisTab <- tabItem(tabName = "functionalEnrichmentAnalys
                                              # @roman_ramirez
                                              column(width = 1,
                                                     div(style = "display:inline-block; float:right", 
-                                                        actionButton('to_geneConceptNetwork', label = 'Proceed', status = "success"))
+                                                        actionButton('to_geneConceptNetwork', label = 'Next', status = "success"))
                                                     )
                                              )
 )                                        
@@ -40,7 +40,7 @@ geneConceptNetworkTab <- tabItem(tabName = "geneConceptNetwork",
                                              # @roman_ramirez
                                              column(width = 1,
                                                     div(style = "display:inline-block; float:right", 
-                                                        actionButton('to_gsea', label = 'Proceed', status = "success"))
+                                                        actionButton('to_gsea', label = 'Next', status = "success"))
                                              )
                                              )
 )                                
@@ -59,7 +59,7 @@ gseaTab <- tabItem(tabName = "gsea",
                                              # @roman_ramirez
                                              column(width = 1,
                                                     div(style = "display:inline-block; float:right", 
-                                                        actionButton('to_transcriptionFactorAnalysis', label = 'Proceed', status = "success"))
+                                                        actionButton('to_transcriptionFactorAnalysis', label = 'Next', status = "success"))
                                              )
                                              )
 )                  

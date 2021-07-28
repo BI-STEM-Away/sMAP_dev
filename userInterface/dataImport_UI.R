@@ -36,7 +36,7 @@ dataImportTab <- tabItem(tabName = "dataImport",
                                # @roman_ramirez
                                column(1,
                                       div(style = "display:inline-block; float:right", 
-                                          actionButton('to_qC', label = 'Proceed', status = "success"))
+                                          actionButton('to_qC', label = 'Next', status = "success"))
                                       )
                              )
 )

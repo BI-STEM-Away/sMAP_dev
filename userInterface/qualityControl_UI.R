@@ -29,7 +29,7 @@ qCTab <- tabItem(tabName = "qC",
                                   # @roman_ramirez
                                   column(width = 1,
                                          div(style = "display:inline-block; float:right", 
-                                             actionButton('to_normalization', label = 'Proceed', status = "success"))
+                                             actionButton('to_normalization', label = 'Next', status = "success"))
                                   )
                               )
 )
@@ -53,7 +53,7 @@ normalizationTab <- tabItem(tabName = "normalization",
                                   # @roman_ramirez
                                   column(width = 1,
                                          div(style = "display:inline-block; float:right", 
-                                             actionButton('to_batchCorrection', label = 'Proceed', status = "success"))
+                                             actionButton('to_batchCorrection', label = 'Next', status = "success"))
                                   )
                               )
 )
@@ -81,7 +81,7 @@ batchCorrectionTab <- tabItem(tabName = "batchCorrection",
                                  # @roman_ramirez
                                  column(width = 1,
                                         div(style = "display:inline-block; float:right", 
-                                            actionButton('to_potentialOutliers', label = 'Proceed', status = "success"))
+                                            actionButton('to_potentialOutliers', label = 'Next', status = "success"))
                                  )
                              )
 )
@@ -107,7 +107,7 @@ potentialOutliersTab <- tabItem(tabName = "potentialOutliers",
                                         # @roman_ramirez
                                         column(width = 1,
                                                div(style = "display:inline-block; float:right", 
-                                                   actionButton('to_sampleGrouping', label = 'Proceed', status = "success"))
+                                                   actionButton('to_sampleGrouping', label = 'Next', status = "success"))
                                         )
                                     )
 )
