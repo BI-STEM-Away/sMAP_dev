@@ -87,11 +87,8 @@ body <- dashboardBody(
 )
 
 
-
-
-
 title <- dashboardBrand(
-  title = "App Name",
+  title = "STEM-Away",
   color = "success",
   opacity = 1
 )
