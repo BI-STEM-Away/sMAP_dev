@@ -3,7 +3,7 @@ title: Arian's Experience
 categories:
 - Participants
 excerpt: |
-  Arian is a first year Ph.D. student, click here to learn more about his experience as a participant in this project.|
+  Arian is a first year Ph.D. student, click here to learn more about her experience as a participant in this project.|
 feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ---
@@ -27,4 +27,4 @@ I really enjoyed learning the variety of different skills from the different pro
 I think the main thing that I will take away are my newfound project management skills. By being a project leader for two different projects, I had the opportunity to see firsthand how important it is to break down a project into more manageable pieces and create a timeline to allow the team to reach its fullest potential.
 
 
-{% include button.html text="Ananya's LinkedIn" link="https://www.linkedin.com/in/arian-veyssi-558446218/" color="#88B98F" %}
+{% include button.html text="Arian's LinkedIn" link="https://www.linkedin.com/in/arian-veyssi-558446218/" color="#88B98F" %}
