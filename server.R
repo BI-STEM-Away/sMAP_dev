@@ -1,11 +1,17 @@
 function(input,output,session){
   
-  # sam_bharti and roman_ramirez
+  # @sam_bharti and # @roman_ramirez
   # PROCEED BUTTONS
   
   # INTRODUCTION BUTTONS
   observeEvent(input$to_dataImport, {
     updateTabItems(session, "tabs", "dataImport")
+  }
+  )
+  # @roman_ramirez
+  observeEvent(input$to_end, {
+    # stops the app with exit code 0
+    stopApp(0)
   }
   )
   
