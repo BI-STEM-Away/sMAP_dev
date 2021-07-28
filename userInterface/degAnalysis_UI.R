@@ -20,15 +20,16 @@ volcanoPlotTab <- tabItem(tabName = "volcanoPlot",
                                                           value =1, step = 0.05),
                                   shinyWidgets::sliderTextInput("m", "Adjusted P-Value cutoff", 
                                                                             choices=c(1e-5,1e-10,1e-15,1e-20,1e-25,1e-30,1e-35,1e-40,1e-45,1e-50),
-                                                                            grid=TRUE))
+                                                                            grid=TRUE)
                                    ),
                             column(5,
                                   plotOutput("plot1")
                                    ),
                             column(width = 3,
                                           div(style = "display:inline-block; float:right", 
-                                              actionButton('degAnalyzed', label = 'Proceed', status = "success"))
+                                              actionButton('to_topDEGs', label = 'Proceed', status = "success"))
                                    )
+                          )
 )                  
 topDEGsTab <- tabItem(tabName = "topDEGs",
                       fluidRow(
@@ -53,6 +54,6 @@ topDEGsTab <- tabItem(tabName = "topDEGs",
                                ),
                         column(width = 3,
                                           div(style = "display:inline-block; float:right", 
-                                              actionButton('degAnalyzed', label = 'Proceed', status = "success")))
+                                              actionButton('to_functionalEnrichmentAnalysis', label = 'Proceed', status = "success")))
                                  )
 )

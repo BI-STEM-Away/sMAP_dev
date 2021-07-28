@@ -1,7 +1,6 @@
 dataImportTab <- tabItem(tabName = "dataImport",
                              fluidRow(
                                column(9,
-                                 HTML("Data Import Page"),
                                  #Selection Input to decide what type of file they want to input: CSV/txt, CEL files, IDAT files, or GEO Accession number
                                  selectInput("dat_type","Input Type",choices=list("Processed Expression Data (CSV/txt File)","Raw Affymetrix Data (.tar File Containing CEL Files)","Raw Illumina Data (.tar File Containing IDAT Files)","GEO Accession Number")),
                                  #Panel that appears if CSV/txt file type selected
@@ -23,15 +22,16 @@ dataImportTab <- tabItem(tabName = "dataImport",
                                  ),
                                  #Input that comes from server function; takes columns of metadata, asks user which feature to analyze
                                  fileInput("metadata","Metadata (CSV)"),
-                                 actionButton("loaddat","Load Data")
+                                 actionButton("loaddat","Load Data"),
+                                 
+                                 
+                                 #ShreyaVora14 and nk468188
+                                 #Text output to confirm data has been uploaded
+                                 h1(textOutput("obj"),align="center")
                                ),
                                
-                               column(width=12,
-                                      #ShreyaVora14 and nk468188
-                                      #Text output to confirm data has been uploaded
-                                      h1(textOutput("obj"),align="center")),
                                column(width = 3,
                                       div(style = "display:inline-block; float:right", 
-                                          actionButton('dataImported', label = 'Proceed', status = "success")))
+                                          actionButton('to_qC', label = 'Proceed', status = "success")))
                              )
 )

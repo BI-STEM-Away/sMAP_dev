@@ -15,7 +15,7 @@ introductionTab <- tabItem(tabName = "introduction",
                                 ),
                                 column(3,
                                        div(style = "display:inline-block; float:right", 
-                                           actionButton('start', label = 'Begin', status = "success"))
+                                           actionButton('to_dataImport', label = 'Begin', status = "success"))
                                 )
                             )
 

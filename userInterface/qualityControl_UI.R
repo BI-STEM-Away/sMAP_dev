@@ -21,6 +21,10 @@ qCTab <- tabItem(tabName = "qC",
                                          textOutput("normal"),
                                          textOutput("norm_comp"),
                                          
+                                  ),
+                                  column(width = 3,
+                                         div(style = "display:inline-block; float:right", 
+                                             actionButton('to_normalization', label = 'Proceed', status = "success"))
                                   )
                               )
 )
@@ -36,6 +40,10 @@ normalizationTab <- tabItem(tabName = "normalization",
                                          textOutput("batch_com"),
                                          htmlOutput("pc_comp"),
                                          htmlOutput("feat"),
+                                  ),
+                                  column(width = 3,
+                                         div(style = "display:inline-block; float:right", 
+                                             actionButton('to_batchCorrection', label = 'Proceed', status = "success"))
                                   )
                               )
 )
@@ -55,6 +63,10 @@ batchCorrectionTab <- tabItem(tabName = "batchCorrection",
                                         plotOutput("qcplot"),
                                         htmlOutput("remove"),
                                         
+                                 ),
+                                 column(width = 3,
+                                        div(style = "display:inline-block; float:right", 
+                                            actionButton('to_potentialOutliers', label = 'Proceed', status = "success"))
                                  )
                              )
 )
@@ -72,6 +84,10 @@ potentialOutliersTab <- tabItem(tabName = "potentialOutliers",
                                                plotOutput("outplot"),
                                                dataTableOutput("newexprs")
                                             
+                                        ),
+                                        column(width = 3,
+                                               div(style = "display:inline-block; float:right", 
+                                                   actionButton('to_sampleGrouping', label = 'Proceed', status = "success"))
                                         )
                                     )
 )

@@ -23,10 +23,11 @@ sampleGroupingTab <- tabItem(tabName = "sampleGrouping",
                                     #Assign groups based on metadata
                                     conditionalPanel(condition="input.grouping=='Metadata Feature'",
                                                      htmlOutput("col_selection")
-                             ),
+                             )),
                              column(width = 3,
                                     div(style = "display:inline-block; float:right", 
-                                        actionButton('grouped', label = 'Proceed', status = "success")))
-                           )
+                                        actionButton('to_volcanoPlot', label = 'Proceed', status = "success"))
+                                    )
+                           
                            )
 )

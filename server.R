@@ -1,23 +1,70 @@
 function(input,output,session){
   
-  observeEvent(input$start, {
+  # sam_bharti and roman_ramirez
+  # PROCEED BUTTONS
+  
+  # INTRODUCTION BUTTONS
+  observeEvent(input$to_dataImport, {
     updateTabItems(session, "tabs", "dataImport")
   }
   )
-  observeEvent(input$dataImported, {
-    updateTabItems(session, "tabs", "qualityControl")
+  
+  # DATA IMPORT BUTTONS
+  observeEvent(input$to_qC, {
+    updateTabItems(session, "tabs", "qC")
   }
   )
-  observeEvent(input$qcAnalyzed, {
+  
+  # QC BUTTONS 
+  observeEvent(input$to_normalization, {
+    updateTabItems(session, "tabs", "normalization")
+  }
+  )
+  observeEvent(input$to_batchCorrection, {
+    updateTabItems(session, "tabs", "batchCorrection")
+  }
+  )
+  observeEvent(input$to_potentialOutliers, {
+    updateTabItems(session, "tabs", "potentialOutliers")
+  }
+  )
+  observeEvent(input$to_sampleGrouping, {
     updateTabItems(session, "tabs", "sampleGrouping")
   }
   )
-  observeEvent(input$grouped, {
-    updateTabItems(session, "tabs", "degAnalysis")
+  
+  # SAMPLE GROUPING BUTTONS
+  observeEvent(input$to_volcanoPlot, {
+    updateTabItems(session, "tabs", "volcanoPlot")
   }
   )
-  observeEvent(input$degAnalyzed, {
-    updateTabItems(session, "tabs", "functionalAnalysis")
+  
+  
+  # DEG ANALYSIS BUTTONS
+  observeEvent(input$to_topDEGs, {
+    updateTabItems(session, "tabs", "topDEGs")
+  }
+  )
+  observeEvent(input$to_functionalEnrichmentAnalysis, {
+    updateTabItems(session, "tabs", "functionalEnrichmentAnalysis")
+  }
+  )
+  
+  # FUNCTIONAL ANALYSIS BUTTONS
+  observeEvent(input$to_geneConceptNetwork, {
+    updateTabItems(session, "tabs", "geneConceptNetwork")
+  }
+  )
+  observeEvent(input$to_gsea, {
+    updateTabItems(session, "tabs", "gsea")
+  }
+  )
+  observeEvent(input$to_transcriptionFactorAnalysis, {
+    updateTabItems(session, "tabs", "transcriptionFactorAnalysis")
+  }
+  )
+  observeEvent(input$to_introduction, {
+    updateTabItems(session, "tabs", "introduction")
   }
   )
   
