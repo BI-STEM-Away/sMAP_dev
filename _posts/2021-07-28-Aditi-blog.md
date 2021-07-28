@@ -3,7 +3,7 @@ title: Aditi's Experience
 categories:
 - Participants
 excerpt: |
-  Aditi is a high school senior, click here to learn more about his experience as a participant in this project.|
+  Aditi is a high school senior, click here to learn more about her experience as a participant in this project.|
 feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ---
