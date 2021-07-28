@@ -192,7 +192,8 @@ function(input,output,session){
         }
     }))
     
-    
+    #disha-22
+    #normalize data
     observeEvent(input$normlzdata,{output$normal<-{
         if(is.null(celdat()) && is.null(geo_data())){
             renderText("Normalization only needed for CEL Files")
@@ -234,6 +235,7 @@ function(input,output,session){
     
     final_qc_dat<-reactiveVal()
     
+    #nk468188
     observeEvent(input$normlzdata,
                  {
                      if(is.null(celdat()) && is.null(geo_data())){
