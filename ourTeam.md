@@ -84,4 +84,4 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ##### Group D Members:
 <table><thead><tr><th style="text-align:center">Modupe Arotiba</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
 
-<table><thead><tr><th style="text-align:center">Hale Ozbek</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
+<table><thead><tr><th style="text-align:center">Hale Ozbek</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Hale.jpeg" alt=""></td></tr></tbody></table>
