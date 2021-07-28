@@ -27,7 +27,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 
 ##### Group Managers:
 
-<table><thead><tr><th style="text-align:center">Nikita Krishnan - A, B1</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/Logo.png" alt=""></td></tr></tbody></table>
+<table><thead><tr><th style="text-align:center">Nikita Krishnan - A, B1</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg" alt=""></td></tr></tbody></table>
 
 <table><thead><tr><th style="text-align:center">Disha Chauhan - A, B1, D</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt=""></td></tr></tbody></table>
 
