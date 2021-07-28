@@ -15,7 +15,7 @@ functionalEnrichmentAnalysisTab <- tabItem(tabName = "functionalEnrichmentAnalys
                                                     HTML("Insert output FEA code here")
                                                     )
                                              )
-                                           
+)                                        
 geneConceptNetworkTab <- tabItem(tabName = "geneConceptNetwork",
                                            fluidRow(
                                              column(6,
@@ -25,7 +25,7 @@ geneConceptNetworkTab <- tabItem(tabName = "geneConceptNetwork",
                                                     HTML("Insert output GCN code here")
                                                     )
                                              )
-                                 
+)                                
 gseaTab <- tabItem(tabName = "gsea",
                                            fluidRow(
                                              column(6,
@@ -35,7 +35,7 @@ gseaTab <- tabItem(tabName = "gsea",
                                                     HTML("Insert output GSEA code here")
                                                     )
                                              )
-                   
+)                  
 transcriptionFactorAnalysisTab <- tabItem(tabName = "transcriptionFactorAnalysis",
                                            fluidRow(
                                              column(6,
@@ -45,3 +45,4 @@ transcriptionFactorAnalysisTab <- tabItem(tabName = "transcriptionFactorAnalysis
                                                     HTML("Insert output TFA code here")
                                                     )
                                              )
+)
