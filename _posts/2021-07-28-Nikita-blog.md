@@ -3,7 +3,7 @@ title: Nikita's Experience
 categories:
 - Group Managers
 excerpt: |
-  Nikita , click here to learn more about her experience as a participant in this project.|
+  Nikita is a master's student at Cornell University, click here to learn more about her experience as a participant in this project.|
 feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ---
