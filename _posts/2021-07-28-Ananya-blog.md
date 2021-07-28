@@ -23,3 +23,6 @@ image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 
 
 **Anything else you would like to add?**
+
+
+{% include button.html text="Ananya's LinkedIn" link="https://www.linkedin.com/in/ananya-kaushik-508b731a3/" color="#88B98F" %}
