@@ -21,6 +21,7 @@ Communicating with people from different counties is really interesting for me a
 One unique aspect of this project that should be appreciated is the attempt of our leads like Samuel, Nikita, and, so on. They spend a lot of time holding meetings and advancing the project. And their efforts are truly commendable.
 
 **What is the one thing you will take away from this experience?**
+
 Experience in remote work in the field of bioinformatics.
 
 {% include button.html text="Maryam's LinkedIn" link="https://www.linkedin.com/in/maryam-momeni/" color="#88B98F" %}
