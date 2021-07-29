@@ -6,7 +6,7 @@ introductionTab <- tabItem(tabName = "introduction",
                                        align="center",
                                        #Introduction block 
                                        jumbotron(
-                                          status = "info",
+                                          status = "info",btnName = NULL,
                                           title = HTML("<b>STEM-Away Transcriptomics Pipeline Application</b>"),
                                           lead = "An application for processing quality control, statistical and functional analysis of a 
                                           GEO dataset in order to find potential biomarkers.",
