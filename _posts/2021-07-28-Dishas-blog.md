@@ -5,8 +5,6 @@ categories:
 - Project Managers
 excerpt: |
   Disha is a rising senior in high school, click here to learn more about her experience as a project manager and group manager in this project.|
-feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
-image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ---
 
 **What were the most challenging moments in developing the app?**
