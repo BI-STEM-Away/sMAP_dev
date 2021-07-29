@@ -14,7 +14,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt="" width="100"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt="" width="100" height="150"></td>
     </tr>
   </tbody>
 </table>
