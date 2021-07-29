@@ -7,7 +7,6 @@ source('userInterface/degAnalysis_UI.R')
 source('userInterface/functionalAnalysis_UI.R')
 source('userInterface/faq_UI.R')
 source('userInterface/contact_UI.R')
-source('userInterface/controlbar_UI.R')
 
 sidebar <- dashboardSidebar(
   skin = "light",
@@ -96,7 +95,19 @@ title <- dashboardBrand(
   image = "https://d1xykt6w2ydx2s.cloudfront.net/original/2X/7/73414b0fa99a6f8f21a9da7c341b927788ec502e.png"
 )
 
-
+controlbar <- dashboardControlbar(
+  id = NULL,
+  disable = FALSE,
+  width = 500,
+  collapse = TRUE,
+  skin = "light",
+  controlbarMenu(
+    h1("Questions? Feedback?"),
+    p("Please leave us a comment in the link below"),
+    p("Links:"), 
+    a(strong("Typeform"), href = "https://www.typeform.com/", style = "font-size : 25px;")
+  )
+)
 
 dashboardPage(
   freshTheme = create_theme(
