@@ -1,6 +1,6 @@
 contactTab <- tabItem(tabName = "contact",
                       fluidRow(
-                        column(4, offset=1, 
+                        column(5, offset=1, 
                                h4("Samuel Bharti"),
                                h6("Role: Project Technical Lead"),
                                h6(img(src = "email.png", height = 30, width = 30), "-"),
@@ -32,7 +32,7 @@ contactTab <- tabItem(tabName = "contact",
                                h6(img(src = "linkedin.png", height = 30, width = 30), 
                                   a("-"))),
                         
-                        column(4, offset = 2,
+                        column(5, offset = 2,
                                h4("Arian Veyssi"),
                                h6("Role: Bioinformatics Project Lead, Group B2 Manager"),
                                h6(img(src = "email.png", height = 30, width = 30), "veyssi20@gmail.com"),
