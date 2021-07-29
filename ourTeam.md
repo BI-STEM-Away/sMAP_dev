@@ -46,6 +46,31 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   </tbody>
 </table>
 
+##### Group A
+<table>
+  <thead>
+    <tr>
+      <!-- Names -->
+      <th>Nikita</th>
+      <th>Disha</th>
+      <th>Maryam</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Images -->
+    <tr>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Maryam.jpg" alt=""></td>
+    </tr>
+    <!-- Captions -->
+    <tr>
+      <td>Group Manager</td>
+      <td>Group Manager</td>
+    </tr>
+  </tbody>
+</table>
+
 ##### Group Managers:
 <table>
   <thead>
