@@ -55,6 +55,7 @@ a {
     @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
 
     font-feature-settings: 'kern', 'onum', 'liga';
+    font-family: unquote(map-get($headingtype, font-family));
   }
 
   // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
@@ -272,7 +273,6 @@ a {
     p {
       border-left: 0.15rem solid $linkColour;
       font-style: map-get($bodytype, italic);
-      font-family: unquote(map-get($headingtype, font-family));
       padding-left: 1rem;
 
       // Add spacing below blockquote paragraphs to align to baseline grid.
