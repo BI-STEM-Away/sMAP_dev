@@ -10,10 +10,8 @@ excerpt: "Our goal for creating this educational app is to help experts and inte
 This app is to help users better understand functional interactive transcriptomics pipeline.
 
 {% include button.html text="Our GitHub" icon="github" link="https://github.com/BI-STEM-Away/shiny_app_dev" color="#88B98F" %} {% include button.html text="App Documentation" link="" color="#88B98F" %} {% include button.html text="STEM-Away"  link="https://stemaway.com/" color="#88B98F" %} {% include button.html text="Our LinkedIn" link="https://www.linkedin.com/company/stemaway/" color="#88B98F" %}
-
-  ## Team Structure
-  Our team consists of five sub-groups:
-
+-
+- ## Team Structure
 - Group A - In charge of developing code for the transcriptomics pipeline.
 
 - Group B1 - In charge of taking the code from group A and implementing it in R Shiny.
