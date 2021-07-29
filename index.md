@@ -12,3 +12,5 @@ Our goal for this educational app is to create a functional interactive transcri
 {% include button.html text="Our GitHub" icon="github" link="https://github.com/BI-STEM-Away/shiny_app_dev" color="#88B98F" %} {% include button.html text="App Documentation" link="" color="#88B98F" %} {% include button.html text="STEM-Away"  link="https://stemaway.com/" color="#88B98F" %} {% include button.html text="Our LinkedIn" link="https://www.linkedin.com/company/stemaway/" color="#88B98F" %}
 
 ## Team Structure
+
+{% include button.html text="Disha's LinkedIn" link="https://www.linkedin.com/in/disha-chauhan-2749621b0/" color="#88B98F" %}
