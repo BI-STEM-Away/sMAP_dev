@@ -4,82 +4,218 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ---
 
 ##### Project Technical Lead:
-
 <table>
   <thead>
     <tr>
-      <th style="text-align:center">Samuel Bharti</th>
+      <!-- Names -->
+      <th>Samuel Bharti</th>
     </tr>
-  </thead>  
+  </thead>
   <tbody>
+    <!-- Images -->
     <tr>
-      <td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt=""></td>
     </tr>
-  </tbody> 
+    <!-- Captions -->
+    <tr>
+      <td>Insert Samuel's Caption here</td>
+    </tr>
+  </tbody>
 </table>
 
-
 ##### Project Management Leads:
-
-<table><thead><tr><th style="text-align:center">Disha Chauhan</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Austin Yang</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Austin.png" alt=""></td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <!-- Names -->
+      <th>Disha</th>
+      <th>Austin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Images -->
+    <tr>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Austin.png" alt=""></td>
+    </tr>
+    <!-- Captions -->
+    <tr>
+      <td>Insert Disha's Caption here</td>
+      <td>Insert Austin's Caption here</td>
+    </tr>
+  </tbody>
+</table>
 
 ##### Group Managers:
-
-<table><thead><tr><th style="text-align:center">Nikita Krishnan - A, B1</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Disha Chauhan - A, B1, D</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Shreya Vora - B1</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Shreya.jpg" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Arian Veyssi - B2</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Arian_Veyssi_.png" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Roman Ramirez - B2</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Roman.jpeg" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Aditi Verma - C</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Huikun Li - D</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg" alt=""></td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <!-- Names -->
+      <th>Nikita Krishnan - A, B1</th>
+      <th>Disha Chauhan - A, B1, D</th>
+      <th>Shreya Vora - B1</th>
+      <th>Arian Veyssi - B2</th>
+      <th>Roman Ramirez - B2</th>
+      <th>Aditi Verma - C</th>
+      <th>Huikun Li - D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Images -->
+    <tr>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Shreya.jpg" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Arian_Veyssi_.png" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Roman.jpeg" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg" alt=""></td>
+    </tr>
+    <!-- Captions -->
+    <tr>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+    </tr>
+  </tbody>
+</table>
 
 ##### Group A Members:
-
-<table><thead><tr><th style="text-align:center">Maryam Momeni</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Maryam.jpg" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Modupe Arotiba</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Sneha Raj</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Alfred Alkinlalu</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Austin.png" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Hazel Erturk</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/H.png" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Sanya Mahesh</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt=""></td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <!-- Names -->
+      <th>Maryam Momeni</th>
+      <th>Modupe Arotiba</th>
+      <th>Sneha Raj</th>
+      <th>Alfred Alkinlalu</th>
+      <th>Hazel Erturk</th>
+      <th>Sanya Mahesh</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Images -->
+    <tr>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Maryam.jpg" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Austin.png" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/H.png" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt=""></td>
+    </tr>
+    <!-- Captions -->
+    <tr>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+    </tr>
+  </tbody>
+</table>
 
 ##### Group B1 Members:
-
-<table><thead><tr><th style="text-align:center">Modupe Arotiba</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Sneha Raj</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg" alt=""></td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <!-- Names -->
+      <th>Modupe Arotiba</th>
+      <th>Sneha Raj</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Images -->
+    <tr>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg" alt=""></td>
+    </tr>
+    <!-- Captions -->
+    <tr>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+    </tr>
+  </tbody>
+</table>
 
 ##### Group B2 Members:
-
-<table><thead><tr><th style="text-align:center">Ivan Lam</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ivan_Lam.png" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Ananya Kaushik</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ananya_Kaushik.png" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Ashlesha Patil</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ashlesha.jpg" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Aditi Verma</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Huikun Li</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Shravya Anisetti</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt=""></td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <!-- Names -->
+      <th>Ivan Lam</th>
+      <th>Ananya Kaushik</th>
+      <th>Ashlesha Patil</th>
+      <th>Aditi Verma</th>
+      <th>Huikun Li</th>
+      <th>Shravya Anisetti</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Images -->
+    <tr>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ivan_Lam.png" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ananya_Kaushik.png" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ashlesha.jpg" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt=""></td>
+    </tr>
+    <!-- Captions -->
+    <tr>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+    </tr>
+  </tbody>
+</table>
 
 ##### Group C Members:
-
-<table><thead><tr><th style="text-align:center">Marc Abdallah</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Marc_Abdallah.jpeg" alt=""></td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <!-- Names -->
+      <th>Marc Abdallah</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Images -->
+    <tr>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Marc_Abdallah.jpeg" alt=""></td>
+    </tr>
+    <!-- Captions -->
+    <tr>
+      <td>Insert Caption here</td>
+    </tr>
+  </tbody>
+</table>
 
 ##### Group D Members:
-<table><thead><tr><th style="text-align:center">Modupe Arotiba</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt=""></td></tr></tbody></table>
-
-<table><thead><tr><th style="text-align:center">Hale Ozbek</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Hale.jpeg" alt=""></td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <!-- Names -->
+      <th>Modupe Arotiba</th>
+      <th>Hale Ozbek</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Images -->
+    <tr>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt=""></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Hale.jpeg" alt=""></td>
+    </tr>
+    <!-- Captions -->
+    <tr>
+      <td>Insert Caption here</td>
+      <td>Insert Caption here</td>
+    </tr>
+  </tbody>
+</table>
