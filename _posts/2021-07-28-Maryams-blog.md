@@ -14,7 +14,7 @@ When I decided to work on the Shiny app because I Knew nothing about Shiny at th
 
 **What were some of the most enjoyable/memorable moments from the project?**
 
-Communicating with people from different counties is really interesting for me and I enjoy it a lot. One another thing that I like about STEM-AWAY is letting us attend the big Shiny app project and we can have our names on it.
+Communicating with people from different countries is really interesting for me and I enjoy it a lot. One another thing that I like about STEM-AWAY is letting us attend the big Shiny app project and we can have our names on it.
 
 **Were there any unique aspects of the project that you particularly enjoyed?**
 
