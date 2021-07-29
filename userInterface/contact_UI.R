@@ -1,6 +1,17 @@
 contactTab <- tabItem(tabName = "contact",
                       fluidRow(
                         column(4, offset=1, 
+                               h4("Samuel Bharti"),
+                               h6("Role: Project Technical Lead"),
+                               h6(img(src = "email.png", height = 30, width = 30), "-"),
+                               h6(img(src = "linkedin.png", height = 30, width = 30), "-"),
+                               br(),
+                               h4("Disha Chauhan"),
+                               h6("Role: Project Management Lead; Groups A, B1, D Manager"),
+                               h6(img(src = "email.png", height = 30, width = 30), "1chopin@gmail.com"),
+                               h6(img(src = "linkedin.png", height = 30, width = 30), 
+                                  a("https://www.linkedin.com/in/disha-chauhan-2749621b0/",
+                                    href = "https://www.linkedin.com/in/disha-chauhan-2749621b0/")),
                                HTML("
                           
                           
@@ -44,9 +55,11 @@ contactTab <- tabItem(tabName = "contact",
                           Role: Bioinformatics Project Lead, Group B2 Manager<br>
                           Email: veyssi20@gmail.com <br>
                           Linkedin: https://www.linkedin.com/in/arian-veyssi-558446218/ <br>
-                          <br>
+                          <br>"),
                           
-                          <b>Roman Ramirez</b><br>
+                          
+                          
+                          HTML("<b>Roman Ramirez</b><br>
                           Role: Group B2 Manager<br>
                           Email: rr8rk@virginia.edu <br>
                           Linkedin: https://www.linkedin.com/in/roman-h-ramirez/ <br>
@@ -54,7 +67,7 @@ contactTab <- tabItem(tabName = "contact",
                           
                           <b>Hou Wang (Ivan) Lam</b><br>
                           Role: Bioinformatics Project Lead, Group B2 Participant<br>
-                          Email:  <br>
+                          Email:  <br> ivan_lam_27@hotmail.com
                           Linkedin: https://www.linkedin.com/in/hou-wang-ivan-lam-56867a18b/ <br>
                           <br>
                           
