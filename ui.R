@@ -6,7 +6,7 @@ source('userInterface/sampleGrouping_UI.R')
 source('userInterface/degAnalysis_UI.R')
 source('userInterface/functionalAnalysis_UI.R')
 source('userInterface/arianVeyssi_faq_UI.R')
-source('userInterface/arianVeyssi_contact_UI.R')
+source('userInterface/arianVeyssicontact_UI.R')
 source('userInterface/controlbar_UI.R')
 
 sidebar <- dashboardSidebar(
@@ -133,9 +133,9 @@ dashboardPage(
   footer = dashboardFooter(
     left = a(
       href = "https://github.com/BI-STEM-Away/shiny_app_dev",
-      target = "_blank", "@S-MAP GitHub"
+      target = "_blank", "@sMAP GitHub"
     ),
-    right = "AppName: 2021"
+    right = "sMAP: 2021"
   ),
   fullscreen = TRUE, dark = NULL
 )
