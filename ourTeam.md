@@ -67,6 +67,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
     <tr>
       <td>Group Manager</td>
       <td>Group Manager</td>
+      <td>Participant</td>
     </tr>
   </tbody>
 </table>
