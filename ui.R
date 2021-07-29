@@ -116,7 +116,7 @@ dashboardPage(
     ),
     bs4dash_color(
       blue = '#4281A4', 
-      lime = '#EBEBEB'
+      lime = '#ffffff'
     )
   ),
   dashboardHeader(
