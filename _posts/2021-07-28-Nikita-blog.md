@@ -4,8 +4,6 @@ categories:
 - Group Managers
 excerpt: |
   Nikita is a master's student at Cornell University, click here to learn more about her experience as a group manager in this project.|
-feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
-image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ---
 
 **What were the most challenging moments in developing the app?**
