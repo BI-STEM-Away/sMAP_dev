@@ -23,6 +23,6 @@ I have learned a lot from our group mates and PM, especially when developing the
 
 **What is the one thing you will take away from this experience?**
 
-I would say teamwork is vital for a project as a whole. Without teammates and group leads’ help, the project would not end up well. Overall, I enjoyed this project, but it could be better if the team workflow is more organized.
+I would say teamwork is vital for a project as a whole. Without teammates and group leads’ help, the project would not end up well. Overall, I enjoyed working on this project, but it could be better if the team workflow is more organized.
 
 {% include button.html text="Huikun's LinkedIn" link="https://linkedin.com/in/kelly-li-b149b2218" color="#88B98F" %} 
