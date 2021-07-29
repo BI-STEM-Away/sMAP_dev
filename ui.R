@@ -129,7 +129,7 @@ dashboardPage(
   ),
   sidebar,
   body,
-  controlbar = dashboardControlbar(),
+  controlbar,
   footer = dashboardFooter(
     left = a(
       href = "#",
