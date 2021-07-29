@@ -3,6 +3,22 @@ feature_text: |
   ## Our Team Members
 feature_image: https://bi-stem-away.github.io/shiny_app_dev/Banner.png
 ---
+##### STEM-Away Mentor:
+<table>
+  <thead>
+    <tr>
+      <!-- Names -->
+      <th>Anya</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Images -->
+    <tr>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Austin.png" alt="" height="150"></td>
+    </tr>
+  </tbody>
+</table>
+<br>
 
 ##### Project Technical Lead:
 <table>
