@@ -12,77 +12,60 @@ contactTab <- tabItem(tabName = "contact",
                                h6(img(src = "linkedin.png", height = 30, width = 30), 
                                   a("https://www.linkedin.com/in/disha-chauhan-2749621b0/",
                                     href = "https://www.linkedin.com/in/disha-chauhan-2749621b0/")),
-                               HTML("
-                          
-                          
-                          <b>Samuel Bharti</b><br>
-                          Role: Project Technical Lead<br>
-                          Email:  <br>
-                          Linkedin:  <br>
-                          <br>
-                          
-                          <b>Disha Chauhan</b><br>
-                          Role: Project Management Lead; Groups A, B1, and D Manager<br>
-                          Email: 31chopin@gmail.com <br>
-                          Linkedin: https://www.linkedin.com/in/disha-chauhan-2749621b0/ <br>
-                          <br>
-                          
-                          <b>Austin Yang</b><br>
-                          Role: Project Management Lead<br>
-                          Email:  <br>
-                          <br>
-                          
-                          <b>Nikita Krishnan</b><br>
-                          Role: Groups A and B1 Manager<br>
-                          Email:  <br>
-                          Linkedin: www.linkedin.com/in/nikita-krishnan <br>
-                          <br>
-                          
-                          <b>Shreya Vora</b><br>
-                          Role: Group B1 Manager<br>
-                          Email:  <br>
-                          <br>
-                          
-                          ")
-                        ),
+                               br(),
+                               h4("Austin Yang"),
+                               h6("Role: Project Management Lead"),
+                               h6(img(src = "email.png", height = 30, width = 30), "-"),
+                               h6(img(src = "linkedin.png", height = 30, width = 30), 
+                                  a("-")),
+                               br(),
+                               h4("Nikita Krishnan"),
+                               h6("Role: Groups A and B1 Manager, "),
+                               h6(img(src = "email.png", height = 30, width = 30), "-"),
+                               h6(img(src = "linkedin.png", height = 30, width = 30), 
+                                  a("www.linkedin.com/in/nikita-krishnan",
+                                    href = "www.linkedin.com/in/nikita-krishnan")),
+                               br(),
+                               h4("Shreya Vora"),
+                               h6("Role: Groups B1 Manager, "),
+                               h6(img(src = "email.png", height = 30, width = 30), "-"),
+                               h6(img(src = "linkedin.png", height = 30, width = 30), 
+                                  a("-"))),
                         
-                               
-                          column(4, offset = 2,
-                                    HTML("
-                          
-                          
-                          <b>Arian Veyssi</b><br>
-                          Role: Bioinformatics Project Lead, Group B2 Manager<br>
-                          Email: veyssi20@gmail.com <br>
-                          Linkedin: https://www.linkedin.com/in/arian-veyssi-558446218/ <br>
-                          <br>"),
-                          
-                          
-                          
-                          HTML("<b>Roman Ramirez</b><br>
-                          Role: Group B2 Manager<br>
-                          Email: rr8rk@virginia.edu <br>
-                          Linkedin: https://www.linkedin.com/in/roman-h-ramirez/ <br>
-                          <br>
-                          
-                          <b>Hou Wang (Ivan) Lam</b><br>
-                          Role: Bioinformatics Project Lead, Group B2 Participant<br>
-                          Email:  <br> ivan_lam_27@hotmail.com
-                          Linkedin: https://www.linkedin.com/in/hou-wang-ivan-lam-56867a18b/ <br>
-                          <br>
-                          
-                          <b>Aditi Verma</b><br>
-                          Role: Group C Manager<br>
-                          Email: aditi.verma.av19@gmail.com <br>
-                          <br>
-                          
-                          <b>Huikun (Kelly) Li</b><br>
-                          Email:  huikun321@gmail.com <br>
-                          Linkedin:  linkedin.com/in/kelly-li-b149b2218 <br>
-                          
-                          <br>
-                        
-                        ")
+                        column(4, offset = 2,
+                               h4("Arian Veyssi"),
+                               h6("Role: Bioinformatics Project Lead, Group B2 Manager"),
+                               h6(img(src = "email.png", height = 30, width = 30), "veyssi20@gmail.com"),
+                               h6(img(src = "linkedin.png", height = 30, width = 30), 
+                                  a("https://www.linkedin.com/in/arian-veyssi-558446218/",
+                                    href = "https://www.linkedin.com/in/arian-veyssi-558446218/")),
+                               br(),
+                               h4("Roman Ramirez"),
+                               h6("Role: Group B2 Manager"),
+                               h6(img(src = "email.png", height = 30, width = 30), "rr8rk@virginia.edu"),
+                               h6(img(src = "linkedin.png", height = 30, width = 30), 
+                                  a("https://www.linkedin.com/in/roman-h-ramirez/",
+                                    href = "https://www.linkedin.com/in/roman-h-ramirez/")),
+                               br(),
+                               h4("Hou Wang (Ivan) Lam"),
+                               h6("Role: Bioinformatics Project Lead, Group B2 Participant"),
+                               h6(img(src = "email.png", height = 30, width = 30), "ivan_lam_27@hotmail.com"),
+                               h6(img(src = "linkedin.png", height = 30, width = 30), 
+                                  a("https://www.linkedin.com/in/hou-wang-ivan-lam-56867a18b/",
+                                    href = "https://www.linkedin.com/in/hou-wang-ivan-lam-56867a18b/")),
+                               br(),
+                               h4("Aditi Verma"),
+                               h6("Role: Group C Manager"),
+                               h6(img(src = "email.png", height = 30, width = 30), "aditi.verma.av19@gmail.com"),
+                               h6(img(src = "linkedin.png", height = 30, width = 30), 
+                                  a("-")),
+                               br(),
+                               h4("Huikun (Kelly) Li"),
+                               h6("Role: Group D Manager"),
+                               h6(img(src = "email.png", height = 30, width = 30), "huikun321@gmail.com"),
+                               h6(img(src = "linkedin.png", height = 30, width = 30), 
+                                  a("https://www.linkedin.com/in/kelly-li-b149b2218/",
+                                    href = "https://www.linkedin.com/in/kelly-li-b149b2218/"))
                           )
                        )
                        )
