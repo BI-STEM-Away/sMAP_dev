@@ -69,7 +69,6 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
       <!-- Names -->
       <th>Modupe</th>
       <th>Sneha</th>
-      <th>Hazel</th>
     </tr>
   </thead>
   <tbody>
@@ -77,11 +76,9 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
     <tr>
       <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt="" height="150"></td>
       <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg" alt="" height="150"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/H.png" alt="" height="150"></td>
     </tr>
     <!-- Captions -->
     <tr>
-      <td>Participant</td>
       <td>Participant</td>
       <td>Participant</td>
     </tr>
