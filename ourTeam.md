@@ -232,22 +232,6 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   </tbody>
 </table>
 
-##### Group Managers:
-
-      <th>Disha Chauhan - A, B1, D</th>
-      <th>Huikun Li - D</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Images -->
-
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt=""></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg" alt=""></td>
-  </tbody>
-</table>
-
- 
-
 ##### Group D Members:
 <table>
   <thead>
