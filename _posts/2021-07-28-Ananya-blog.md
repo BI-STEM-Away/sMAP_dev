@@ -4,8 +4,6 @@ categories:
 - Participants
 excerpt: |
   Sneha is a rising freshman in college, click here to learn more about her experience as a participant in this project.|
-feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
-image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ---
 
 **What were the most challenging moments in developing the app?**
