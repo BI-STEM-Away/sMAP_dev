@@ -200,8 +200,8 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
     </tr>
     <!-- Captions -->
     <tr>
-      <td>Insert Caption here</td>
-      <td>Insert Caption here</td>
+      <td>Participant</td>
+      <td>Participant</td>
     </tr>
   </tbody>
 </table>
