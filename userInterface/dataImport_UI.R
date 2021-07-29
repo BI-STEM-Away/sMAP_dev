@@ -6,7 +6,9 @@ dataImportTab <- tabItem(tabName = "dataImport",
                                  ),
                                column(10,
                                  #Selection Input to decide what type of file they want to input: CSV/txt, CEL files, IDAT files, or GEO Accession number
-                                 selectInput("dat_type","Input Type",choices=list("Processed Expression Data (CSV/txt File)","Raw Affymetrix Data (.tar File Containing CEL Files)","Raw Illumina Data (.tar File Containing IDAT Files)","GEO Accession Number")),
+                                 selectInput("dat_type","Input Type",choices=list("Processed Expression Data (CSV/txt File)","Raw Affymetrix Data (.tar File Containing CEL Files)","Raw Illumina Data (.tar File Containing IDAT Files)","GEO Accession Number"),
+                                            width = '500px'
+                                             ),
                                  #Panel that appears if CSV/txt file type selected
                                  conditionalPanel(condition="input.dat_type=='Processed Expression Data (CSV/txt File)'",
                                                   #ShreyaVora14
