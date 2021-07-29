@@ -112,7 +112,7 @@ dashboardPage(
       hover_color = "#0C4767",
     ),
     bs4dash_status(
-      primary = "#57A773", danger = "#BF616A", success = '#57A773', warning = '#F7B538', info = "#0C4767"
+      primary = "#57A773", danger = "#BF616A", success = '#57A773', warning = '#F7B538', info = "#57a773"
     ),
     bs4dash_color(
       blue = '#4281A4', 
