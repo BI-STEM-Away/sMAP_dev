@@ -54,7 +54,8 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/Banner.png
   </tbody>
 </table>
 <br>
-##### Group A:
+##### Group A - Transcriptomics pipeline code development:
+
 <table>
   <thead>
     <tr>
@@ -102,7 +103,8 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/Banner.png
   </tbody>
 </table>
 <br>
-##### Group B1:
+##### Group B1 - Implementation of transcriptomics code in R Shiny:
+
 <table>
   <thead>
     <tr>
@@ -150,7 +152,7 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/Banner.png
   </tbody>
 </table>
 <br>
-##### Group B2:
+##### Group B2 - Formatting/layout of the R Shiny App:
 <table>
   <thead>
     <tr>
@@ -223,7 +225,7 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/Banner.png
   </tbody>
 </table>
 <br>
-##### Group C:
+##### Group C - GitHub management and code documentation:
 <table>
   <thead>
     <tr>
@@ -246,7 +248,7 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/Banner.png
   </tbody>
 </table>
 <br>
-##### Group D Members:
+##### Group D - GitHub page and documentation site development:
 <table>
   <thead>
     <tr>
