@@ -48,7 +48,7 @@ contactTab <- tabItem(tabName = "contact",
                           
                           <b>Roman Ramirez</b><br>
                           Role: Group B2 Manager<br>
-                          Email:  <br>
+                          Email: rr8rk@virginia.edu <br>
                           Linkedin: https://www.linkedin.com/in/roman-h-ramirez/ <br>
                           <br>
                           
