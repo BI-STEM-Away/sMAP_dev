@@ -15,14 +15,14 @@ For me, the most challenging part of the app development was leading and contrib
 
 **What were some of the most enjoyable/memorable moments from the project?**
 
-
+My most enjoyable moments were when tasks/the project in general began to function how I hoped. For example, after a two or so weeks of the project, working with Sam and Nikita for setting up the project's outline the initial chaos of the project began to settle as participants got a better understanding of our goal. Seeing things beginning to run smoothly was very rewarding as a project management lead. Similarly, when I got R Shiny code that I worked on for a while to work (e.g., my volcano plot), I felt overjoyed.
 
 **Were there any unique aspects of the project that you particularly enjoyed?**
 
-
-
+I think that a great and unique aspect of the project was getting to work with colleagues of different education levels from places all over the world. I learned a lot from the more experienced members of our team and was really impressed by the code that people made because many of them supplied functions and/or arguments that I had never heard of or didn't even think of using.
 
 **What is the one thing you will take away from this experience?**
 
+The project management and leadership skills I have built from this experience are definitely the big take-aways for me. Managing the project and sub-groups has really shown me the importance of keeping organized, planning ahead, and communication with teammates, and I hope to use the tools and methodologies I learned in this role in any future projects I work on.
 
 {% include button.html text="Disha's LinkedIn" link="https://www.linkedin.com/in/disha-chauhan-2749621b0/" color="#88B98F" %} 
