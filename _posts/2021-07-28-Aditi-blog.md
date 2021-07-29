@@ -1,6 +1,7 @@
 ---
 title: Aditi's Experience
 categories:
+- Group Managers
 - Participants
 excerpt: |
   Aditi is a high school senior, click here to learn more about her experience as a participant in this project.|
