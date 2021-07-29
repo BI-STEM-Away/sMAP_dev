@@ -14,7 +14,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt="" width="100" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt="" height="150"></td>
     </tr>
   </tbody>
 </table>
@@ -31,8 +31,8 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Austin.png" alt="" width="100"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Austin.png" alt="" height="150"></td>
     </tr>
   </tbody>
 </table>
@@ -51,8 +51,8 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
     <!-- Images -->
     <tr>
       <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Maryam.jpg" alt="" width="100"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Maryam.jpg" alt="" height="150"></td>
     </tr>
     <!-- Captions -->
     <tr>
@@ -75,9 +75,9 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/H.png" alt="" width="100"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/H.png" alt="" height="150"></td>
     </tr>
     <!-- Captions -->
     <tr>
@@ -102,8 +102,8 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
     <!-- Images -->
     <tr>
       <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Shreya.jpg" alt="" width="100"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Shreya.jpg" alt="" height="150"></td>
     </tr>
     <!-- Captions -->
     <tr>
@@ -125,8 +125,8 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg" alt="" width="100"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg" alt="" height="150"></td>
     </tr>
     <!-- Captions -->
     <tr>
@@ -149,9 +149,9 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Roman.jpeg" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Arian_Veyssi_.png" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ivan_Lam.png" alt="" width="100"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Roman.jpeg" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Arian_Veyssi_.png" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ivan_Lam.png" alt="" height="150"></td>
     </tr>
     <!-- Captions -->
     <tr>
@@ -174,9 +174,9 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ashlesha.jpg" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg" alt="" width="100"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ashlesha.jpg" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg" alt="" height="150"></td>
     </tr>
     <!-- Captions -->
     <tr>
@@ -198,8 +198,8 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ananya_Kaushik.png" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt="" width="100"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ananya_Kaushik.png" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt="" height="150"></td>
     </tr>
     <!-- Captions -->
     <tr>
@@ -221,8 +221,8 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Marc_Abdallah.jpeg" alt="" width="100"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Marc_Abdallah.jpeg" alt="" height="150"></td>
     </tr>
     <!-- Captions -->
     <tr>
@@ -245,9 +245,9 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt="" width="100"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt="" width="100"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt="" height="150"></td>
     </tr>
     <!-- Captions -->
     <tr>
