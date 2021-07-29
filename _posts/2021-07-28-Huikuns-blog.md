@@ -4,7 +4,7 @@ categories:
 - Group Managers
 - Participants
 excerpt: |
-  Huikun is a rising college sophomore at Foothill College, click here to learn more about her experience as a participant in this project.|
+  Huikun is a rising college sophomore at Foothill College, click here to learn more about her experience as a group manager and participant in this project.|
 feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ---
