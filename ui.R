@@ -5,8 +5,8 @@ source('userInterface/qualityControl_UI.R')
 source('userInterface/sampleGrouping_UI.R')
 source('userInterface/degAnalysis_UI.R')
 source('userInterface/functionalAnalysis_UI.R')
-source('userInterface/arianVeyssi_faq_UI.R')
-source('userInterface/arianVeyssicontact_UI.R')
+source('userInterface/faq_UI.R')
+source('userInterface/contact_UI.R')
 source('userInterface/controlbar_UI.R')
 
 sidebar <- dashboardSidebar(
@@ -122,7 +122,7 @@ dashboardPage(
   dashboardHeader(
     fixed = TRUE,
     border = TRUE,
-    status = 'lime',
+    status = 'lightgray',
     #    sidebarIcon = shiny::icon("water"),
     title = title,
     div(style = "margin-left:auto;margin-right:auto; text-align:center; color:black",HTML('<strong>Transcriptomics Pipeline Application</strong>'))
