@@ -4,8 +4,6 @@ categories:
 - Group Managers
 excerpt: |
   Roman is a rising third-year student at the University of Virginia, click here to learn more about his experience as a group manager for this project.|
-feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
-image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ---
 
 **What were the most challenging moments in developing the app?**
