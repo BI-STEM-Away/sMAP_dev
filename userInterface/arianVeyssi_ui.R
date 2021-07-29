@@ -97,7 +97,7 @@ dashboardPage(
   ),
   sidebar,
   body,
-  #THIS IS THE RIGHT SIDEBAR
+  #FEEDBACK FORM 
   controlbar = dashboardControlbar(tags$iframe(d = "googleform",
                                                src = "https://docs.google.com/forms/d/e/1FAIpQLScR2k-Y-TjV7aMUiZRZYtJ743zTy1bAYHuAUCN_DD5as-kJhg/viewform?usp=sf_link",
                                                width = 400,
