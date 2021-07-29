@@ -1,8 +1,9 @@
 controlbar <- dashboardControlbar(
   skin = "light",
   controlbarMenu(
-    h1("Welcome to any valuable feedback"), 
-    p("Link to:"), 
+    h1("Questions? Feedback?"),
+    p("Please leave us a comment in the link below"),
+    p("Links:"), 
     a(strong("Typeform"), href = "https://www.typeform.com/", style = "font-size : 25px;")
   )
 )
