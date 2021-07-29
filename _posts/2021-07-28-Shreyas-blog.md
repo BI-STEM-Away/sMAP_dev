@@ -5,8 +5,6 @@ categories:
 - Participants
 excerpt: |
   Shreya is a high school sophomore, click here to learn more about her experience as a group manager and participant in this project.|
-feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
-image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
 ---
 
 **What were the most challenging moments in developing the app?**
