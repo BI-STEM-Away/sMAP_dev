@@ -1,7 +1,7 @@
 ---
 title: Arian's Experience
 categories:
-- Participants
+- Group Managers
 excerpt: |
   Arian is a first year Ph.D. student, click here to learn more about her experience as a participant in this project.|
 feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
