@@ -132,8 +132,8 @@ dashboardPage(
   controlbar,
   footer = dashboardFooter(
     left = a(
-      href = "#",
-      target = "_blank", "@STEM-Away"
+      href = "https://github.com/BI-STEM-Away/shiny_app_dev",
+      target = "_blank", "@S-MAP GitHub"
     ),
     right = "AppName: 2021"
   ),
