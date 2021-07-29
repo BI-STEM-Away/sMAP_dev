@@ -1,6 +1,7 @@
 ---
 title: Shreya's Experience
 categories:
+- Group Managers
 - Participants
 excerpt: |
   Shreya is a high school sophomore, click here to learn more about her experience as a participant in this project.|
