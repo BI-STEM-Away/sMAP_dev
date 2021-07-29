@@ -50,7 +50,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg" alt="" width="100"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg" alt="" height="150"></td>
       <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt="" height="150"></td>
       <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Maryam.jpg" alt="" height="150"></td>
     </tr>
@@ -101,7 +101,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg" alt="" width="100"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg" alt="" height="150"></td>
       <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt="" height="150"></td>
       <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Shreya.jpg" alt="" height="150"></td>
     </tr>
