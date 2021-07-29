@@ -18,7 +18,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
     </tr>
   </tbody>
 </table>
-
+<br>
 ##### Project Management Leads:
 <table>
   <thead>
@@ -36,7 +36,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
     </tr>
   </tbody>
 </table>
-
+<br>
 ##### Group A:
 <table>
   <thead>
@@ -84,7 +84,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
     </tr>
   </tbody>
 </table>
-
+<br>
 ##### Group B1:
 <table>
   <thead>
@@ -132,7 +132,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
     </tr>
   </tbody>
 </table>
-
+<br>
 ##### Group B2:
 <table>
   <thead>
@@ -205,7 +205,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
     </tr>
   </tbody>
 </table>
-
+<br>
 ##### Group C:
 <table>
   <thead>
@@ -228,7 +228,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
     </tr>
   </tbody>
 </table>
-
+<br>
 ##### Group D Members:
 <table>
   <thead>
