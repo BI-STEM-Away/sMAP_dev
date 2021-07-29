@@ -8,7 +8,7 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <thead>
     <tr>
       <!-- Names -->
-      <th>Samuel Bharti</th>
+      <th>Samuel</th>
     </tr>
   </thead>
   <tbody>
@@ -67,9 +67,9 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <thead>
     <tr>
       <!-- Names -->
-      <th>Modupe Arotiba</th>
-      <th>Sneha Raj</th>
-      <th>Hazel Erturk</th>
+      <th>Modupe</th>
+      <th>Sneha</th>
+      <th>Hazel</th>
     </tr>
   </thead>
   <tbody>
@@ -118,8 +118,8 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
   <thead>
     <tr>
       <!-- Names -->
-      <th>Modupe Arotiba</th>
-      <th>Sneha Raj</th>
+      <th>Modupe</th>
+      <th>Sneha</th>
     </tr>
   </thead>
   <tbody>
@@ -130,8 +130,8 @@ feature_image: "https://bi-stem-away.github.io/shiny_app_dev/Banner.png"
     </tr>
     <!-- Captions -->
     <tr>
-      <td>Insert Caption here</td>
-      <td>Insert Caption here</td>
+      <td>Participant</td>
+      <td>Participant</td>
     </tr>
   </tbody>
 </table>
