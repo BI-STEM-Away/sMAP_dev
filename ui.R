@@ -7,6 +7,7 @@ source('userInterface/degAnalysis_UI.R')
 source('userInterface/functionalAnalysis_UI.R')
 source('userInterface/arianVeyssi_faq_UI.R')
 source('userInterface/arianVeyssi_contact_UI.R')
+source('userInterface/controlbar_UI.R')
 
 sidebar <- dashboardSidebar(
   skin = "light",
