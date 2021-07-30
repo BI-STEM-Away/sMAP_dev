@@ -1,13 +1,27 @@
 dataImportTab <- tabItem(tabName = "dataImport",
                              fluidRow(
-                                 column(1,
-                                        div(style = "display:inline-block; float:left", 
-                                            actionButton('backTo_introduction', label = 'Back', status = "success"))
+                                 column(12,
+                                        fluidRow(
+                                            column(1,
+                                                   div(style = "display:inline-block; float:left", 
+                                                       actionButton('backTo_introduction', label = 'Back', status = "success"))
+                                            ),
+                                            column(10, align="center",
+                                                   HTML("<h3><b>Upload Data</b></h3>")
+                                                   
+                                            ),
+                                            # @roman_ramirez
+                                            column(1,
+                                                   div(style = "display:inline-block; float:right", 
+                                                       actionButton('to_qC', label = 'Next', status = "success"))
+                                            )
+                                        )
                                  ),
-                               column(10,
+                                 
+                               column(12,
                                  #Selection Input to decide what type of file they want to input: CSV/txt, CEL files, IDAT files, or GEO Accession number
                                  selectInput("dat_type","Input Type",choices=list("Processed Expression Data (CSV/txt File)","Raw Affymetrix Data (.tar File Containing CEL Files)","Raw Illumina Data (.tar File Containing IDAT Files)","GEO Accession Number"),
-                                            width = '500px'
+                                            width = '400px'
                                              ),
                                  #Panel that appears if CSV/txt file type selected
                                  conditionalPanel(condition="input.dat_type=='Processed Expression Data (CSV/txt File)'",
@@ -34,11 +48,7 @@ dataImportTab <- tabItem(tabName = "dataImport",
                                  #ShreyaVora14 and nk468188
                                  #Text output to confirm data has been uploaded
                                  h1(textOutput("obj"),align="center")
-                               ),
-                               # @roman_ramirez
-                               column(1,
-                                      div(style = "display:inline-block; float:right", 
-                                          actionButton('to_qC', label = 'Next', status = "success"))
-                                      )
+                               )
                              )
 )
+

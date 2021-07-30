@@ -30,7 +30,6 @@ function(input,output,session){
     updateTabItems(session, "tabs", "qC")
   }
   )
-  
   # QC BUTTONS 
   observeEvent(input$backTo_dataImport, {
     updateTabItems(session, "tabs", "dataImport")

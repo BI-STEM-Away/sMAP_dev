@@ -136,7 +136,7 @@ dashboardPage(
     status = 'lightgray',
     #    sidebarIcon = shiny::icon("water"),
     title = title,
-    div(style = "margin-left:auto;margin-right:auto; text-align:center; color:black",HTML('<strong>Transcriptomics Pipeline Application</strong>'))
+    div(style = "text-align:center; color:black",HTML('<strong>Standard Microarray Analysis Pipeline</strong>'))
   ),
   sidebar,
   body,
