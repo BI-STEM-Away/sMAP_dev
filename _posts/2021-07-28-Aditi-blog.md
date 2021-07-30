@@ -9,8 +9,12 @@ excerpt: |
 ---
 
 **What were the most challenging moments in developing the app?**
+<details>
+  <summary>Click to expand!</summary>
 
 Some of the challenges were actually understanding how RShiny works as well as getting used to all the group formats. I am from level 1 which means that the RShiny project is out of the expected task, therefore, it was challenging to learn something that I didn’t know prior to the internship. Another challenge was waiting for other groups to finish their part to continue with my tasks because our group depended on other group’s progress.
+
+</details>
 
 **What were some of the most enjoyable/memorable moments from the project?**
 
