@@ -13,7 +13,6 @@ This app is to help users better understand functional interactive transcriptomi
 
 ## Team Structure
 
-Our team consists of five sub-groups:
 - Group A - In charge of developing code for the transcriptomics pipeline.
 - Group B1 - In charge of taking the code from group A and implementing it in R Shiny.
 - Group B2 - In charge of formatting/layout of the R Shiny App.
