@@ -22,5 +22,5 @@ This app is to help users better understand functional interactive transcriptomi
 
 - Group D - In charge of developing the GitHub page and documentation site. 
 
-- If you have any questions, please reach out to our team.
+If you have any questions, please reach out to our team.
 
