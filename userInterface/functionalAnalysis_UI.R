@@ -66,26 +66,28 @@ geneConceptNetworkTab <- tabItem(tabName = "geneConceptNetwork",
 gseaTab <- tabItem(tabName = "gsea",
                    fluidRow(
                        column(12,
-                              column(1,
-                                     div(style = "display:inline-block; float:left", 
-                                         actionButton('backTo_geneConceptNetwork', label = 'Back', status = "success"))
+                              fluidRow(
+                                  column(1,
+                                         div(style = "display:inline-block; float:left", 
+                                             actionButton('backTo_geneConceptNetwork', label = 'Back', status = "success"))
+                                  ),
+                                  column(10, align="center",
+                                         HTML("<h3><b>Gene-Set Enrichment Analysis</b></h3>")
+                                         
+                                  ),
+                                  # @roman_ramirez
+                                  column(width = 1,
+                                         div(style = "display:inline-block; float:right", 
+                                             actionButton('to_transcriptionFactorAnalysis', label = 'Next', status = "success"))
+                                  )
                               ),
-                              column(10, align="center",
-                                     HTML("<h3><b>Gene-Set Enrichment Analysis</b></h3>")
-                                     
-                              ),
-                              # @roman_ramirez
-                              column(width = 1,
-                                     div(style = "display:inline-block; float:right", 
-                                         actionButton('to_transcriptionFactorAnalysis', label = 'Next', status = "success"))
-                              )
                        ),
                        column(6,
                               HTML("Insert input GSEA code here")
                        ),
                        column(6,
                               HTML("Insert output GSEA code here")
-                       ),
+                       )
                    )
 )                  
 transcriptionFactorAnalysisTab <- tabItem(tabName = "transcriptionFactorAnalysis",
