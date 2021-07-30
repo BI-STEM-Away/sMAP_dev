@@ -21,6 +21,9 @@ volcanoPlotTab <- tabItem(tabName = "volcanoPlot",
                                   
                               ),
                               column(6,
+                                     #ShreyaVora14
+                                     p("Volcano plots are a visualization used for differential gene expression analysis. The x-axis represents log-fold change and the y-axis 
+        represents p-value. "),
                                      sliderInput("n", "LogFC cutoff", 0, 5,
                                                  value =1, step = 0.05),
                                      shinyWidgets::sliderTextInput("m", "Adjusted P-Value cutoff", 
@@ -59,19 +62,20 @@ topDEGsTab <- tabItem(tabName = "topDEGs",
                                  #marmomeni
                                  numericInput("cutoff","What percent of genes should be filtered out?",value=0),
                                  actionButton("filt_gen","Filter Out Genes"),
-                                 p("Limma Analysis to find DEGs"),
-                                 selectInput("grouping","Select how to group samples",choices=c("Metadata Feature","Manually")),
+                                 #ShreyaVora14
+                                 tags$div(
+                                   tags$p("The percent of genes you choose will be the percent of genes that will be filtered because of the low levels of expression. Additionally any duplicates, NA,
+             or Duplicate gene symbols will be removed.")
+                                   ),
                                  numericInput("p_val","Cutoff p-value:",value=0.05),
-                                 sliderInput("num_gen","Percentage of Differentially Expressed Genes to Display",0,100,0),
                                  actionButton("degs","Find DEGs"),
                                  #P-value and number of genes for topTable and volcano plot
                                  numericInput("p_val","Cutoff p-value:",value=0.05),
-                                 sliderInput("num_gen","Percentage of Differentially Expressed Genes to Display",0,100,0),
                                  actionButton("degs","Find DEGs")
                           ),
                           column(6,
                                  textOutput("gen_filt"),
-                                 verbatimTextOutput("toptab")
+                                 dataTableOutput("toptab")
                           )
                       )
 )
