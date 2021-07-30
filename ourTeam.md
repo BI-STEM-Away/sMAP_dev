@@ -1,7 +1,7 @@
 ---
 feature_text: |
   ## Our Team Members
-feature_image: https://bi-stem-away.github.io/shiny_app_dev/Banner.png
+feature_image: https://bi-stem-away.github.io/shiny_app_dev/Banner3.jpg
 ---
 
 ##### Project Technical Lead:
