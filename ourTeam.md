@@ -36,64 +36,15 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/Banner.png
   </tbody>
 </table>
 <br>
-##### Group A - Transcriptomics pipeline code development:
+##### Group Managers:
 
 <table>
   <thead>
     <tr>
       <!-- Names -->
-      <th>Nikita</th>
-      <th>Disha</th>
-      <th>Maryam</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Images -->
-    <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg" alt="" height="150"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt="" height="150"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Maryam.jpg" alt="" height="150"></td>
-    </tr>
-    <!-- Captions -->
-    <tr>
-      <td>Manager</td>
-      <td>Manager</td>
-      <td>Participant</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <!-- Names -->
-      <th>Modupe</th>
-      <th>Sneha</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Images -->
-    <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt="" height="150"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg" alt="" height="150"></td>
-    </tr>
-    <!-- Captions -->
-    <tr>
-      <td>Participant</td>
-      <td>Participant</td>
-    </tr>
-  </tbody>
-</table>
-<br>
-##### Group B1 - Implementation of transcriptomics code in R Shiny:
-
-<table>
-  <thead>
-    <tr>
-      <!-- Names -->
-      <th>Nikita</th>
-      <th>Disha</th>
-      <th>Shreya</th>
+      <th>Nikita Krishnan</th>
+      <th>Disha Chauhan</th>
+      <th>Shreya Vora</th>
     </tr>
   </thead>
   <tbody>
@@ -105,9 +56,9 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/Banner.png
     </tr>
     <!-- Captions -->
     <tr>
-      <td>Manager</td>
-      <td>Manager</td>
-      <td>Manager</td>
+      <td>Group A,B1</td>
+      <td>Group A,B1,D</td>
+      <td>Group B1</td>
     </tr>
   </tbody>
 </table>
@@ -116,32 +67,9 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/Banner.png
   <thead>
     <tr>
       <!-- Names -->
-      <th>Modupe</th>
-      <th>Sneha</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Images -->
-    <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt="" height="150"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg" alt="" height="150"></td>
-    </tr>
-    <!-- Captions -->
-    <tr>
-      <td>Participant</td>
-      <td>Participant</td>
-    </tr>
-  </tbody>
-</table>
-<br>
-##### Group B2 - Formatting/layout of the R Shiny App:
-<table>
-  <thead>
-    <tr>
-      <!-- Names -->
-      <th>Roman</th>
-      <th>Arian</th>
-      <th>Ivan</th>
+      <th>Roman Ramirez</th>
+      <th>Arian Veyssi</th>
+      <th>Aditi Verma</th>
     </tr>
   </thead>
   <tbody>
@@ -149,109 +77,83 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/Banner.png
     <tr>
       <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Roman.jpeg" alt="" height="150"></td>
       <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Arian_Veyssi_.png" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt="" height="150"></td>
+    </tr>
+    <!-- Captions -->
+    <tr>
+      <td>Group B2</td>
+      <td>Group B2</td>
+      <td>Group C</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <!-- Names -->
+      <th>Huikun Li</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Images -->
+    <tr>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg" alt="" height="150"></td>
+    </tr>
+    <!-- Captions -->
+    <tr>
+      <td>Group D</td>
+    </tr>
+  </tbody>
+</table>
+
+##### Team members:
+<table>
+  <thead>
+    <tr>
+      <!-- Names -->
+      <th>Ivan Lam</th>
+      <th>Maryam Momeni</th>
+      <th>Sneha Raj</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Images -->
+    <tr>
       <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ivan_Lam.png" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Maryam.jpg" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg" alt="" height="150"></td>
     </tr>
     <!-- Captions -->
     <tr>
-      <td>Manager</td>
-      <td>Manager</td>
-      <td>Participant</td>
+      <td>Group B2</td>
+      <td>Group A</td>
+      <td>Group A,B1</td>
     </tr>
   </tbody>
 </table>
+<br>
 
 <table>
   <thead>
     <tr>
       <!-- Names -->
-      <th>Aditi</th>
-      <th>Ashlesha</th>
-      <th>Huikun</th>
+      <th>Modupe Arotiba</th>
+      <th>Marc Abdallah</th>
     </tr>
   </thead>
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt="" height="150"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ashlesha.jpg" alt="" height="150"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Roman.jpeg" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Arian_Veyssi_.png" alt="" height="150"></td>
     </tr>
     <!-- Captions -->
     <tr>
-      <td>Participant</td>
-      <td>Participant</td>
-      <td>Participant</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <!-- Names -->
-      <th>Ananya Kaushik</th>
-      <th>Shravya Anisetti</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Images -->
-    <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Ananya_Kaushik.png" alt="" height="150"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt="" height="150"></td>
-    </tr>
-    <!-- Captions -->
-    <tr>
-      <td>Participant</td>
-      <td>Participant</td>
-    </tr>
-  </tbody>
-</table>
-<br>
-##### Group C - GitHub management and code documentation:
-<table>
-  <thead>
-    <tr>
-      <!-- Names -->
-      <th>Aditi</th>
-      <th>Marc</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Images -->
-    <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg" alt="" height="150"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Marc_Abdallah.jpeg" alt="" height="150"></td>
-    </tr>
-    <!-- Captions -->
-    <tr>
-      <td>Manager</td>
-      <td>Participant</td>
-    </tr>
-  </tbody>
-</table>
-<br>
-##### Group D - GitHub page and documentation site development:
-<table>
-  <thead>
-    <tr>
-      <!-- Names -->
-      <th>Huikun</th>
-      <th>Disha</th>
-      <th>Modupe</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Images -->
-    <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg" alt="" height="150"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg" alt="" height="150"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt="" height="150"></td>
-    </tr>
-    <!-- Captions -->
-    <tr>
-      <td>Manager</td>
-      <td>Manager</td>
-      <td>Participant</td>
+      <td>Group A,D</td>
+      <td>Group C</td>
     </tr>
   </tbody>
 </table>
