@@ -5,7 +5,7 @@ library(shiny)
 library(fresh)
 
 # other imports
-packages1<-c("oligo","GEOquery","affy","limma","arrayQualityMetrics","sva","Biobase","affyPLM", "simpleaffy")#, "AffyBatch")
+packages1<-c("oligo","GEOquery","affy","limma","arrayQualityMetrics","sva","Biobase","affyPLM" )#"simpleaffy")#), "AffyBatch")
 for(x in packages1){
     library(x,character.only=TRUE)
 }
