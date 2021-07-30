@@ -147,8 +147,8 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/Banner.png
   <tbody>
     <!-- Images -->
     <tr>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Roman.jpeg" alt="" height="150"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Arian_Veyssi_.png" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt="" height="150"></td>
+      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Marc_Abdallah.jpeg" alt="" height="150"></td>
     </tr>
     <!-- Captions -->
     <tr>
