@@ -19,8 +19,14 @@ qCTab <- tabItem(tabName = "qC",
                                          )
                                   ),
                                   column(6,
+                                         #Selection for user to visualize raw data
                                          selectInput("qc_method", "Choose a QC visualization method before normalization.", choices = c("NUSE","RLE")),
-                                         actionButton("vis_dat","Visualize Data")
+                                         actionButton("vis_dat","Visualize Data"),
+                                         #ShreyaVora14
+                                         tags$div(
+                                           tags$p("Quality control is crucial because it checks whether the data is reliable. NUSE and RLE are two different
+                        methods that are used for quality control. ")
+                                         ),
                                   ),
                                   column(6,
                                          
@@ -56,9 +62,15 @@ normalizationTab <- tabItem(tabName = "normalization",
                                          )
                                   ),
                                   column(6,
-                                         #Disha
+                                         #disha-22
+                                         #Input for normalization methods
                                          radioButtons("normlztype","Which normalization method do you want to use?", choices=list("RMA","GCRMA","MAS5")),
                                          actionButton("normlzdata","Begin Normalization"),
+                                         #ShreyaVora14
+                                         tags$div(
+                                           tags$p("Normalization of the data will make feature extraction easier and the organization of the data much more structured. 
+                        The MAS5 function will normalize each array in the data independently while rma and gcrma use a multi-chip model. ")
+                                         ),
                                   ),
                                   column(6,
                                          textOutput("batch_com"),
@@ -90,10 +102,26 @@ batchCorrectionTab <- tabItem(tabName = "batchCorrection",
                                      
                                  ),
                                  column(6,
+                                        #nk468188
+                                        #Input to perform batch correction
                                         htmlOutput("batch_cat"),
                                         actionButton("startbatch","Perform Batch Correction"),
+                                        #ShreyaVora14
+                                        tags$div(
+                                          tags$p("Batch Correction makes two batches comparable to one another by correcting for differences in equipment and experimentation. 
+                        As a result, after batch correction, the two batches can be used for the same analysis.
+                        In Batch correction the normalized data will be the input and the returned value is an expression matrix that is corrected for batch effects ")
+                                        ),
+                                        #xgeng3
+                                        #Input to visualize via PCA or boxplot
                                         selectInput("qc_method2", "Choose a QC visualization method after normalization.", choices = c("Boxplot","PCA")),
-                                        actionButton("vis_button", "Generate Plot", icon = icon("play")),
+                                        actionButton("vis_button", "Generate Plot"),
+                                        #ShreyaVora14
+                                        tags$div(
+                                          tags$p("Visualizing the data after the normalization is complete will allow you to see how your data has changed due to 
+                        normalization. Both the boxplot and the PCA will show you the quality control that was done on the data. The boxplot will
+                        help to visualize the outliers while the PCA plot will help visualize patterns and variety in the data.")
+                                        ),
                                  ),
                                  column(6,
                                         actionButton("pcplot","Plot Principal Components"),
@@ -128,9 +156,18 @@ potentialOutliersTab <- tabItem(tabName = "potentialOutliers",
                                           )  
                                         ),
                                         column(6,
+                                               #nk468188
+                                               #Finding outliers
                                                selectInput("outmethod","Outlier Detection Method",choices=c("KS","sum", "upperquartile")),
+                                              
                                                actionButton("getout","Find Potential Outliers"),
-                                               actionButton("update","Show Updated List of Samples")   
+                                               actionButton("update","Show Updated List of Samples"),
+                                               #ShreyaVora14
+                                               tags$div(
+                                                 tags$p("In order for the data more reliable, the outliers need to be identified and removed so that that results can truly be 
+                 attributed to differences in gene function and expression. You can choose from three different methods, and  all three will 
+                 find and remove the outliers. ")
+                                               )
                                         ),
                                         column(6,
                                                p("Potential Outliers:"),
