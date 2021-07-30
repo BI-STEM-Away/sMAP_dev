@@ -7,9 +7,12 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/images/Banner3.jpg
 excerpt: "Our goal for creating this educational app is to help experts and intellectuals easily access the transcriptomics information and data they need. On this web page, users can view the project details via the links on the front page."
 ---
 
-This app is to help users better understand functional interactive transcriptomics pipeline.
+Our app was made to help users understand a standard transcriptomics pipeline by taking them through the steps of microarray analysis. The app has an interactive user interface where users upload a GEO dataset and then explore and try out functions for quality control, statistical analysis, and functional analysis to find potential biomarkers.
 
-{% include button.html text="Our GitHub" icon="github" link="https://github.com/BI-STEM-Away/shiny_app_dev" color="#88B98F" %} {% include button.html text="App Documentation" link="" color="#88B98F" %} {% include button.html text="STEM-Away"  link="https://stemaway.com/" color="#88B98F" %} {% include button.html text="Our LinkedIn" link="https://www.linkedin.com/company/stemaway/" color="#88B98F" %}
+{% include button.html text="Our GitHub" icon="github" link="https://github.com/BI-STEM-Away/shiny_app_dev" color="#88B98F" %} {% include button.html text="App Documentation" link="" color="#88B98F" %} 
+
+
+{% include button.html text="STEM-Away"  link="https://stemaway.com/" color="#88B98F" %} {% include button.html text="Our LinkedIn" link="https://www.linkedin.com/company/stemaway/" color="#88B98F" %}
 
 ## Team Structure
 
