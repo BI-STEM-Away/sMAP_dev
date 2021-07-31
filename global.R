@@ -5,11 +5,11 @@ library(shiny)
 library(fresh)
 
 # other imports
-packages1<-c("oligo","GEOquery","affy","limma","arrayQualityMetrics","sva","Biobase","affyPLM" )#"simpleaffy")#), "AffyBatch")
+packages1<-c("oligo","GEOquery","affy","limma","arrayQualityMetrics","sva","Biobase","affyPLM","EnhancedVolcano","AnnotationDbi","hgu133plus2.db","WGCNA","impute","org.Hs.eg.db","msigdbr","clusterProfiler","enrichplot","topGO" )#"simpleaffy")#), "AffyBatch")
 for(x in packages1){
     library(x,character.only=TRUE)
 }
-packages2<-c("ggplot2", "pheatmap")
+packages2<-c("ggplot2", "pheatmap","shinyWidgets","DT","data.table","magrittr","tidyr","shinybusy")
 for(y in packages2){
     library(y,character.only=TRUE)
 }
