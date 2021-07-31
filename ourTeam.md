@@ -141,19 +141,19 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/images/Banner3.jpg
     <tr>
       <!-- Names -->
       <th>Modupe Arotiba</th>
-      <th>Marc Abdallah</th>
+    <!--  <th>Marc Abdallah</th> -->
     </tr>
   </thead>
   <tbody>
     <!-- Images -->
     <tr>
       <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png" alt="" height="150"></td>
-      <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Marc_Abdallah.jpeg" alt="" height="150"></td>
+    <!--  <td><img src="https://bi-stem-away.github.io/shiny_app_dev/images/Marc_Abdallah.jpeg" alt="" height="150"></td> -->
     </tr>
     <!-- Captions -->
     <tr>
       <td>Group A,D</td>
-      <td>Group C</td>
+    <!--  <td>Group C</td> -->
     </tr>
   </tbody>
 </table>
