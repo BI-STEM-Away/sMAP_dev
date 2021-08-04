@@ -126,11 +126,8 @@ navigation_header:
 
 
 navigation_footer:
-- title: Created by Huikun
-- url: https://www.linkedin.com/in/kelly-li-b149b2218/
+- title: Created by Huikun and Disha
 
-- title: and Disha
-- url: https://www.linkedin.com/in/disha-chauhan-2749621b0/
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Twitter: https://twitter.com/stemaway?lang=en
