@@ -18,4 +18,4 @@ sMAP's development team was brought together via STEM-Away, a platform for virtu
 
 If you have any questions, please reach out to the website developers here:
 
-{% include button.html text="Disha's LinkedIn" link="https://www.linkedin.com/in/disha-chauhan-2749621b0/" color="#88B98F" %}{% include button.html text="Huikun's LinkedIn" link="https://www.linkedin.com/in/kelly-li-b149b2218/" color="#88B98F" %}
+{% include button.html text="Disha's LinkedIn" icon="linkedin" link="https://www.linkedin.com/in/disha-chauhan-2749621b0/"  color="#88B98F" %}{% include button.html text="Huikun's LinkedIn" icon="linkedin" link="https://www.linkedin.com/in/kelly-li-b149b2218/" color="#88B98F" %}
