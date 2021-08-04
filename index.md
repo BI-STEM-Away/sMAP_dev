@@ -14,8 +14,8 @@ sMAP was made to help users understand a standard transcriptomics pipeline by ta
 sMAP's development team was brought together via STEM-Away, a platform for virtual internships. Our team is made up of participants in STEM-Away's bioinformatics pathway who wanted to challenge themselves by taking on the R Shiny App project. We organized our team into five groups, respectively in charge of developing code for the transcriptomics pipeline, implementing code in R Shiny, formatting the layout of the R Shiny App, managing GitHub and code documentation, and producing this GitHub page and our documentation site. For furthur information about STEM-Away, please refer to the links below.
 
 
-{% include button.html text="STEM-Away"  link="https://stemaway.com/" color="#88B98F" %} {% include button.html text="STEM-Away's LinkedIn" link="https://www.linkedin.com/company/stemaway/" color="#88B98F" %}
+{% include button.html text="STEM-Away"  link="https://stemaway.com/" color="#88B98F" %} {% include button.html text="STEM-Away" icon="linkedin" link="https://www.linkedin.com/company/stemaway/" color="#88B98F" %}
 
 If you have any questions, please reach out to the website developers here:
 
-{% include button.html text="Disha's LinkedIn" icon="linkedin" link="https://www.linkedin.com/in/disha-chauhan-2749621b0/"  color="#88B98F" %}{% include button.html text="Huikun's LinkedIn" icon="linkedin" link="https://www.linkedin.com/in/kelly-li-b149b2218/" color="#88B98F" %}
+{% include button.html text="Disha" icon="linkedin" link="https://www.linkedin.com/in/disha-chauhan-2749621b0/"  color="#88B98F" %}{% include button.html text="Huikun" icon="linkedin" link="https://www.linkedin.com/in/kelly-li-b149b2218/" color="#88B98F" %}
