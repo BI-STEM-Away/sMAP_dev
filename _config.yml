@@ -88,7 +88,7 @@ defaults:
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right
 lang: en-GB # Set the site language
-title: "R Shiny Educational Transcriptomics App" # Site name or title, also used in jekyll-seo-tag
+title: "sMAP" # Site name or title, also used in jekyll-seo-tag
 logo: /images/logo_size.jpg" # Site logo, also used in jekyll-seo-tag
 description: "R Shiny Educational Transcriptomics App created by the Summer 2021 STEM-Away Bioinformatics Teams" # Site description and default description, also used in jekyll-seo-tag
 url: "https://huikunli.github.io/BI-RShiny" # Site url, also used in jekyll-seo-tag
@@ -126,7 +126,10 @@ navigation_header:
 
 
 navigation_footer:
-- title: Created by Huikun, Disha, and Modupe
+- title: Created by Huikun
+- url: https://www.linkedin.com/in/kelly-li-b149b2218/
+- title: and Disha
+- url: https://www.linkedin.com/in/disha-chauhan-2749621b0/
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Twitter: https://twitter.com/stemaway?lang=en
