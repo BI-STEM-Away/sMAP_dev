@@ -7,49 +7,41 @@ source('userInterface/degAnalysis_UI.R')
 source('userInterface/functionalAnalysis_UI.R')
 source('userInterface/faq_UI.R')
 source('userInterface/contact_UI.R')
+options(shiny.maxRequestSize = 100*1024^2)
 
 sidebar <- dashboardSidebar(
   skin = "light",
   sidebarMenu(id = "tabs",
               menuItem("Introduction", tabName = "introduction", 
                        icon = icon("arrow-right")),
-              bs4SidebarHeader("Data Importation"),
+            #  bs4SidebarHeader("Data Importation"),
               menuItem("Upload Data", tabName = "dataImport",
                        icon = icon("upload")),
-              bs4SidebarHeader("Quality Control"),
+         #     bs4SidebarHeader("Quality Control"),
               menuItem("Quality Control", tabName = "qualityControl", 
-                       icon = icon("object-group"),
-                       menuSubItem("QC", tabName = "qC",
-                                   icon = icon("object-group")),
-                       menuSubItem("Normalization", tabName = "normalization",
-                                   icon = icon("object-group")),
-                       menuSubItem("Batch Correction", tabName = "batchCorrection",
-                                   icon = icon("object-group")),
-                       menuSubItem("Potential Outliers", tabName = "potentialOutliers",
-                                   icon = icon("object-group"))
+                       icon = icon("vials"),
+                       menuSubItem(text=tags$div("Visualization",tags$br(), "Before Processing",style= "display: inline-block;vertical-align:middle"), tabName = "qC"),
+                       menuSubItem("Normalization", tabName = "normalization"),
+                       menuSubItem(text=tags$div("Batch Correction &",tags$br(),"Visualization",style= "display: inline-block;vertical-align:middle"), tabName = "batchCorrection"),
+                       menuSubItem("Potential Outliers", tabName = "potentialOutliers")
               ),
-              bs4SidebarHeader("Grouping of Samples"),
+            #  bs4SidebarHeader("Grouping of Samples"),
               menuItem("Sample Grouping", tabName = "sampleGrouping", 
                        icon = icon("object-group")),
-              bs4SidebarHeader("Statistical Analysis"),
-              menuItem("DEGs", tabName = "degAnalysis", 
-                       icon = icon("chart-bar"),
-                       menuSubItem("Volcano Plot", tabName="volcanoPlot",
-                                   icon = icon("chart-bar")),
-                       menuSubItem("Top DEGs", tabName="topDEGs",
-                                   icon = icon("chart-bar"))
+       #       bs4SidebarHeader("Statistical Analysis"),
+              menuItem("Statistical Analysis", tabName = "degAnalysis", 
+                       icon = icon("dna"),
+                       menuSubItem("Top DEGs", tabName="topDEGs"),
+                       menuSubItem("Volcano Plot", tabName="volcanoPlot")
+                       
               ),
-              bs4SidebarHeader("Functional Analysis"),
-              menuItem("Functional", tabName = "functionalAnalysis", 
-                       icon = icon("chart-bar"),
-                       menuSubItem("Functional Enrichment", tabName="functionalEnrichmentAnalysis",
-                                   icon = icon("chart-bar")),
-                       menuSubItem("Gene-Concept Network", tabName="geneConceptNetwork",
-                                   icon = icon("chart-bar")),
-                       menuSubItem("Gene Set Enrichment", tabName="gsea",
-                                   icon = icon("chart-bar")),
-                       menuSubItem("Transcription Factor", tabName="transcriptionFactorAnalysis",
-                                   icon = icon("chart-bar"))
+     #         bs4SidebarHeader("Functional Analysis"),
+              menuItem("Functional Analysis", tabName = "functionalAnalysis", 
+                       icon = icon("project-diagram"),
+                       menuSubItem("KEGG Pathway Enrichment", 
+                                   tabName="functionalEnrichmentAnalysis"),
+                       menuSubItem("Gene Ontology Enrichment", tabName="geneConceptNetwork"),
+                       menuSubItem("Gene Set Enrichment", tabName="gsea")
               ),
               bs4SidebarHeader("Help"),
               #              menuItem("Docs", tabName = "docs",  icon = icon("book")),
@@ -69,30 +61,29 @@ body <- dashboardBody(
       potentialOutliersTab,
     sampleGroupingTab,
     # degAnalysisTab,
-      volcanoPlotTab,
       topDEGsTab,
+      volcanoPlotTab,
     # functionalAnalysisTab,
       functionalEnrichmentAnalysisTab,
       geneConceptNetworkTab,
       gseaTab,
-      transcriptionFactorAnalysisTab,
     #    docsTab,
     faqTab,
     contactTab
   ),
   
   tags$head(
-    tags$link(rel = "stylesheet", type = "text/css", href = "css/style.css")
+    tags$link(rel = "stylesheet", type = "text/css", href = "css/style.css"),
+    tags$script(src = "js/tform.js")
   )
 )
 
 # Valid statuses are: primary, secondary, info, success, warning, danger, gray-dark, gray, white, indigo, lightblue, navy, purple, fuchsia, pink, maroon, orange, lime, teal, olive.
 title <- dashboardBrand(
-  title = "",
-  color = "white",
+  title = "sMAP",
+  color = "primary",
   opacity = 1,
   href = "https://stemaway.com/",
-  image = "https://d1xykt6w2ydx2s.cloudfront.net/original/2X/7/73414b0fa99a6f8f21a9da7c341b927788ec502e.png"
 )
 
 controlbar <- dashboardControlbar(
@@ -102,12 +93,13 @@ controlbar <- dashboardControlbar(
   collapse = TRUE,
   skin = "light",
   controlbarMenu(
+    div(class="typeform-widget", 'data-url' ="https://form.typeform.com/to/GoJ0NzhN?typeform-medium=embed-snippet", style="width: 85%; height: 450px;"),
     h1("Questions? Feedback?"),
     p("Please leave us a comment in the link below"),
     p("Links:"), 
     a(strong("Typeform"), href = "https://www.typeform.com/", style = "font-size : 25px;")
-  )
-)
+
+))
 
 dashboardPage(
   freshTheme = create_theme(
@@ -134,17 +126,16 @@ dashboardPage(
     fixed = TRUE,
     border = TRUE,
     status = 'lightgray',
-    #    sidebarIcon = shiny::icon("water"),
     title = title,
-    div(style = "text-align:center; color:black",HTML('<strong>Standard Microarray Analysis Pipeline</strong>'))
+    div(style = "margin-left:auto;margin-right:auto; text-align:center; color:black",HTML('<strong>sMAP: Standard Microarray Analysis Pipeline</strong>'))
   ),
   sidebar,
   body,
   controlbar,
   footer = dashboardFooter(
     left = a(
-      href = "https://github.com/BI-STEM-Away/shiny_app_dev",
-      target = "_blank", "@sMAP GitHub"
+      href = "https://github.com/BI-STEM-Away/",
+      target = "_blank", "@BI-STEM-Away"
     ),
     right = "sMAP: 2021"
   ),
