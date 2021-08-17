@@ -472,7 +472,7 @@ function(input,output,session){
       if(input$oligo=="Affymetrix Human Gene 1.0 ST Array"){
         symbols<-AnnotationDbi::select(hugene11sttranscriptcluster.db, keys=row.names(data_stat), columns=c("SYMBOL"))
       }
-      else if(input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array"){
+      else{
         symbols<-AnnotationDbi::select(hgu133plus2.db, keys=row.names(data_stat), columns=c("SYMBOL"))
       }
       
