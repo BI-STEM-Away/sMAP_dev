@@ -8,7 +8,7 @@ qCTab <- tabItem(tabName = "qC",
                                              ),
                                              
                                              column(10, align="center",
-                                                    HTML("<h3><b>Quality Control</b></h3>")
+                                                    HTML("<h5>Visualization Before Processing</h5>")
                                                     
                                              ),
                                              # @roman_ramirez
@@ -24,15 +24,14 @@ qCTab <- tabItem(tabName = "qC",
                                          actionButton("vis_dat","Visualize Data"),
                                          #ShreyaVora14
                                          tags$div(
-                                           tags$p("Quality control is crucial because it checks whether the data is reliable. NUSE and RLE are two different
-                        methods that are used for quality control. ")
+                                           tags$p("Quality control is crucial because it checks whether the data is reliable. Normalized unscaled standard errors (NUSE) and Relative Log Expression (RLE) plots are two different
+                        methods that are used for quality control. NUSE effectively compares the probeset standard errors between samples. RLE plots show the relative intensity values between samples.")
                                          ),
                                   ),
                                   column(6,
                                          
                                          plotOutput("plot_raw"),
-                                         textOutput("normal"),
-                                         textOutput("norm_comp"),
+                                         
                                          
                                   ),
                               )
@@ -50,7 +49,7 @@ normalizationTab <- tabItem(tabName = "normalization",
                                              
                                              
                                              column(10, align="center",
-                                                    HTML("<h3><b>Normalization</b></h3>")
+                                                    HTML("<h5>Normalization</h5>")
                                                     
                                              ),
                                              
@@ -69,13 +68,13 @@ normalizationTab <- tabItem(tabName = "normalization",
                                          #ShreyaVora14
                                          tags$div(
                                            tags$p("Normalization of the data will make feature extraction easier and the organization of the data much more structured. 
-                        The MAS5 function will normalize each array in the data independently while rma and gcrma use a multi-chip model. ")
+                        The MAS5 function will normalize each chip in the data independently while RMA and GCRMA use a multi-chip model.")
                                          ),
                                   ),
                                   column(6,
-                                         textOutput("batch_com"),
-                                         htmlOutput("pc_comp"),
-                                         htmlOutput("feat"),
+                                         textOutput("normal"),
+                                         textOutput("norm_comp"),
+                                         
                                   )
                               )
 )
@@ -90,7 +89,7 @@ batchCorrectionTab <- tabItem(tabName = "batchCorrection",
                                             ),
                                             
                                             column(10, align="center",
-                                                   HTML("<h3><b>Batch Correction</b></h3>")
+                                                   HTML("<h5>Batch Correction & Visualization After Processing</h5>")
                                                    
                                             ),
                                             # @roman_ramirez
@@ -115,20 +114,26 @@ batchCorrectionTab <- tabItem(tabName = "batchCorrection",
                                         #xgeng3
                                         #Input to visualize via PCA or boxplot
                                         selectInput("qc_method2", "Choose a QC visualization method after normalization.", choices = c("Boxplot","PCA")),
-                                        actionButton("vis_button", "Generate Plot"),
+                                        actionButton("vis_button", "Next"),
                                         #ShreyaVora14
                                         tags$div(
                                           tags$p("Visualizing the data after the normalization is complete will allow you to see how your data has changed due to 
                         normalization. Both the boxplot and the PCA will show you the quality control that was done on the data. The boxplot will
                         help to visualize the outliers while the PCA plot will help visualize patterns and variety in the data.")
                                         ),
+                                        conditionalPanel(condition="input.qc_method2=='PCA' && input.vis_button!=0",
+                                                         htmlOutput("pc_comp"),
+                                                         htmlOutput("feat"),
+                                                         actionButton("pcplot","Plot Principal Components"), 
+                                                         )
                                  ),
                                  column(6,
-                                        actionButton("pcplot","Plot Principal Components"),
+                                        textOutput("batch_com"),
+                                        
                                         textOutput("pcwarn"),
-                                        textOutput("plot_status"),
+                                        #textOutput("plot_status"),
                                         plotOutput("qcplot"),
-                                        htmlOutput("remove"),
+                                       
                                         
                                  )
                              )
@@ -144,7 +149,7 @@ potentialOutliersTab <- tabItem(tabName = "potentialOutliers",
                                                          actionButton('backTo_batchCorrection', label = 'Back', status = "success"))
                                               ),
                                               column(10, align="center",
-                                                     HTML("<h3><b>Find Potential Outliers</b></h3>")
+                                                     HTML("<h5>Find Potential Outliers</h5>")
                                                      
                                               ),
                                               
@@ -171,6 +176,7 @@ potentialOutliersTab <- tabItem(tabName = "potentialOutliers",
                                         ),
                                         column(6,
                                                p("Potential Outliers:"),
+                                               uiOutput("remove"),
                                                uiOutput("potout"),
                                                plotOutput("outplot"),
                                                dataTableOutput("newexprs")
