@@ -7,131 +7,122 @@
 # )
 
 functionalEnrichmentAnalysisTab <- tabItem(tabName = "functionalEnrichmentAnalysis",
-                                           fluidRow(
-                                               column(12,
-                                                      fluidRow(
-                                                          
-                                                          column(1,
-                                                                 div(style = "display:inline-block; float:left", 
-                                                                     actionButton('backTo_topDEGs', label = 'Back', status = "success"))
-                                                          ),
-                                                          column(10, align="center",
-                                                                 HTML("<h3><b>Functional Enrichment Analysis</b></h3>")
-                                                                 
-                                                          ),
-                                                          # @roman_ramirez
-                                                          column(width = 1,
-                                                                 div(style = "display:inline-block; float:right", 
-                                                                     actionButton('to_geneConceptNetwork', label = 'Next', status = "success"))
-                                                          )
-                                                      )
-                                                   
-                                               ),
-                                               column(6,
-                                                      actionButton("kegg","KEGG Analysis"),
-                                                      sliderInput("x", "Number of categories shown", 0, 20,
-                                                                  value =10, step = 2),
-                                                      sliderInput("y", "Number of categories shown", 0, 20,
-                                                                  value =10, step = 2),
-                                                      downloadButton("exportkegg","Download KEGG Plots")
-                                               ),
-                                               column(6,
-                                                      plotOutput("dotplot"),
-                                                      plotOutput("barplot")
-                                               )
-                                           )
-)                                        
+                      fluidRow(
+                          
+                          column(2,
+                                 div(style = "display:inline-block; float:left", 
+                                     actionButton('backTo_topDEGs', label = 'Back', status = "success"))
+                          ),
+                          column(8, align="center",
+                                 HTML("<h5>KEGG Pathway Enrichment Analysis</h5>")
+                                 
+                          ),
+                          # @roman_ramirez
+                          column(2,
+                                 div(style = "display:inline-block; float:right", 
+                                     actionButton('to_geneConceptNetwork', label = 'Next', status = "success"))
+                          )
+                      ),
+                      HTML("<HR>"),
+                      HTML("<BR>"),
+                      fluidRow(
+#                                downloadButton("exportkegg","Download KEGG Plots")
+                         column(12,
+                                actionButton("kegg","KEGG Analysis"),
+                                p("KEGG is a database that lets you compare your data using the gene symbols
+             to other biological systems, allowing you to determine which biological pathways are associated with your set of enriched genes. You will be able to visualize a dotplot and barplot for which larger dots and longer bars indicate enriched pathways."),
+                        )
+                        ),
+                  HTML("<HR>"),
+                  HTML("<BR>"),
+                   fluidRow(
+                     column(12,
+                            sliderInput("x", "Number of pathways shown", 0, 20,
+                                        value =10, step = 2),
+                            plotOutput("dotplot"))
+                   ),
+                  HTML("<HR>"),
+                   fluidRow(
+                   column(12,
+                          sliderInput("y", "Number of pathways shown", 0, 20,
+                                      value =10, step = 2),
+                          
+                          plotOutput("barplot"))
+                  )
+)
+
 geneConceptNetworkTab <- tabItem(tabName = "geneConceptNetwork",
-                                 fluidRow(
-                                     column(12,
-                                            fluidRow(
-                                                
-                                                column(1,
-                                                       div(style = "display:inline-block; float:left", 
-                                                           actionButton('backTo_functionalEnrichmentAnalysis', label = 'Back', status = "success"))
-                                                ),
-                                                column(10, align="center",
-                                                       HTML("<h3><b>Gene-Concept Network</b></h3>")
-                                                       
-                                                ),
-                                                # @roman_ramirez
-                                                column(width = 1,
-                                                       div(style = "display:inline-block; float:right", 
-                                                           actionButton('to_gsea', label = 'Next', status = "success"))
-                                                )
-                                            )
-                                     ),
-                                     column(6,
-                                            h1("Gene Ontology Enrichment Analysis"),
-                                            selectInput("type","Category for Gene Ontology Analysis",choices=c("Cellular Components","Molecular Functions","Biological Processes")),
-                                            actionButton("go","Gene Ontology Analysis"),
-                                            sliderInput("a", "Number of categories shown", 0, 20,
-                                                        value =10, step = 2),
-                                            sliderInput("b", "Number of categories shown", 0, 20,
-                                                        value =10, step = 2),
-                                            downloadButton("exportgo","Download GO Plots")
-                                     ),
-                                     column(6,
-                                            plotOutput("dotplot2"),
-                                            plotOutput("barplot2"),
-                                            plotOutput("GOgraph")
-                                     ),
-                                 )
+              fluidRow(
+                  
+                  column(2,
+                         div(style = "display:inline-block; float:left", 
+                             actionButton('backTo_functionalEnrichmentAnalysis', label = 'Back', status = "success"))
+                  ),
+                  column(8, align="center",
+                         HTML("<h5>Gene Ontology Enrichment Analysis</h5>")
+                         
+                  ),
+                  # @roman_ramirez
+                  column(2,
+                         div(style = "display:inline-block; float:right", 
+                             actionButton('to_gsea', label = 'Next', status = "success"))
+                  )
+              ),
+              HTML("<HR>"),
+              HTML("<BR>"),
+              fluidRow(
+               column(6,
+                      selectInput("type","Category for Gene Ontology Analysis",choices=c("Cellular Components","Molecular Functions","Biological Processes"))
+                      ),
+               column(6,
+                      actionButton("go","Gene Ontology Analysis")
+               )
+                      #downloadButton("exportgo","Download GO Plots")
+               ),
+               HTML("<HR>"),
+               fluidRow(
+               column(12,
+                sliderInput("a", "Number of categories shown", 0, 20, value =10, step = 2),
+                p("Gene Ontology defines gene function and the relationship between Cellular Components, Molecular Functions, and Biological Processes with your set of genes. The dot plot and bar plot are two ways of visualizing which gene ontology terms are most enriched, these terms being indicated by larger dots and longer bars."),
+                plotOutput("dotplot2")
+               )),
+              fluidRow(
+                column(12,
+                       sliderInput("b", "Number of Terms shown", 0, 20, value =10, step = 2),
+                       plotOutput("barplot2")
+               )
+                    #  plotOutput("GOgraph")
+              )
 )                                
 gseaTab <- tabItem(tabName = "gsea",
-                   fluidRow(
-                       column(12,
-                              fluidRow(
-                                  column(1,
-                                         div(style = "display:inline-block; float:left", 
-                                             actionButton('backTo_geneConceptNetwork', label = 'Back', status = "success"))
-                                  ),
-                                  column(10, align="center",
-                                         HTML("<h3><b>Gene-Set Enrichment Analysis</b></h3>")
-                                         
-                                  ),
-                                  # @roman_ramirez
-                                  column(width = 1,
-                                         div(style = "display:inline-block; float:right", 
-                                             actionButton('to_transcriptionFactorAnalysis', label = 'Next', status = "success"))
-                                  )
-                              ),
-                       ),
-                       column(6,
-                              h1("Gene Set Enrichment Analysis"),
-                              actionButton("gsea","Conduct GSEA")
-                       ),
-                       column(6,
-                              plotOutput("plot_gsea"),
-                              downloadButton("exportgsea","Download GSEA Plot")
-                       )
-                   )
+            fluidRow(
+                column(2,
+                       div(style = "display:inline-block; float:left", 
+                           actionButton('backTo_geneConceptNetwork', label = 'Back', status = "success"))
+                ),
+                column(8, align="center",
+                       HTML("<h5>Gene-Set Enrichment Analysis</h5>")
+                       
+                ),
+                # @roman_ramirez
+                column(2,
+                       div(style = "display:inline-block; float:right", 
+                           actionButton('to_transcriptionFactorAnalysis', label = 'Next', status = "success"))
+                )
+            ),
+            HTML("<HR>"),
+            HTML("<BR>"),
+            fluidRow(
+             column(12,offset=0,align="center",
+                    p("GSEA is the evaluation of microarray data in gene sets. The goal of GSEA is to figure 
+                      out how the genes are distributed within the data set. GSEA will first rank all genes in a data set, then it will calculate an enrichment score 
+                      for the genes which show the under and over expressed genes."),
+                    actionButton("gsea","Perform GSEA")
+             )),
+             fluidRow(
+             column(12,offset=0,align="center",
+                    plotOutput("plot_gsea")
+#                    downloadButton("exportgsea","Download GSEA Plot")
+             )
+         )
 )                  
-transcriptionFactorAnalysisTab <- tabItem(tabName = "transcriptionFactorAnalysis",
-                                          fluidRow(
-                                              column(12,
-                                                     fluidRow(
-                                                         column(1,
-                                                                div(style = "display:inline-block; float:left",
-                                                                    actionButton('backTo_gsea', label = 'Back', status = "success"))
-                                                         ),
-                                                         column(10, align="center",
-                                                                HTML("<h3><b>Transcription Factor Analysis</b></h3>")
-
-                                                         ),
-                                                         # @roman_ramirez
-                                                         column(width = 1,
-                                                                div(style = "display:inline-block; float:right",
-                                                                    actionButton('to_introduction', label = 'Start Over', status = "success"))
-                                                         )
-                                                     )
-
-                                              ),
-                                              column(6,
-                                                     HTML("Insert input TFA code here")
-                                              ),
-                                              column(6,
-                                                     HTML("Insert output TFA code here")
-                                              ),
-                                          )
-)
