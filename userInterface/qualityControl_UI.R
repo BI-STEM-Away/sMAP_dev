@@ -177,7 +177,7 @@ potentialOutliersTab <- tabItem(tabName = "potentialOutliers",
                                         column(6,
                                                p("Potential Outliers:"),
                                                uiOutput("remove"),
-                                               uiOutput("potout"),
+                                               textOutput("potout"),
                                                plotOutput("outplot"),
                                                dataTableOutput("newexprs")
                                             
