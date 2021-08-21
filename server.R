@@ -399,7 +399,7 @@ function(input,output,session){
     
     #Find outliers
     outlier_affy<-outliers(final_qc_dat(),method=as.vector(input$outmethod))
-    output$potout<-renderUI(as.vector(names(outlier_affy@which)))
+    #output$potout<-renderText(as.vector(names(outlier_affy@which)))
     values<-outlier_affy@statistic
     dat_fram<-data.frame(colnames(final_qc_dat()),values)
     #Visualize outlier statistic value for each sample
@@ -538,11 +538,26 @@ function(input,output,session){
     fac1<-colnames(as.data.frame(des_matrix))[1]
     fac2<-colnames(as.data.frame(des_matrix))[2]
     phr<-c(paste(fac1,fac2,sep="-"))
-    con_mat<-makeContrasts(contrasts=phr,levels=colnames(des_matrix))
+    con_mat<-makeContrasts(contrasts=phr,levels=des_matrix)
     fit.contrast<-contrasts.fit(fitting,con_mat)
     stat.con<-eBayes(fit.contrast)
     result<-topTable(stat.con,sort.by="p",p.value=input$p_val,number=length(rownames(dat_for_stat)))
-    
+    output$error<-renderPrint({c(fit.contrast,"stat",result)})
+    dimension<-dim(result)
+    if(dimension[1]==0 && dimension[2]==0){
+      des_matrix<-model.matrix(~variable,met_dat)
+      desmat1(des_matrix)
+      colnames(des_matrix)<-c("Factor_a","Factor_b")
+      fitting<-lmFit(dat_for_stat,des_matrix)
+      fac1<-colnames(as.data.frame(des_matrix))[1]
+      fac2<-colnames(as.data.frame(des_matrix))[2]
+      phr<-c(paste(fac1,fac2,sep="-"))
+      con_mat<-makeContrasts(contrasts=phr,levels=des_matrix)
+      fit.contrast<-contrasts.fit(fitting,con_mat)
+      stat.con<-eBayes(fit.contrast)
+      result<-topTable(stat.con,sort.by="p",p.value=input$p_val,number=length(rownames(dat_for_stat)))
+    }
+    result
   }
   )
   
