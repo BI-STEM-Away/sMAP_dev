@@ -20,8 +20,16 @@ qCTab <- tabItem(tabName = "qC",
                                   ),
                                   column(6,
                                          #Selection for user to visualize raw data
-                                         selectInput("qc_method", "Choose a QC visualization method before normalization.", choices = c("NUSE","RLE")),
-                                         actionButton("vis_dat","Visualize Data"),
+                                         selectInput("qc_method", "Choose a QC visualization method before normalization.", choices = c("NUSE","RLE","PCA")),
+                                         
+                                         actionButton("vis_dat","Next"),
+                                         conditionalPanel(condition="input.qc_method=='PCA' && input.vis_dat!=0",
+                                                          htmlOutput("pc_comp_raw"),
+                                                          htmlOutput("feat_raw"),
+                                                          actionButton("pcplot_raw","Plot Principal Components")
+
+                                         ),
+                                         
                                          #ShreyaVora14
                                          tags$div(
                                            tags$p("Quality control is crucial because it checks whether the data is reliable. Normalized unscaled standard errors (NUSE) and Relative Log Expression (RLE) plots are two different
@@ -29,7 +37,7 @@ qCTab <- tabItem(tabName = "qC",
                                          ),
                                   ),
                                   column(6,
-                                         
+                                         textOutput("pcwarnraw"),
                                          plotOutput("plot_raw"),
                                          
                                          
