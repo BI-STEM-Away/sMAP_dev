@@ -319,28 +319,65 @@ function(input,output,session){
   
   #Visualize data prior to normalization using RLE or NUSE
   #xgeng3 and nk468188
-  observeEvent(input$vis_dat,output$plot_raw<-renderPlot({
+  observeEvent(input$vis_dat,{
     if(input$qc_method=="RLE" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array" && is.null(geo_data())){
       affy.data=fitPLM(celdat())
-      RLE(affy.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values")
+      output$plot_raw<-renderPlot({RLE(affy.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values")})
     }
     else if(input$qc_method=="NUSE" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array"&& is.null(geo_data())){
       affy.data=fitPLM(celdat())
-      NUSE(affy.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values")
+      output$plot_raw<-renderPlot({NUSE(affy.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values")})
     }
     
     else if(input$qc_method=="RLE" && (input$oligo=="Affymetrix Human Gene 1.0 ST Array" || input$oligo=="Affymetrix Human Exon 1.0 ST Array")&& is.null(geo_data())){
       oligo.data=oligo::fitProbeLevelModel(celdat())
-      oligo::RLE(oligo.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values")
+      output$plot_raw<-renderPlot({oligo::RLE(oligo.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values")})
     }
     
     else if(input$qc_method=="NUSE"&& (input$oligo=="Affymetrix Human Gene 1.0 ST Array" || input$oligo=="Affymetrix Human Exon 1.0 ST Array")&& is.null(geo_data())){
       oligo.data=oligo::fitProbeLevelModel(celdat())
-      oligo::NUSE(oligo.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values")
+      output$plot_raw<-renderPlot({oligo::NUSE(oligo.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values")})
     }
-    
-    
-  }))
+    else if(input$qc_method=="PCA"){
+      pcacomps_raw<-prcomp(exprs(celdat()),center=FALSE,scale=FALSE)
+      comps_raw<-pcacomps_raw$rotation
+      output$pc_comp_raw<-renderUI({
+        selectInput("compraw","Which components do you want to plot?",choices=colnames(comps_raw),multiple=TRUE)
+      })
+      output$feat_raw<-renderUI({
+        selectInput("featcolraw","Which feature do you want to group samples by?",choices=colnames(meet())[-1])
+      })
+    }
+  })
+  
+  observeEvent(input$pcplot_raw,{
+    if(length(input$compraw)>2){
+      output$pcwarnraw<-renderText("Please only select two principal components.")
+    }
+    else if (length(input$compraw)<2){
+      output$pcwarnraw<-renderText("Please select two principal components.")
+    }
+    if(is.null(input$featcolraw)){
+      output$pcwarnraw<-renderText("Please specify a feature to group samples by.")
+    }
+    else{
+      output$pcwarnraw<-NULL
+      pcacomps1raw<-prcomp(exprs(celdat()),center=FALSE,scale=FALSE)
+      comps1raw<-pcacomps1raw$rotation
+      input_compraw<-as.vector(input$compraw)
+      pcsraw<-comps1raw[,input_compraw]
+      pc1raw<-pcsraw[,1]
+      pc2raw<-pcsraw[,2]
+      colorsraw<-meet()[,input$featcolraw]
+      data_to_plotraw<-data.frame(pc1raw,pc2raw,colorsraw)
+      praw<-ggplot(data_to_plotraw,aes(x=pc1raw,y=pc2raw,color=colorsraw))+stat_ellipse()
+      praw<-praw+geom_point()+labs(color=input$featcolraw)+ggtitle("PCA Plot for Raw Data")+xlab(input$compraw[1])+ylab(input$compraw[2])
+      met_info<-meet()
+      #met_info<-met_info[-1,]
+      praw<-praw+geom_text(aes(label=met_info[,1]),hjust=0,vjust=0,size=4)
+      output$plot_raw<-renderPlot(praw)
+    }
+  })
   
   #Visualize normalized data using Boxplot or PCA
   #nk468188
@@ -386,8 +423,10 @@ function(input,output,session){
       pc2<-pcs[,2]
       colors<-meet()[,input$feat_color]
       data_to_plot<-data.frame(pc1,pc2,colors)
-      p<-ggplot(data_to_plot,aes(x=pc1,y=pc2,color=colors))
-      p<-p+geom_point()+labs(color=input$feat_color)+ggtitle("PCA Plot for Normalized Data")+xlab("PC1")+ylab("PC2")
+      p<-ggplot(data_to_plot,aes(x=pc1,y=pc2,color=colors))+stat_ellipse()
+      p<-p+geom_point()+labs(color=input$feat_color)+ggtitle("PCA Plot for Normalized Data")+xlab(input$comp_plot[1])+ylab(input$comp_plot[2])
+      met_2<-meet()
+      p<-p+geom_text(aes(label=met_2[,1]),hjust=0,vjust=0,size=4)
       output$qcplot<-renderPlot(p)
     }
   })
