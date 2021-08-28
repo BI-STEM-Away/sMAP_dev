@@ -45,7 +45,7 @@ topDEGsTab <- tabItem(tabName = "topDEGs",
                         column(12,
                                textOutput("gen_filt"),
                                dataTableOutput("toptab"),
-                               verbatimTextOutput("error")
+                               #verbatimTextOutput("error")
                         )
                       )
 )
