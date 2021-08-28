@@ -60,7 +60,7 @@ volcanoPlotTab <- tabItem(tabName = "volcanoPlot",
                        ),
                        
                        column(8, align="center",
-                              HTML("<h5>Interactive Volcano Plot for calculated DEGs</h5>")
+                              HTML("<h5>Interactive Volcano Plot for Calculated DEGs</h5>")
                               
                        ),
                        
