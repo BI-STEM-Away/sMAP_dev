@@ -254,6 +254,20 @@ function(input,output,session){
     
   }))
   
+  plot_samplenames<-eventReactive(input$loaddat,{
+    names<-input$celzip$name
+    plotnames<-c()
+    metanames<-meet()[,1]
+    for(hu in names){
+      for(bu in metanames){
+        if(grepl(bu,hu,fixed=TRUE)==TRUE){
+          plotnames<-c(plotnames,bu)
+        }
+      }
+    }
+    plotnames
+  })
+  
   ####QUALITY CONTROL######
   
   
@@ -272,21 +286,25 @@ function(input,output,session){
                  else{
                    if(input$normlztype=="RMA" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array"){
                      norm_affy<-exprs(affy::rma(celdat()))
+                     colnames(norm_affy)<-plot_samplenames()
                      final_qc_dat(norm_affy)
                      output$norm_comp<-renderText("Normalization is complete.")
                    }
                    else if(input$normlztype=="GCRMA"  && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array"){
                      norm_affy<-exprs(gcrma(celdat()))
+                     colnames(norm_affy)<-plot_samplenames()
                      final_qc_dat(norm_affy)
                      output$norm_comp<-renderText("Normalization is complete.")
                    }
                    else if(input$normlztype=="MAS5" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array"){
                      norm_affy<-log(exprs(mas5(celdat())),2)
+                     colnames(norm_affy)<-plot_samplenames()
                      final_qc_dat(norm_affy)
                      output$norm_comp<-renderText("Normalization is complete.")
                    }
                    else if(input$normlztype=="RMA" && (input$oligo=="Affymetrix Human Gene 1.0 ST Array" )){
                      norm_affy<-exprs(oligo::rma(celdat()))
+                     colnames(norm_affy)<-plot_samplenames()
                      final_qc_dat(norm_affy)
                      output$norm_comp<-renderText("Normalization is complete.")
                    }
@@ -455,7 +473,7 @@ function(input,output,session){
         expr_mat_2<-expr_mat_2[,-ind_to_remove]
         meta_sample_names=meta_datframe[,1]
         meta_ind_to_remove<-which(meta_sample_names==name)
-        meta_matrix<-meta_datframe[,-meta_ind_to_remove]
+        meta_datframe<-meta_datframe[-meta_ind_to_remove,]
       }
       #Update reactive value
       final_qc_dat(expr_mat_2)
@@ -573,6 +591,7 @@ function(input,output,session){
     des_matrix<-model.matrix(~0+variable,met_dat)
     desmat1(des_matrix)
     colnames(des_matrix)<-c("Factor_a","Factor_b")
+    output$error<-renderPrint({c(rownames(des_matrix),colnames(dat_for_stat))})
     fitting<-lmFit(dat_for_stat,des_matrix)
     fac1<-colnames(as.data.frame(des_matrix))[1]
     fac2<-colnames(as.data.frame(des_matrix))[2]
@@ -581,7 +600,7 @@ function(input,output,session){
     fit.contrast<-contrasts.fit(fitting,con_mat)
     stat.con<-eBayes(fit.contrast)
     result<-topTable(stat.con,sort.by="p",p.value=input$p_val,number=length(rownames(dat_for_stat)))
-    output$error<-renderPrint({c(fit.contrast,"stat",result)})
+    
     dimension<-dim(result)
     if(dimension[1]==0 && dimension[2]==0){
       des_matrix<-model.matrix(~variable,met_dat)
