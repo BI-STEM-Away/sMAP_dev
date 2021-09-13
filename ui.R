@@ -14,28 +14,28 @@ sidebar <- dashboardSidebar(
   sidebarMenu(id = "tabs",
               menuItem("Introduction", tabName = "introduction", 
                        icon = icon("arrow-right")),
-            #  bs4SidebarHeader("Data Importation"),
+              #  bs4SidebarHeader("Data Importation"),
               menuItem("Upload Data", tabName = "dataImport",
                        icon = icon("upload")),
-         #     bs4SidebarHeader("Quality Control"),
-              menuItem("Quality Control", tabName = "qualityControl", 
+              #     bs4SidebarHeader("Quality Control"),
+              menuItem(tags$div("Quality Control",tags$br(),"& Processing",style="display: inline-block;vertical-align:middle"), tabName = "qualityControl", 
                        icon = icon("vials"),
                        menuSubItem(text=tags$div("Visualization",tags$br(), "Before Processing",style= "display: inline-block;vertical-align:middle"), tabName = "qC"),
                        menuSubItem("Normalization", tabName = "normalization"),
                        menuSubItem(text=tags$div("Batch Correction &",tags$br(),"Visualization",style= "display: inline-block;vertical-align:middle"), tabName = "batchCorrection"),
                        menuSubItem("Potential Outliers", tabName = "potentialOutliers")
               ),
-            #  bs4SidebarHeader("Grouping of Samples"),
+              #  bs4SidebarHeader("Grouping of Samples"),
               menuItem("Sample Grouping", tabName = "sampleGrouping", 
                        icon = icon("object-group")),
-       #       bs4SidebarHeader("Statistical Analysis"),
+              #       bs4SidebarHeader("Statistical Analysis"),
               menuItem("Statistical Analysis", tabName = "degAnalysis", 
                        icon = icon("dna"),
                        menuSubItem("Top DEGs", tabName="topDEGs"),
                        menuSubItem("Volcano Plot", tabName="volcanoPlot")
                        
               ),
-     #         bs4SidebarHeader("Functional Analysis"),
+              #         bs4SidebarHeader("Functional Analysis"),
               menuItem("Functional Analysis", tabName = "functionalAnalysis", 
                        icon = icon("project-diagram"),
                        menuSubItem("KEGG Pathway Enrichment", 
@@ -55,18 +55,18 @@ body <- dashboardBody(
     introductionTab,
     dataImportTab,
     # qualityControlTab,
-      qCTab,
-      normalizationTab,
-      batchCorrectionTab,
-      potentialOutliersTab,
+    qCTab,
+    normalizationTab,
+    batchCorrectionTab,
+    potentialOutliersTab,
     sampleGroupingTab,
     # degAnalysisTab,
-      topDEGsTab,
-      volcanoPlotTab,
+    topDEGsTab,
+    volcanoPlotTab,
     # functionalAnalysisTab,
-      functionalEnrichmentAnalysisTab,
-      geneConceptNetworkTab,
-      gseaTab,
+    functionalEnrichmentAnalysisTab,
+    geneConceptNetworkTab,
+    gseaTab,
     #    docsTab,
     faqTab,
     contactTab
@@ -98,8 +98,8 @@ controlbar <- dashboardControlbar(
     p("Please leave us a comment in the link below"),
     p("Links:"), 
     a(strong("Typeform"), href = "https://www.typeform.com/", style = "font-size : 25px;")
-
-))
+    
+  ))
 
 dashboardPage(
   freshTheme = create_theme(
