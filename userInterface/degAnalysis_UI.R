@@ -45,7 +45,7 @@ topDEGsTab <- tabItem(tabName = "topDEGs",
                         column(12,
                                textOutput("gen_filt"),
                                dataTableOutput("toptab"),
-                               #verbatimTextOutput("error")
+                               verbatimTextOutput("error")
                         )
                       )
 )
@@ -80,7 +80,7 @@ volcanoPlotTab <- tabItem(tabName = "volcanoPlot",
                                sliderInput("n", "LogFC cutoff", 0, 5,
                                            value =1, step = 0.05),
                                shinyWidgets::sliderTextInput("m", "Adjusted P-Value cutoff", 
-                                                             choices=c(1e-5,1e-10,1e-15,1e-20,1e-25,1e-30,1e-35,1e-40,1e-45,1e-50),
+                                                             choices=c(1e-1,5e-2,1e-2,5e-3,1e-3,5e-4,1e-4,5e-5,1e-5,5e-6),
                                                              grid=TRUE)
                         ),
                         column(9,
