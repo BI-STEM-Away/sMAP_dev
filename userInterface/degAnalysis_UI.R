@@ -33,7 +33,11 @@ topDEGsTab <- tabItem(tabName = "topDEGs",
                                
                         ),
                         column(4,
-                               numericInput("p_val","Cutoff p-value:",value=0.05)
+                               numericInput("p_val","Cutoff adjusted p-value:",value=0.05),
+                               numericInput("fc_cut","Cutoff LogFC Value:",value=1),
+                               tags$div(
+                                 tags$p("Genes with a lower adjusted p-value than the cutoff and with a higher magnitude log fold change will be considered significantly differentially expressed.")
+                               )
                         ),
                         column(2,
                                actionButton("degs","Find DEGs")
