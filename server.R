@@ -280,7 +280,7 @@ function(input,output,session){
   #disha-22
   observeEvent(input$normlzdata,
                {
-                 if(is.null(celdat())){
+                 if(is.null(celdat()) && is.null(data()) && is.null(geo_data())){
                    final_qc_dat(NULL)
                  }
                  else{
@@ -591,7 +591,7 @@ function(input,output,session){
     des_matrix<-model.matrix(~0+variable,met_dat)
     desmat1(des_matrix)
     colnames(des_matrix)<-c("Factor_a","Factor_b")
-    output$error<-renderPrint({c(rownames(des_matrix),colnames(dat_for_stat))})
+    
     fitting<-lmFit(dat_for_stat,des_matrix)
     fac1<-colnames(as.data.frame(des_matrix))[1]
     fac2<-colnames(as.data.frame(des_matrix))[2]
@@ -599,7 +599,13 @@ function(input,output,session){
     con_mat<-makeContrasts(contrasts=phr,levels=des_matrix)
     fit.contrast<-contrasts.fit(fitting,con_mat)
     stat.con<-eBayes(fit.contrast)
-    result<-topTable(stat.con,sort.by="p",p.value=input$p_val,number=length(rownames(dat_for_stat)))
+    result<-topTable(stat.con,sort.by="p",p.value=input$p_val,lfc=input$fc_cut,number=length(rownames(dat_for_stat)))
+    # lfc2<-result$logFC
+    # for(lfcval_index in 1:length(lfc2)){
+    #   if(abs(lfc2[lfcval_index]) < abs(input$fc_cut)){
+    #     result<-result[-c(lfcval_index),] %>% head()
+    #   }
+    # }
     
     dimension<-dim(result)
     if(dimension[1]==0 && dimension[2]==0){
@@ -613,7 +619,14 @@ function(input,output,session){
       con_mat<-makeContrasts(contrasts=phr,levels=des_matrix)
       fit.contrast<-contrasts.fit(fitting,con_mat)
       stat.con<-eBayes(fit.contrast)
-      result<-topTable(stat.con,sort.by="p",p.value=input$p_val,number=length(rownames(dat_for_stat)))
+      result<-topTable(stat.con,sort.by="p",p.value=input$p_val,lfc=input$fc_cut,number=length(rownames(dat_for_stat)))
+      lfc2<-result$logFC
+      for(lfcval_index in 1:length(lfc2)){
+        if(abs(lfc2[lfcval_index]) < abs(input$fc_cut)){
+          result<-result[-c(lfcval_index),] %>% head()
+        }
+      }
+      #output$error<-renderPrint({c(result,result[-1,],lfc2,1:length(lfc2))})
     }
     result
   }
