@@ -37,6 +37,7 @@ functionalEnrichmentAnalysisTab <- tabItem(tabName = "functionalEnrichmentAnalys
                   HTML("<BR>"),
                    fluidRow(
                      column(12,
+                            numericInput("funcpcutKEGG","Cutoff Adjusted p-Value for Enriched KEGG Pathways",value=0.05),
                             sliderInput("x", "Number of pathways shown", 0, 20,
                                         value =10, step = 2),
                             plotOutput("dotplot"))
@@ -72,8 +73,10 @@ geneConceptNetworkTab <- tabItem(tabName = "geneConceptNetwork",
               HTML("<BR>"),
               fluidRow(
                column(6,
-                      selectInput("type","Category for Gene Ontology Analysis",choices=c("Cellular Components","Molecular Functions","Biological Processes"))
+                      selectInput("type","Category for Gene Ontology Analysis",choices=c("Cellular Components","Molecular Functions","Biological Processes")),
+                      numericInput("funcpcutGO","Cutoff Adjusted p-Value for Enriched GO Terms",value=0.05)
                       ),
+               
                column(6,
                       actionButton("go","Gene Ontology Analysis")
                )
