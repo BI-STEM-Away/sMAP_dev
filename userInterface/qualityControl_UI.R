@@ -20,7 +20,7 @@ qCTab <- tabItem(tabName = "qC",
                                   ),
                                   column(6,
                                          #Selection for user to visualize raw data
-                                         selectInput("qc_method", "Choose a QC visualization method before normalization.", choices = c("NUSE","RLE","PCA")),
+                                         selectInput("qc_method", "Choose a QC visualization method before normalization.", choices = c("NUSE","RLE","PCA","Boxplot")),
                                          
                                          actionButton("vis_dat","Next"),
                                          conditionalPanel(condition="input.qc_method=='PCA' && input.vis_dat!=0",
