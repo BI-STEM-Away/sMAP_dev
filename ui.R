@@ -7,7 +7,7 @@ source('userInterface/degAnalysis_UI.R')
 source('userInterface/functionalAnalysis_UI.R')
 source('userInterface/faq_UI.R')
 source('userInterface/contact_UI.R')
-options(shiny.maxRequestSize = 100*1024^2)
+options(shiny.maxRequestSize = 1000*1024^2)
 
 sidebar <- dashboardSidebar(
   skin = "light",
@@ -18,9 +18,9 @@ sidebar <- dashboardSidebar(
               menuItem("Upload Data", tabName = "dataImport",
                        icon = icon("upload")),
               #     bs4SidebarHeader("Quality Control"),
-              menuItem(tags$div("Quality Control",tags$br(),"& Processing",style="display: inline-block;vertical-align:middle"), tabName = "qualityControl", 
+              menuItem(tags$div("Quality Control",tags$br(),"& Preprocessing",style="display: inline-block;vertical-align:middle"), tabName = "qualityControl", 
                        icon = icon("vials"),
-                       menuSubItem(text=tags$div("Visualization",tags$br(), "Before Processing",style= "display: inline-block;vertical-align:middle"), tabName = "qC"),
+                       menuSubItem(text=tags$div("Visualization",tags$br(), "Before Preprocessing",style= "display: inline-block;vertical-align:middle"), tabName = "qC"),
                        menuSubItem("Normalization", tabName = "normalization"),
                        menuSubItem(text=tags$div("Batch Correction &",tags$br(),"Visualization",style= "display: inline-block;vertical-align:middle"), tabName = "batchCorrection"),
                        menuSubItem("Potential Outliers", tabName = "potentialOutliers")
@@ -141,4 +141,3 @@ dashboardPage(
   ),
   fullscreen = TRUE, dark = NULL
 )
-
