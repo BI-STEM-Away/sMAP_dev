@@ -208,16 +208,7 @@ function(input,output,session){
     }
   })
   
-  #Text outputs to confirm data and metadata are loaded
-  #nk468188
-  # observeEvent(input$loaddat,output$obj<-renderText({
-  #   if(is.null(data()) && is.null(celdat()) && is.null(geo_data())){
-  #     return("Please upload data.")
-  #   }
-  #   else{
-  #     return("Your data has been loaded. See the summary below.")
-  #   }
-  # }))
+  
   
   #ShreyaVora14, referenced code from aagarw30 
   observeEvent(input$loaddat,output$csv_summary<-renderDataTable({
@@ -340,21 +331,28 @@ function(input,output,session){
   observeEvent(input$vis_dat,{
     if(input$qc_method=="RLE" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array" && is.null(geo_data())){
       affy.data=fitPLM(celdat())
-      output$plot_raw<-renderPlot({RLE(affy.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values")})
+      output$plot_raw<-renderPlot({
+        RLE(affy.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values",xlab="Sample Names",xaxt="n")
+        axis(1,at=1:length(rownames(affy.data@phenoData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)
+        })
+      
     }
     else if(input$qc_method=="NUSE" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array"&& is.null(geo_data())){
       affy.data=fitPLM(celdat())
-      output$plot_raw<-renderPlot({NUSE(affy.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values")})
+      output$plot_raw<-renderPlot({NUSE(affy.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values",xlab="Sample Names",xaxt="n")})
+      axis(1,at=1:length(rownames(affy.data@phenoData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)
     }
     
     else if(input$qc_method=="RLE" && (input$oligo=="Affymetrix Human Gene 1.0 ST Array" || input$oligo=="Affymetrix Human Exon 1.0 ST Array")&& is.null(geo_data())){
       oligo.data=oligo::fitProbeLevelModel(celdat())
-      output$plot_raw<-renderPlot({oligo::RLE(oligo.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values")})
+      output$plot_raw<-renderPlot({oligo::RLE(oligo.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values",xlab="Sample Names",xaxt="n")})
+      axis(1,at=1:length(rownames(olig.data@protocolData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)
     }
     
     else if(input$qc_method=="NUSE"&& (input$oligo=="Affymetrix Human Gene 1.0 ST Array" || input$oligo=="Affymetrix Human Exon 1.0 ST Array")&& is.null(geo_data())){
       oligo.data=oligo::fitProbeLevelModel(celdat())
-      output$plot_raw<-renderPlot({oligo::NUSE(oligo.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values")})
+      output$plot_raw<-renderPlot({oligo::NUSE(oligo.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values",xlab="Sample Names",xaxt="n")})
+      axis(1,at=1:length(rownames(olig.data@protocolData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)
     }
     else if(input$qc_method=="PCA"){
       pcacomps_raw<-prcomp(exprs(celdat()),center=FALSE,scale=FALSE)
@@ -365,6 +363,10 @@ function(input,output,session){
       output$feat_raw<-renderUI({
         selectInput("featcolraw","Which feature do you want to group samples by?",choices=colnames(meet())[-1])
       })
+    }
+    else if(input$qc_method=="Boxplot"){
+      output$plot_raw<-renderPlot({boxplot(exprs(celdat()),xlab="Sample Number",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n")
+        axis(1,at=1:length(plot_samplenames()),labels=plot_samplenames(),las=2,cex.axis=0.5)})
     }
   })
   
@@ -401,9 +403,9 @@ function(input,output,session){
   #nk468188
   observeEvent(input$vis_button,{
     if(input$qc_method2=="Boxplot"){
-      output$plot_status<-renderText("Your plot is being generated.")
       output$qcplot<-renderPlot({
-        boxplot(final_qc_dat(),xlab="Sample Number",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=3)
+        boxplot(final_qc_dat(),xlab="Sample Number",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n",yaxt="n")
+        axis(1,at=1:length(plot_samplenames()),labels=plot_samplenames(),las=2,cex.axis=0.5)
       })
     }
     else if(input$qc_method2=="PCA"){
@@ -460,7 +462,7 @@ function(input,output,session){
     values<-outlier_affy@statistic
     dat_fram<-data.frame(colnames(final_qc_dat()),values)
     #Visualize outlier statistic value for each sample
-    p<-ggplot(data=dat_fram,aes(x=dat_fram[,1],y=dat_fram[,2]))+geom_col()+geom_hline(yintercept=outlier_affy@threshold)+ggtitle("Potential Outliers")+labs(y="Value of Selected Statistic",x="Sample")+theme(axis.text.x=element_text(size=7))
+    p<-ggplot(data=dat_fram,aes(x=dat_fram[,1],y=dat_fram[,2]))+geom_col()+geom_hline(yintercept=outlier_affy@threshold)+ggtitle("Potential Outliers")+labs(y="Value of Selected Statistic",x="Sample")+theme(axis.text.x=element_text(size=7,angle=90))
     output$outplot<-renderPlot(p)
     output$remove<-renderUI(selectInput("torem","Select outlier candidates you would like to remove.",multiple=TRUE,choices=as.list(names(outlier_affy@which))))
     #Remove outliers and update expression matrix
@@ -688,14 +690,24 @@ function(input,output,session){
   #marmomeni and disha-22
   eKegg <- reactive({
     gene_entrez<-genelist()
-    enrichKEGG(gene = names(gene_entrez), organism = "hsa")
+    enrichKEGG(gene = names(gene_entrez), organism = "hsa",pvalueCutoff=input$funcpcutKEGG)
   })
-  observeEvent(input$kegg,output$dotplot <- renderPlot({
-    dotplot(eKegg(), showCategory = input$x)
-  }))
-  observeEvent(input$kegg,output$barplot <- renderPlot({
-    barplot(eKegg(), showCategory = input$y)
-  }))
+  observeEvent(input$kegg,{
+    if(is.null(eKegg())){
+      output$keggwarn<-renderText("There are no enriched pathways at this cutoff adjusted p-value.")
+    }
+    else{
+      output$dotplot <- renderPlot(dotplot(eKegg(), showCategory = input$x))
+    }
+  })
+  observeEvent(input$kegg, {
+    if(is.null(eKegg())){
+      output$barplot<-NULL
+    }
+    else{
+      output$barplot <- renderPlot(barplot(eKegg(), showCategory = input$y))
+    }
+  })
   
   ont_cat<-reactive({
     if(input$type=="Cellular Components"){
@@ -715,7 +727,8 @@ function(input,output,session){
              OrgDb = org.Hs.eg.db, 
              ont = ont_cat(), 
              readable = T, 
-             pAdjustMethod = "fdr")
+             pAdjustMethod = "fdr",
+             pvalueCutoff=input$funcpcutGO)
   })
   enrichedforplot <- reactive({setReadable(enrichedgo(), OrgDb = org.Hs.eg.db)})
   observeEvent(input$go,output$dotplot2 <- renderPlot({
