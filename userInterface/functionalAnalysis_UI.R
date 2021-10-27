@@ -37,9 +37,8 @@ functionalEnrichmentAnalysisTab <- tabItem(tabName = "functionalEnrichmentAnalys
                   HTML("<BR>"),
                    fluidRow(
                      column(12,
-                            #numericInput("KEGG_pcut","Cutoff Adjusted p-Value for Enriched KEGG Pathways",value=0.05),
-                            sliderInput("y", "Number of pathways shown", 0, 20,
-                                        value =10, step = 2),
+                            numericInput("KEGG_pcut","Cutoff Adjusted p-Value for Enriched KEGG Pathways",value=0.05),
+                            uiOutput("kegg_y"),
                             uiOutput("cat"),
                             plotOutput("dotplot"))
                    ),
@@ -74,7 +73,7 @@ geneConceptNetworkTab <- tabItem(tabName = "geneConceptNetwork",
               fluidRow(
                column(6,
                       selectInput("type","Category for Gene Ontology Analysis",choices=c("Cellular Components","Molecular Functions","Biological Processes")),
-                      #numericInput("funcpcutGO","Cutoff Adjusted p-Value for Enriched GO Terms",value=0.05)
+                      numericInput("funcpcutGO","Cutoff Adjusted p-Value for Enriched GO Terms",value=0.05)
                       ),
                
                column(6,
@@ -85,13 +84,13 @@ geneConceptNetworkTab <- tabItem(tabName = "geneConceptNetwork",
                HTML("<HR>"),
                fluidRow(
                column(12,
-                sliderInput("a", "Number of categories shown", 0, 20, value =10, step = 2),
+                uiOutput("go_a"),
                 p("Gene Ontology defines gene function and the relationship between Cellular Components, Molecular Functions, and Biological Processes with your set of genes. The dot plot and bar plot are two ways of visualizing which gene ontology terms are most enriched, these terms being indicated by larger dots and longer bars."),
                 plotOutput("dotplot2")
                )),
               fluidRow(
                 column(12,
-                       sliderInput("b", "Number of Terms shown", 0, 20, value =10, step = 2),
+                       #sliderInput("b", "Number of Terms shown", 0, 20, value =10, step = 2),
                        plotOutput("barplot2")
                )
                     #  plotOutput("GOgraph")
