@@ -696,7 +696,20 @@ function(input,output,session){
   #marmomeni and disha-22
   eKegg <- reactive({
     gene_entrez<-genelist()
-    enrichKEGG(gene = names(gene_entrez), organism = "hsa",pvalueCutoff=0.05)
+    enrichKEGG(gene = names(gene_entrez), organism = "hsa",pvalueCutoff=input$KEGG_pcut)
+  })
+  max_kegg<-reactive({
+    if(is.null(eKegg)){
+      return(20)
+    }
+    else{
+      enrichobj<-eKegg()
+      length(enrichobj@result$Description)
+    }
+  })
+  output$kegg_y<-renderUI({
+    sliderInput("y", "Number of pathways shown", 0, max_kegg(),
+                value =10, step = 2)
   })
   observeEvent(input$kegg,{
     if(is.null(eKegg())){
@@ -726,6 +739,8 @@ function(input,output,session){
       return("BP")
     }
   })
+  
+ 
   #disha-22
   enrichedgo <- reactive({
     entrez_gene<-genelist()
@@ -734,14 +749,27 @@ function(input,output,session){
              ont = ont_cat(), 
              readable = T, 
              pAdjustMethod = "fdr",
-             pvalueCutoff=0.05)
+             pvalueCutoff=input$funcpcutGO)
+  })
+  max_go<-reactive({
+    if(is.null(enrichedgo)){
+      return(20)
+    }
+    else{
+      enrichobj2<-enrichedgo()
+      length(enrichobj2@result$Description)
+    }
+  })
+  output$go_a<-renderUI({
+    sliderInput("a", "Number of pathways shown", 0, max_go(),
+                value =10, step = 2)
   })
   enrichedforplot <- reactive({setReadable(enrichedgo(), OrgDb = org.Hs.eg.db)})
   observeEvent(input$go,output$dotplot2 <- renderPlot({
     dotplot(enrichedforplot(), showCategory = input$a)
   }))
   observeEvent(input$go,output$barplot2 <- renderPlot({
-    barplot(enrichedforplot(), showCategory = input$b)
+    barplot(enrichedforplot(), showCategory = input$a)
   }))
   observeEvent(input$go,output$GOgraph <- renderPlot({
     plotGOgraph(enrichedforplot())
