@@ -182,7 +182,7 @@ potentialOutliersTab <- tabItem(tabName = "potentialOutliers",
                  find and remove the outliers. ")
                                                )
                                         ),
-                                        column(6,
+                                        column(12,
                                                p("Potential Outliers:"),
                                                uiOutput("remove"),
                                                textOutput("potout"),
