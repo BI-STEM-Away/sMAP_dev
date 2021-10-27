@@ -365,7 +365,7 @@ function(input,output,session){
       })
     }
     else if(input$qc_method=="Boxplot"){
-      output$plot_raw<-renderPlot({boxplot(exprs(celdat()),xlab="Sample Number",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n")
+      output$plot_raw<-renderPlot({boxplot(celdat(),xlab="Sample Number",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n")
         axis(1,at=1:length(plot_samplenames()),labels=plot_samplenames(),las=2,cex.axis=0.5)})
     }
   })
@@ -462,9 +462,9 @@ function(input,output,session){
     values<-outlier_affy@statistic
     dat_fram<-data.frame(colnames(final_qc_dat()),values)
     #Visualize outlier statistic value for each sample
-    p<-ggplot(data=dat_fram,aes(x=dat_fram[,1],y=dat_fram[,2]))+geom_col()+geom_hline(yintercept=outlier_affy@threshold)+ggtitle("Potential Outliers")+labs(y="Value of Selected Statistic",x="Sample")+theme(axis.text.x=element_text(size=7,angle=90))
+    p<-ggplot(data=dat_fram,aes(x=dat_fram[,1],y=dat_fram[,2]))+geom_col()+geom_hline(yintercept=outlier_affy@threshold)+ggtitle("Potential Outliers")+labs(y="Value of Selected Statistic",x="Sample")+theme(axis.text.x=element_text(size=3,angle=90))
     output$outplot<-renderPlot(p)
-    output$remove<-renderUI(selectInput("torem","Select outlier candidates you would like to remove.",multiple=TRUE,choices=as.list(names(outlier_affy@which))))
+    output$remove<-renderUI(selectInput("torem","Select outlier candidates you would like to remove.",multiple=TRUE,choices=as.list(names(outlier_affy@which))))})
     #Remove outliers and update expression matrix
     observeEvent(input$update,{
       expr_mat_2<-final_qc_dat()
@@ -481,18 +481,23 @@ function(input,output,session){
       final_qc_dat(expr_mat_2)
       meta_data(meta_datframe)
       #Table of expression data with outlier samples removed
-      output$newexprs<-renderDT({
-        datatable(expr_mat_2,extensions = c('Responsive'), class = 'cell-border stripe',
-                  options = list(pageLength = 10,responsive = TRUE))
+      output$newexprs<-renderDataTable({
+        matr<-final_qc_dat()
+        veccolnames<-colnames(matr)
+        veccoltodatfram<-as.data.frame(veccolnames)
+        datatable(veccoltodatfram,extensions = c('Responsive'), class = 'cell-border stripe',
+                  options = list(pageLength = 10,responsive = TRUE),
+                  colnames=c('Sample Index','Sample Name'))
         })
     })
-  })
+
   
   
   observeEvent(input$grouped, {
     updateTabItems(session, "tabs", "degAnalysis")
   }
   )
+  
   
   ####STATISTICAL ANALYSIS####
   #Data Annotation
@@ -682,22 +687,23 @@ function(input,output,session){
   h <- msig %>% select(gs_name, entrez_gene)
   
   observeEvent(input$gsea,output$plot_gsea <- renderPlot({
-    gsea <- GSEA(genelist(), TERM2GENE=h, eps=0)
-    gseaplot2(gsea, geneSetID=1:5, pvalue_table=T,title="GSEA Results")
+    gsea <- GSEA(genelist(), TERM2GENE=h,eps=0)
+    #c("genelist",genelist(),"gsea",gsea)
+    gseaplot2(gsea, geneSetID=1:length(gsea$enrichmentScore), pvalue_table=TRUE,title="GSEA Results")
   }))
   
   
   #marmomeni and disha-22
   eKegg <- reactive({
     gene_entrez<-genelist()
-    enrichKEGG(gene = names(gene_entrez), organism = "hsa",pvalueCutoff=input$funcpcutKEGG)
+    enrichKEGG(gene = names(gene_entrez), organism = "hsa",pvalueCutoff=0.05)
   })
   observeEvent(input$kegg,{
     if(is.null(eKegg())){
       output$keggwarn<-renderText("There are no enriched pathways at this cutoff adjusted p-value.")
     }
     else{
-      output$dotplot <- renderPlot(dotplot(eKegg(), showCategory = input$x))
+      output$dotplot <- renderPlot(dotplot(eKegg(), showCategory = input$y))
     }
   })
   observeEvent(input$kegg, {
@@ -728,7 +734,7 @@ function(input,output,session){
              ont = ont_cat(), 
              readable = T, 
              pAdjustMethod = "fdr",
-             pvalueCutoff=input$funcpcutGO)
+             pvalueCutoff=0.05)
   })
   enrichedforplot <- reactive({setReadable(enrichedgo(), OrgDb = org.Hs.eg.db)})
   observeEvent(input$go,output$dotplot2 <- renderPlot({
@@ -744,6 +750,6 @@ function(input,output,session){
   
   
   
-
+  
   
 }
