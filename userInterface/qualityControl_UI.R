@@ -26,7 +26,7 @@ qCTab <- tabItem(tabName = "qC",
                                          conditionalPanel(condition="input.qc_method=='PCA' && input.vis_dat!=0",
                                                           htmlOutput("pc_comp_raw"),
                                                           htmlOutput("feat_raw"),
-                                                          actionButton("pcplot_raw","Plot Principal Components")
+                                                          uiOutput("pcplot_raw_button")
 
                                          ),
                                          
@@ -76,7 +76,7 @@ normalizationTab <- tabItem(tabName = "normalization",
                                          #ShreyaVora14
                                          tags$div(
                                            tags$p("Normalization of the data will make feature extraction easier and the organization of the data much more structured. 
-                        The MAS5 function will normalize each chip in the data independently while RMA and GCRMA use a multi-chip model.")
+                        The MAS5 function will normalize each chip in the data independently while RMA and GCRMA use a multi-chip model. NOTE: If the Affymetrix Human Gene 1.0 ST Array was used, only RMA can be used.")
                                          ),
                                   ),
                                   column(6,
