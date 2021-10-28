@@ -332,27 +332,32 @@ function(input,output,session){
     if(input$qc_method=="RLE" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array" && is.null(geo_data())){
       affy.data=fitPLM(celdat())
       output$plot_raw<-renderPlot({
-        RLE(affy.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values",xlab="Sample Names",xaxt="n")
+        RLE(affy.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values",xlab="",xaxt="n")
         axis(1,at=1:length(rownames(affy.data@phenoData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)
+        title(xlab="Sample Names",line=4)
         })
       
     }
     else if(input$qc_method=="NUSE" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array"&& is.null(geo_data())){
       affy.data=fitPLM(celdat())
-      output$plot_raw<-renderPlot({NUSE(affy.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values",xlab="Sample Names",xaxt="n")
-      axis(1,at=1:length(rownames(affy.data@phenoData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)})
+      output$plot_raw<-renderPlot({NUSE(affy.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values",xlab="",xaxt="n")
+      axis(1,at=1:length(rownames(affy.data@phenoData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)
+      title(xlab="Sample Names",line=4)})
     }
     
     else if(input$qc_method=="RLE" && (input$oligo=="Affymetrix Human Gene 1.0 ST Array" || input$oligo=="Affymetrix Human Exon 1.0 ST Array")&& is.null(geo_data())){
       oligo.data=oligo::fitProbeLevelModel(celdat())
-      output$plot_raw<-renderPlot({oligo::RLE(oligo.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values",xlab="Sample Names",xaxt="n")
-      axis(1,at=1:length(rownames(olig.data@protocolData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)})
+      output$plot_raw<-renderPlot({oligo::RLE(oligo.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values",xlab="",xaxt="n")
+      axis(1,at=1:length(rownames(oligo.data@protocolData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)
+      title(xlab="Sample Names",line=4)})
+      
     }
     
     else if(input$qc_method=="NUSE"&& (input$oligo=="Affymetrix Human Gene 1.0 ST Array" || input$oligo=="Affymetrix Human Exon 1.0 ST Array")&& is.null(geo_data())){
       oligo.data=oligo::fitProbeLevelModel(celdat())
-      output$plot_raw<-renderPlot({oligo::NUSE(oligo.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values",xlab="Sample Names",xaxt="n")
-      axis(1,at=1:length(rownames(olig.data@protocolData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)})
+      output$plot_raw<-renderPlot({oligo::NUSE(oligo.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values",xlab="",xaxt="n")
+      axis(1,at=1:length(rownames(oligo.data@protocolData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)
+      title(xlab="Sample Names",line=4)})
     }
     else if(input$qc_method=="PCA"){
       pcacomps_raw<-prcomp(exprs(celdat()),center=FALSE,scale=FALSE)
@@ -363,10 +368,21 @@ function(input,output,session){
       output$feat_raw<-renderUI({
         selectInput("featcolraw","Which feature do you want to group samples by?",choices=colnames(meet())[-1])
       })
+      output$pcplot_raw_button<-renderUI({
+        actionButton("pcplot_raw","Plot Principal Components")
+      })
     }
-    else if(input$qc_method=="Boxplot"){
-      output$plot_raw<-renderPlot({boxplot(celdat(),xlab="Sample Number",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n")
-        axis(1,at=1:length(plot_samplenames()),labels=plot_samplenames(),las=2,cex.axis=0.5)})
+    else if(input$qc_method=="Boxplot" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array" && is.null(geo_data())){
+      output$plot_raw<-renderPlot({boxplot(celdat(),xlab="",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n")
+        axis(1,at=1:length(plot_samplenames()),labels=plot_samplenames(),las=2,cex.axis=0.5)
+        title(xlab="Sample Names",line=4)})
+    }
+    else if(input$qc_method=="Boxplot" && input$oligo=="Affymetrix Human Gene 1.0 ST Array" && is.null(geo_data())){
+      output$plot_raw<-renderPlot({
+        databox<-celdat()
+        boxplot(fitProbeLevelModel(databox),xlab="",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n")
+        axis(1,at=1:length(plot_samplenames()),labels=plot_samplenames(),las=2,cex.axis=0.5)
+        title(xlab="Sample Names",line=4)})
     }
   })
   
@@ -404,8 +420,9 @@ function(input,output,session){
   observeEvent(input$vis_button,{
     if(input$qc_method2=="Boxplot"){
       output$qcplot<-renderPlot({
-        boxplot(final_qc_dat(),xlab="Sample Number",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n",yaxt="n")
+        boxplot(final_qc_dat(),xlab="",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n",yaxt="n")
         axis(1,at=1:length(plot_samplenames()),labels=plot_samplenames(),las=2,cex.axis=0.5)
+        title(xlab="Sample Names",line=4)
       })
     }
     else if(input$qc_method2=="PCA"){
