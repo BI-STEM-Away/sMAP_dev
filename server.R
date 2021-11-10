@@ -624,17 +624,19 @@ function(input,output,session){
     fit.contrast<-contrasts.fit(fitting,con_mat)
     stat.con<-eBayes(fit.contrast)
     result<-topTable(stat.con,sort.by="p",p.value=input$p_val,lfc=input$fc_cut,number=length(rownames(dat_for_stat)))
-    # lfc2<-result$logFC
-    # for(lfcval_index in 1:length(lfc2)){
-    #   if(abs(lfc2[lfcval_index]) < abs(input$fc_cut)){
-    #     result<-result[-c(lfcval_index),] %>% head()
-    #   }
-    # }
+    lfc2<-result$logFC
+    for(lfcval_index in 1:length(lfc2)){
+      if(length(lfc2)==0){
+        result<-result
+      }
+      else if(abs(as.integer(lfc2[lfcval_index]))< abs(as.integer(input$fc_cut))){
+        result<-result[-c(lfcval_index),] %>% head()
+      }
+    }
     
     dimension<-dim(result)
-    if(dimension[1]==0 && dimension[2]==0){
+    if(dimension[1]==0){
       des_matrix<-model.matrix(~variable,met_dat)
-      desmat1(des_matrix)
       colnames(des_matrix)<-c("Factor_a","Factor_b")
       fitting<-lmFit(dat_for_stat,des_matrix)
       fac1<-colnames(as.data.frame(des_matrix))[1]
