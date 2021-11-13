@@ -723,7 +723,7 @@ function(input,output,session){
     }
     else{
       enrichobj<-eKegg()
-      ncol(enrichobj@result)
+      nrow(enrichobj@result)
     }
   })
   output$kegg_y<-renderUI({
