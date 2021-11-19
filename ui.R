@@ -18,7 +18,7 @@ sidebar <- dashboardSidebar(
               menuItem("Upload Data", tabName = "dataImport",
                        icon = icon("upload")),
               #     bs4SidebarHeader("Quality Control"),
-              menuItem(tags$div("Quality Control",tags$br(),"& Preprocessing",style="display: inline-block;vertical-align:middle"), tabName = "qualityControl", 
+              menuItem(tags$div("QC & Preprocessing",style="display: inline-block;vertical-align:middle"), tabName = "qualityControl", 
                        icon = icon("vials"),
                        menuSubItem(text=tags$div("Visualization",tags$br(), "Before Preprocessing",style= "display: inline-block;vertical-align:middle"), tabName = "qC"),
                        menuSubItem("Normalization", tabName = "normalization"),
@@ -86,21 +86,6 @@ title <- dashboardBrand(
   href = "https://stemaway.com/",
 )
 
-controlbar <- dashboardControlbar(
-  id = NULL,
-  disable = FALSE,
-  width = 500,
-  collapse = TRUE,
-  skin = "light",
-  controlbarMenu(
-    div(class="typeform-widget", 'data-url' ="https://form.typeform.com/to/GoJ0NzhN?typeform-medium=embed-snippet", style="width: 85%; height: 450px;"),
-    h1("Questions? Feedback?"),
-    p("Please leave us a comment in the link below"),
-    p("Links:"), 
-    a(strong("Typeform"), href = "https://www.typeform.com/", style = "font-size : 25px;")
-    
-  ))
-
 dashboardPage(
   freshTheme = create_theme(
     bs4dash_vars(
@@ -131,7 +116,6 @@ dashboardPage(
   ),
   sidebar,
   body,
-  controlbar,
   footer = dashboardFooter(
     left = a(
       href = "https://github.com/BI-STEM-Away/",
