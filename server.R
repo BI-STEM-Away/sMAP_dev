@@ -446,7 +446,8 @@ function(input,output,session){
         actionButton("pcplot","Plot Principal Components")
       
     })
-  })
+    }}
+    )
   
   #Specify Principal Components and Colors for PCA
   observeEvent(input$pcplot,{
