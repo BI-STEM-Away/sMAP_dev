@@ -145,7 +145,7 @@ batchCorrectionTab <- tabItem(tabName = "batchCorrection",
                   conditionalPanel(condition="input.qc_method2=='PCA' && input.vis_button!=0",
                                    htmlOutput("pc_comp"),
                                    htmlOutput("feat"),
-                                   actionButton("pcplot","Plot Principal Components"), 
+                                   htmlOutput("pc_after_norm"), 
                   )
          ),
          column(6,
@@ -156,7 +156,7 @@ batchCorrectionTab <- tabItem(tabName = "batchCorrection",
                 ),
                 textOutput("pcwarn"),
                 #textOutput("plot_status"),
-                plotOutput("qcplot"),)
+                plotOutput("qcplot",width='600px'),)
          )
 )
 
