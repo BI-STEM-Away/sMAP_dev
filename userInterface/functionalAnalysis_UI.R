@@ -114,15 +114,23 @@ gseaTab <- tabItem(tabName = "gsea",
             HTML("<HR>"),
             HTML("<BR>"),
             fluidRow(
-             column(12,offset=0,align="center",
-                    p("GSEA is the evaluation of microarray data in gene sets. The goal of GSEA is to figure 
-                      out how the genes are distributed within the data set. GSEA will first rank all genes in a data set, then it will calculate an enrichment score 
-                      for the genes which show the under and over expressed genes."),
+             column(12,offset=0,
+                    tags$p("GSEA identifies sets of genes that are significantly overexpressed or underexpressed in the experimental condition relative to the control."),
+                      tags$ul(
+                        tags$li("sMAP uses a database for gene sets from humans."),
+                        tags$li("In GSEA, the genes in each gene set are ranked by the log fold change in expression of the gene in the experimental condition relative to the control."),
+                        tags$li("A running enrichment score for each gene set is calculated, genes that are overexpressed making the score more positive and genes that are underexpressed making the score more negative (see plot below)."),
+                        tags$li("Based on the enrichment score for a gene set, statistical analysis is used to determine if that gene set is statistically significantly over- or underexpressed."),
+                        tags$li("Based on a p-value of 0.05, sMAP reports the running enrichment score plot, a plot showing where the genes in each gene set are located along the x-axis, as well as a plot of the ranked expression of all genes from the microarray data. A table of the statistically significant gene sets is reported as well.")
+                    ),
                     actionButton("gsea","Perform GSEA")
              )),
              fluidRow(
-             column(12,offset=0,align="center",
-                    plotOutput("plot_gsea")
+             column(12,align="center",
+                    dataTableOutput("gsea_pathways"),
+                    htmlOutput("path_select"),
+                    htmlOutput("button_gsea_plot"),
+                    plotOutput("plot_gsea",height="600px"),
 #                    downloadButton("exportgsea","Download GSEA Plot")
              )
          )
