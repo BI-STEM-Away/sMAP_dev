@@ -442,8 +442,10 @@ function(input,output,session){
       output$feat<-renderUI({
         selectInput("feat_color","Which feature do you want to group samples by?",choices=colnames(meet())[-1])
       })
+      output$pc_after_norm<-renderUI({
+        actionButton("pcplot","Plot Principal Components")
       
-    }
+    })
   })
   
   #Specify Principal Components and Colors for PCA
@@ -718,11 +720,31 @@ function(input,output,session){
   msig <- msigdbr(species="Homo sapiens", category="H")
   h <- msig %>% select(gs_name, entrez_gene)
   
-  observeEvent(input$gsea,output$plot_gsea <- renderPlot({
-    gsea <- GSEA(genelist(), TERM2GENE=h,eps=0)
-    #c("genelist",genelist(),"gsea",gsea)
-    gseaplot2(gsea, geneSetID=1:length(gsea$enrichmentScore), pvalue_table=TRUE,title="GSEA Results")
-  }))
+  gsea_reactive<-reactiveVal()
+  
+  observeEvent(input$gsea,{
+    gsea<-GSEA(genelist(),TERM2GENE=h,eps=0)
+    gsea_reactive(gsea)
+    output$gsea_pathways<-renderDataTable({
+      dat<-data.frame(gsea@result$ID,gsea@result$p.adjust)
+      colnames(dat)<-c("Pathway ID","Adjusted p-Value")
+      dat
+    })
+    paths<-gsea@result$ID
+    output$path_select<-renderUI({
+      selectInput("gsea_path_toplot","Select an enriched Hallmark pathway to visualize",choices=paths,selected=paths[1])
+    })
+    output$button_gsea_plot<-renderUI({
+      actionButton("gsea_button","Visualize Pathway")
+    })
+    })
+  observeEvent(input$gsea_button,output$plot_gsea<-renderPlot({
+    gseaplot(gsea_reactive(), geneSetID=input$gsea_path_toplot,by="all",title="GSEA Results")
+  },height=600)
+  )
+    
+    
+  
   
   
   #marmomeni and disha-22
