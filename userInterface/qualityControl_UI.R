@@ -145,9 +145,9 @@ batchCorrectionTab <- tabItem(tabName = "batchCorrection",
                   conditionalPanel(condition="input.qc_method2=='PCA' && input.vis_button!=0",
                                    htmlOutput("pc_comp"),
                                    htmlOutput("feat"),
-                                   actionButton("pcplot","Plot Principal Components"), 
+                                   htmlOutput("pc_after_norm"), 
                   )
-         ),
+         ), #This line is changed (line 151)
          column(6,
                 tags$div(
                   tags$p("Visualizing the data after the normalization is complete will allow you to see how your data has changed due to 
@@ -156,7 +156,7 @@ batchCorrectionTab <- tabItem(tabName = "batchCorrection",
                 ),
                 textOutput("pcwarn"),
                 #textOutput("plot_status"),
-                plotOutput("qcplot"),)
+                plotOutput("qcplot",width='600px'),)
          )
 )
 
