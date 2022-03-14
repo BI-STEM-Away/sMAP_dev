@@ -24,7 +24,8 @@ dataImportTab <- tabItem(tabName = "dataImport",
                                         "Raw Affymetrix Data (CEL Files)",
                                         "GEO Accession Number",
                                         "Load Demo Data (Raw)"),
-                           width = '350px')
+                           width = '350px'),
+               tags$p("'Load Demo Data' will input 20 raw CEL files from the GSE19804 dataset. Download the demo data for more information.")
                ),
           column(8,
              conditionalPanel(condition="input.dat_type=='Expression Data File (CSV/TXT)' | input.dat_type=='Raw Affymetrix Data (CEL Files)'  | input.dat_type=='GEO Accession Number'",
