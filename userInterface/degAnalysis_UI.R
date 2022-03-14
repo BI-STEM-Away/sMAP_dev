@@ -31,7 +31,7 @@ topDEGsTab <- tabItem(tabName = "topDEGs",
                                )
                         ),
                         column(6,
-                               sliderInput("fc_cut","Cutoff LogFC Value:",min=0,max=5,value=1),
+                               sliderInput("fc_cut","Cutoff LogFC Value:",min=0,max=5,value=1,step=0.25),
                                sliderInput("p_val","Cutoff adjusted p-value:",min=1e-15,max=0.2,value=0.05),
                                actionButton("degs","Find DEGs"),
                                HTML("<BR>"),
