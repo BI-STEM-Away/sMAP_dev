@@ -428,7 +428,7 @@ function(input,output,session){
   observeEvent(input$vis_button,{
     if(input$qc_method2=="Boxplot"){
       output$qcplot<-renderPlot({
-        boxplot(final_qc_dat(),xlab="",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n",yaxt="n")
+        boxplot(final_qc_dat(),xlab="",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n")
         axis(1,at=1:length(plot_samplenames()),labels=plot_samplenames(),las=2,cex.axis=0.5)
         title(xlab="Sample Names",line=4)
       })
@@ -442,9 +442,12 @@ function(input,output,session){
       output$feat<-renderUI({
         selectInput("feat_color","Which feature do you want to group samples by?",choices=colnames(meet())[-1])
       })
+      output$pc_after_norm<-renderUI({
+        actionButton("pcplot","Plot Principal Components")
       
-    }
-  })
+    })
+    }}
+    )
   
   #Specify Principal Components and Colors for PCA
   observeEvent(input$pcplot,{
@@ -605,6 +608,7 @@ function(input,output,session){
   
   #Find DEGs
   desmat1<-reactiveVal()
+  result_for_volc<-reactiveVal()
   final_result<-eventReactive(input$degs,{
     
     #Data to use based on if user filtered data or not
@@ -629,6 +633,8 @@ function(input,output,session){
     fit.contrast<-contrasts.fit(fitting,con_mat)
     stat.con<-eBayes(fit.contrast)
     result<-topTable(stat.con,sort.by="p",p.value=input$p_val,lfc=input$fc_cut,number=length(rownames(dat_for_stat)))
+    result_for_volc_tab<-topTable(stat.con,sort.by="p",p.value=1,number=length(rownames(dat_for_stat)))
+    result_for_volc(result_for_volc_tab)
     lfc2<-result$logFC
     for(lfcval_index in 1:length(lfc2)){
       if(length(lfc2)==0){
@@ -680,7 +686,8 @@ function(input,output,session){
         NULL
       }
       else{
-        result_to_plot<-final_result()
+        #result_to_plot<-final_result()
+        result_to_plot<-result_for_volc()
         if(input$labs_volc==TRUE){
         EnhancedVolcano(data.frame(result_to_plot),lab=rownames(data.frame(result_to_plot)),
                         x='logFC',y='P.Value',
@@ -718,11 +725,31 @@ function(input,output,session){
   msig <- msigdbr(species="Homo sapiens", category="H")
   h <- msig %>% select(gs_name, entrez_gene)
   
-  observeEvent(input$gsea,output$plot_gsea <- renderPlot({
-    gsea <- GSEA(genelist(), TERM2GENE=h,eps=0)
-    #c("genelist",genelist(),"gsea",gsea)
-    gseaplot2(gsea, geneSetID=1:length(gsea$enrichmentScore), pvalue_table=TRUE,title="GSEA Results")
-  }))
+  gsea_reactive<-reactiveVal()
+  
+  observeEvent(input$gsea,{
+    gsea<-GSEA(genelist(),TERM2GENE=h,eps=0)
+    gsea_reactive(gsea)
+    output$gsea_pathways<-renderDataTable({
+      dat<-data.frame(gsea@result$ID,gsea@result$p.adjust)
+      colnames(dat)<-c("Pathway ID","Adjusted p-Value")
+      dat
+    })
+    paths<-gsea@result$ID
+    output$path_select<-renderUI({
+      selectInput("gsea_path_toplot","Select an enriched Hallmark pathway to visualize",choices=paths,selected=paths[1])
+    })
+    output$button_gsea_plot<-renderUI({
+      actionButton("gsea_button","Visualize Pathway")
+    })
+    })
+  observeEvent(input$gsea_button,output$plot_gsea<-renderPlot({
+    gseaplot(gsea_reactive(), geneSetID=input$gsea_path_toplot,by="all",title="GSEA Results")
+  },height=600)
+  )
+    
+    
+  
   
   
   #marmomeni and disha-22
@@ -801,7 +828,7 @@ function(input,output,session){
     clusterProfiler::dotplot(enrichedforplot(), showCategory = input$a)
   }))
   observeEvent(input$go,output$barplot2 <- renderPlot({
-    barplot(enrichedforplot(), showCategory = input$a)
+    barplot(enrichedforplot(), showCategory = input$a)+xlab("Count")
   }))
   observeEvent(input$go,output$GOgraph <- renderPlot({
     plotGOgraph(enrichedforplot())
